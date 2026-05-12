@@ -1,0 +1,45 @@
+mutation CheckEmail($email: String!) {
+  checkEmail(input: { email: $email }) {
+    __typename
+    ... on CheckEmailResult {
+      available
+    }
+  }
+}
+
+mutation SendToken($email: String!) {
+  sendToken(input: { email: $email, skipDeepLink: true }) {
+    __typename
+  }
+}
+
+mutation SignIn($email: String!, $token: String!) {
+  signIn(input: { email: $email, token: $token }) {
+    __typename
+    ... on SignInSuccess {
+      accessToken
+      refreshToken
+      ttl
+    }
+  }
+}
+
+mutation GenerateToken {
+  generateShareToken {
+    __typename
+    ... on GenerateShareTokenSuccess {
+      token
+    }
+  }
+}
+
+mutation RefreshToken($token: String!) {
+  refreshToken(input: { token: $token }) {
+    __typename
+    ... on RefreshTokenSuccess {
+      accessToken
+      refreshToken
+      ttl
+    }
+  }
+}

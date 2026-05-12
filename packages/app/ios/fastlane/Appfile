@@ -1,0 +1,14 @@
+app_identifier([
+  "com.kraftful.dev.hx.homeowner",
+  "com.kraftful.dev.hx.homeowner.watchkitapp",
+  "com.kraftful.dev.hx.homeowner.watchkitapp.watchkitextension"
+])
+
+apple_id("ios-dev@kraftful.com") # Your Apple email address
+
+itc_team_id("120441654") # App Store Connect Team ID
+
+team_id("BPGHMXQ36K") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

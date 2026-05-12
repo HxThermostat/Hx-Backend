@@ -1,0 +1,44 @@
+fragment Status on Status {
+  label
+  items {
+    label
+    value
+  }
+  updatedAt
+}
+
+fragment StatusFields on Location {
+  statusIndoor {
+    ...Status
+  }
+  statusIndoorEEV {
+    ...Status
+  }
+  statusOutdoor {
+    ...Status
+  }
+  statusZone {
+    ...Status
+  }
+}
+
+query EquipmentStatus($locationId: ID!) {
+  location(id: $locationId) {
+    __typename
+    id
+    ...StatusFields
+  }
+}
+
+mutation RefreshStatus($locationId: ID!) {
+  refreshStatus(input: { id: $locationId }) {
+    __typename
+    ... on RefreshStatusSuccess {
+      location {
+        __typename
+        id
+        ...StatusFields
+      }
+    }
+  }
+}

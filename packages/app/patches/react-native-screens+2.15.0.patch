@@ -1,0 +1,61 @@
+diff --git a/node_modules/react-native-screens/android/build.gradle b/node_modules/react-native-screens/android/build.gradle
+index fbfa766..7543cd8 100644
+--- a/node_modules/react-native-screens/android/build.gradle
++++ b/node_modules/react-native-screens/android/build.gradle
+@@ -6,7 +6,7 @@ buildscript {
+     if (project == rootProject) {
+         repositories {
+             google()
+-            jcenter()
++            mavenCentral()
+         }
+ 
+         dependencies {
+@@ -46,7 +46,6 @@ repositories {
+     mavenCentral()
+     mavenLocal()
+     google()
+-    jcenter()
+ 
+ }
+ 
+diff --git a/node_modules/react-native-screens/ios/RNSScreen.m b/node_modules/react-native-screens/ios/RNSScreen.m
+index 5378409..9879484 100644
+--- a/node_modules/react-native-screens/ios/RNSScreen.m
++++ b/node_modules/react-native-screens/ios/RNSScreen.m
+@@ -402,6 +402,23 @@ - (id)findFirstResponder:(UIView*)parent
+   return nil;
+ }
+ 
++- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
++{
++    [self headerButtonFix];
++}
++
++- (void)headerButtonFix
++{
++  double delayInSeconds = 0.2;
++  dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
++  dispatch_after(popTime, dispatch_get_main_queue(), ^(void){    [self.view.reactSubviews enumerateObjectsUsingBlock:^(UIView * _Nonnull view, NSUInteger idx, BOOL * _Nonnull stop) {
++      if ([view isKindOfClass:[RNSScreenStackHeaderConfig class]]) {
++        [RNSScreenStackHeaderConfig willShowViewController:self animated:NO withConfig:(RNSScreenStackHeaderConfig *)view];
++      }
++    }];
++  });
++}
++
+ - (void)willMoveToParentViewController:(UIViewController *)parent
+ {
+   [super willMoveToParentViewController:parent];
+@@ -416,6 +433,11 @@ - (void)willMoveToParentViewController:(UIViewController *)parent
+ - (void)viewWillAppear:(BOOL)animated
+ {
+   [super viewWillAppear:animated];
++  [self headerButtonFix];
++  UIViewController *parentVC = [self parentViewController];
++  if ([parentVC isKindOfClass:[UINavigationController class]]) {
++    [((UINavigationController *)parentVC).navigationBar sizeToFit];
++  }
+   [RNSScreenStackHeaderConfig updateStatusBarAppearance];
+   [((RNSScreenView *)self.view) notifyWillAppear];
+ }

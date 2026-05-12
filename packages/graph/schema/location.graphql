@@ -1,0 +1,254 @@
+type AirflowRange {
+  active: Int!
+  min: Int!
+  max: Int!
+}
+
+enum ConnectionStatus {
+  ONLINE
+  OFFLINE
+  INITIALIZING
+}
+
+type Dealer {
+  email: String!
+  name: String!
+  phone: String!
+  website: String!
+}
+
+type Fault {
+  value: String!
+  createdAt: String!
+}
+
+enum Override {
+  AWAY
+  VACATION
+}
+
+type Status {
+  items: [StatusItem!]!
+  label: String
+  updatedAt: String!
+}
+
+type StatusItem {
+  label: String!
+  value: String
+}
+
+type Vacation {
+  active: Boolean!
+  setpoints: Setpoints!
+}
+
+type Version {
+  application: String!
+  bootloader: String!
+  outdoorControl: String!
+}
+
+type Location {
+  id: ID!
+  activeFault: String
+  airflow: AirflowRange
+  brand: String!
+  connectionStatus: ConnectionStatus!
+  controller: Controller
+  controllers: [Controller!]!
+  dealer: Dealer!
+  dsn: String!
+  faults: [Fault!]!
+  lat: Float @access(requires: DIAGNOSTIC)
+  lng: Float @access(requires: DIAGNOSTIC)
+  model: String!
+  modes: [Mode!]!
+  name: String!
+  override: Override @access(requires: DIAGNOSTIC)
+  programmable: Boolean @access(requires: DIAGNOSTIC)
+  statusIndoor: [Status!]
+  statusIndoorEEV: [Status!] @deprecated
+  statusOutdoor: [Status!]
+  statusThermostat: [Status!] @deprecated
+  statusZone: [Status!]
+  vacation: Vacation @access(requires: DIAGNOSTIC)
+  version: Version!
+  zones: Int
+  zoning: Boolean!
+}
+
+extend type Query {
+  locations: [Location!]!
+  location(id: ID!): Location
+}
+
+extend type Mutation {
+  renameLocation(input: RenameLocationInput!): RenameLocationResult!
+  changeFanCfm(input: ChangeFanCfmInput!): ChangeFanCfmResult!
+  changeLocationAway(input: ChangeLocationAwayInput!): ChangeLocationAwayResult!
+  registerLocation(input: RegisterLocationInput!): RegisterLocationResult!
+  changeDealer(input: ChangeDealerInput!): ChangeDealerResult!
+  changeProgrammable(input: ChangeProgrammableInput!): ChangeProgrammableResult!
+  changeVacation(input: ChangeVacationInput!): ChangeVacationResult!
+  changeVacationSetpoints(
+    input: ChangeVacationSetpointsInput!
+  ): ChangeVacationSetpointsResult!
+  refreshStatus(input: RefreshStatusInput!): RefreshStatusResult!
+  removeLocation(input: RemoveLocationInput!): RemoveLocationResult!
+  resetLogs(input: ResetLogsInput!): ResetLogsResult!
+}
+
+input RenameLocationInput {
+  id: ID!
+  name: String!
+}
+
+type RenameLocationSuccess {
+  location: Location!
+}
+
+type LocationNameInvalid implements Error {
+  message: String!
+}
+
+union RenameLocationResult =
+    RenameLocationSuccess
+  | LocationNameInvalid
+  | NotFound
+
+input ChangeFanCfmInput {
+  id: ID!
+  cfm: Float!
+}
+
+type ChangeFanCfmSuccess {
+  location: Location!
+}
+
+union ChangeFanCfmResult = ChangeFanCfmSuccess | NotFound | NotSupported
+
+input ChangeLocationAwayInput {
+  id: ID!
+  active: Boolean!
+}
+
+type ChangeLocationAwaySuccess {
+  location: Location!
+}
+
+union ChangeLocationAwayResult = ChangeLocationAwaySuccess | NotFound
+
+input RegisterLocationInput {
+  dsn: String!
+  setupToken: String!
+}
+
+type RegisterLocationSuccess {
+  location: Location!
+}
+
+union RegisterLocationResult = RegisterLocationSuccess | NotFound
+
+input ChangeDealerInput {
+  id: ID!
+  email: String
+  name: String
+  phone: String
+  website: String
+}
+
+type ChangeDealerSuccess {
+  location: Location!
+}
+
+union ChangeDealerResult = ChangeDealerSuccess | NotFound
+
+input ChangeProgrammableInput {
+  id: ID!
+  programmable: Boolean!
+}
+
+type ChangeProgrammableSuccess {
+  location: Location!
+}
+
+union ChangeProgrammableResult = ChangeProgrammableSuccess | NotFound
+
+input ChangeVacationInput {
+  id: ID!
+  active: Boolean!
+}
+
+type ChangeVacationSuccess {
+  location: Location!
+}
+
+type VacationNotSupported implements Error {
+  message: String!
+}
+
+union ChangeVacationResult =
+    ChangeVacationSuccess
+  | VacationNotSupported
+  | NotFound
+
+input ChangeVacationSetpointsInput {
+  id: ID!
+  heat: Int!
+  cool: Int!
+}
+
+type ChangeVacationSetpointsSuccess {
+  location: Location!
+}
+
+union ChangeVacationSetpointsResult =
+    ChangeVacationSetpointsSuccess
+  | VacationNotSupported
+  | NotFound
+
+enum StatusSection {
+  INDOOR
+  INDOOREEV
+  OUTDOOR
+  THERMOSTAT
+  ZONE
+}
+
+input RefreshStatusInput {
+  id: ID!
+  section: StatusSection
+}
+
+type RefreshStatusSuccess {
+  location: Location!
+}
+
+union RefreshStatusResult = RefreshStatusSuccess | NotFound | Offline
+
+input RemoveLocationInput {
+  id: ID!
+}
+
+type RemoveLocationSuccess {
+  _: Boolean
+}
+
+union RemoveLocationResult = RemoveLocationSuccess | NotFound
+
+enum LogType {
+  THERMOSTAT
+  SYSTEM
+}
+
+input ResetLogsInput {
+  id: ID!
+  logType: LogType!
+}
+
+type ResetLogsSuccess {
+  location: Location!
+}
+
+union ResetLogsResult = ResetLogsSuccess | NotFound | NotSupported

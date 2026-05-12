@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+
+    <style>
+      html {
+        background: #181718;
+        background: linear-gradient(to bottom, #181718, #1d1e1e);
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+
+        justify-content: center;
+        display: flex;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        margin: auto;
+      }
+
+      p {
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 22px;
+        /* identical to box height, or 169% */
+        text-align: center;
+        letter-spacing: -0.408px;
+
+        /* Font */
+        color: #ffffff;
+
+        opacity: 0.5;
+
+        width: 150px;
+
+        margin: 15px auto;
+      }
+
+      svg {
+        margin: 50px 0;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 376px;
+        margin: auto;
+      }
+
+      legend {
+        border: none;
+        color: #fff;
+        font-size: 34px;
+        line-height: 41px;
+        margin-bottom: 43px;
+        text-align: center;
+      }
+
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgba(235, 235, 245, 0.3);
+        opacity: 1; /* Firefox */
+      }
+
+      button {
+        display: block;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 25px;
+        color: #fff;
+        line-height: 20px;
+        padding: 15px 0;
+        font-size: 18px;
+        width: 150px;
+        margin: 100px auto 0;
+      }
+
+      fieldset {
+        border: none;
+        padding: 0 68px;
+      }
+
+      input[type="email"],
+      input[type="text"] {
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        box-shadow: none;
+        background-color: transparent;
+        color: #fff;
+        padding: 10px 8px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg
+      width="120"
+      height="120"
+      viewBox="0 0 60 60"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style="border-radius: 15px"
+    >
+      <g clip-path="url(#clip0)">
+        <rect width="60" height="60" fill="white" />
+        <rect width="60" height="60" fill="url(#paint0_linear)" />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M33.5664 3.12453C33.9058 2.85226 34.3997 2.83806 34.7575 3.1176L61.6103 24.0973C62.0281 24.4237 62.1022 25.027 61.7758 25.4448C61.4494 25.8625 60.8461 25.9366 60.4283 25.6102L34.1688 5.09398L6.00606 27.2828H8.15087C8.68102 27.2828 9.11079 27.7126 9.11079 28.2427C9.11079 28.7729 8.68102 29.2026 8.15087 29.2026H3.35127C3.3265 29.2026 3.30195 29.2017 3.27765 29.1999C2.98097 29.2115 2.68305 29.0858 2.48525 28.8347C2.15715 28.4183 2.22876 27.8147 2.64519 27.4866L33.5596 3.12984C33.5618 3.12806 33.5641 3.12629 33.5664 3.12453Z"
+          fill="white"
+        />
+        <path
+          d="M14.7379 48.0063V29.9105C14.7379 28.8319 13.85 27.9548 12.7585 27.9548C11.6671 27.9548 10.7792 28.8319 10.7792 29.9105V48.0066C10.226 48.5255 9.87878 49.2566 9.87878 50.0677C9.87878 51.6366 11.1708 52.9127 12.7585 52.9127C14.3466 52.9127 15.6383 51.6366 15.6383 50.0677C15.6383 49.2564 15.2911 48.5252 14.7379 48.0063ZM12.7585 51.8808C11.7464 51.8808 10.923 51.0674 10.923 50.0675C10.923 49.4055 11.2854 48.8265 11.8234 48.51V29.9105C11.8234 29.4008 12.243 28.9864 12.7585 28.9864C13.2744 28.9864 13.6937 29.4008 13.6937 29.9105V30.8559H13.0196C12.7674 30.8559 12.5628 31.0581 12.5628 31.3073C12.5628 31.5564 12.7674 31.7586 13.0196 31.7586H13.6937V32.7902H13.0196C12.7674 32.7902 12.5628 32.9924 12.5628 33.2415C12.5628 33.4907 12.7674 33.6929 13.0196 33.6929H13.6937V34.7248H13.0196C12.7674 34.7248 12.5628 34.927 12.5628 35.1761C12.5628 35.4252 12.7674 35.6274 13.0196 35.6274H13.6937V36.6593H13.0196C12.7674 36.6593 12.5628 36.8615 12.5628 37.1106C12.5628 37.3598 12.7674 37.562 13.0196 37.562H13.6937V38.5936H13.0196C12.7674 38.5936 12.5628 38.7958 12.5628 39.0449C12.5628 39.2941 12.7674 39.4962 13.0196 39.4962H13.6937V48.5103C14.2317 48.8267 14.5941 49.4057 14.5941 50.0677C14.5941 51.0674 13.7707 51.8808 12.7585 51.8808Z"
+          fill="white"
+        />
+        <path
+          d="M13.3818 48.7553V41.1267H12.1404V48.7527C11.6261 48.9848 11.2682 49.4962 11.2682 50.0912C11.2682 50.9044 11.9355 51.5636 12.7586 51.5636C13.5817 51.5636 14.249 50.9044 14.249 50.0912C14.249 49.4983 13.8934 48.9887 13.3818 48.7553Z"
+          fill="white"
+        />
+        <path
+          d="M35.3589 39.1891V22.1952H30.508V28.694H25.2888V22.1952H20.4379V39.1891H25.2888V32.6157H30.508V39.1891H35.3589Z"
+          fill="white"
+        />
+        <path
+          d="M46.6791 48.1131H48.2756L43.8055 41.5894L48.1651 35.1654H46.6423L43.0441 40.5437H43.0195L39.4336 35.1654H37.8371L42.1844 41.6019L37.702 48.1131H39.2248L42.9335 42.6726H42.9581L46.6791 48.1131Z"
+          fill="white"
+        />
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear"
+          x1="30"
+          y1="0"
+          x2="30"
+          y2="60"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#03A5FF" />
+          <stop offset="1" stop-color="#70C281" />
+        </linearGradient>
+        <clipPath id="clip0">
+          <rect width="60" height="60" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <svg
+      width="131"
+      height="131"
+      viewBox="0 0 131 131"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M44.0661 47.7839C43.75 47.7839 43.3542 47.8637 43.1164 48.0217L64.3125 63.2859L65.5 63.6803L66.6078 63.2844L87.8039 48.0203C87.5661 47.8622 87.1717 47.7825 86.8542 47.7825H44.0661V47.7839ZM44.0661 83.3742H86.8542C88.12 83.3742 89.2264 82.3461 89.2264 81.002V61.6242L73.5664 72.9342C71.1144 74.6742 68.2666 75.5442 65.4986 75.5442C62.6508 75.5442 59.8044 74.6742 57.3525 72.9342L41.7722 61.7039V81.002C41.7722 82.3461 42.8003 83.3742 44.0661 83.3742ZM130.75 65.5C130.75 70.4822 130.118 75.3078 129.09 79.9739C129.01 80.29 128.932 80.6061 128.774 80.9237C127.666 85.2737 125.373 89.3076 121.972 92.3134C118.412 95.5556 113.588 97.6132 108.21 97.6132C103.148 97.6132 98.4817 95.7934 94.8437 92.7093C92.5498 94.2912 89.8615 95.2395 86.8556 95.2395H44.0661C36.2361 95.2395 29.9083 88.8334 29.9083 81.0034V50.7898V50.0778C29.9083 49.7617 29.9083 49.3659 29.9881 49.0498C29.9881 48.97 30.0678 48.8917 30.0678 48.812C29.9881 48.6539 30.0678 48.4959 30.1476 48.2581C30.9378 41.2981 36.8698 35.92 44.0676 35.92H86.8556C94.6856 35.92 101.013 42.2478 101.092 50.0778V81.002C101.092 81.3978 101.092 81.872 100.934 82.2678C101.092 82.4259 101.33 82.5839 101.488 82.742C103.148 84.64 105.521 85.7478 108.21 85.7478C110.582 85.7478 112.402 84.9576 114.062 83.5337C115.644 82.0315 116.988 79.8956 117.542 77.3639C118.412 73.5678 118.886 69.5339 118.886 65.5C118.886 50.71 112.876 37.4222 103.226 27.6942C93.4981 18.0459 80.2103 12.1139 65.5 12.1139C50.71 12.1139 37.4222 18.0459 27.6942 27.6942C18.0459 37.4222 12.1139 50.71 12.1139 65.5C12.1139 80.2103 18.0459 93.5778 27.6942 103.226C37.4222 112.876 50.71 118.886 65.5 118.886C74.5161 118.886 82.9798 116.672 90.4139 112.716C93.2617 111.214 96.8998 112.321 98.402 115.168C99.9042 118.094 98.7978 121.654 95.95 123.156C86.8542 127.982 76.4142 130.75 65.5 130.75C29.4342 130.75 0.25 101.486 0.25 65.5C0.25 29.4342 29.4342 0.25 65.5 0.25C101.486 0.25 130.67 29.4342 130.75 65.5Z"
+        fill="url(#paint0_linear)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear"
+          x1="65.5"
+          y1="0.25"
+          x2="65.5"
+          y2="130.75"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#39A6E7" />
+          <stop offset="1" stop-color="#33B375" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <form method="POST">
+      <fieldset>
+        <legend>What's your email address?</legend>
+        <input
+          type="email"
+          id="stacked-email"
+          placeholder="Email"
+          required=""
+          name="email"
+          class="input-field"
+          autocomplete="email"
+        />
+        <button type="submit" class="button">
+          Continue
+        </button>
+        <p>Let's check if this address already has an Hx account.</p>
+      </fieldset>
+    </form>
+  </body>
+</html>

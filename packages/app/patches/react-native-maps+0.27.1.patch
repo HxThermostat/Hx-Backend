@@ -1,0 +1,22 @@
+diff --git a/node_modules/react-native-maps/build.gradle b/node_modules/react-native-maps/build.gradle
+index 1a2b159..49e6c7b 100644
+--- a/node_modules/react-native-maps/build.gradle
++++ b/node_modules/react-native-maps/build.gradle
+@@ -8,7 +8,7 @@ buildscript {
+   }
+   repositories {
+     google()
+-    jcenter()
++    mavenCentral()
+   }
+   dependencies {
+     classpath 'com.android.tools.build:gradle:3.3.1'
+@@ -19,7 +19,7 @@ allprojects {
+   repositories {
+     mavenLocal()
+     google()
+-    jcenter()
++    maventCentral()
+     maven {
+       // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+       url "$rootDir/node_modules/react-native/android"

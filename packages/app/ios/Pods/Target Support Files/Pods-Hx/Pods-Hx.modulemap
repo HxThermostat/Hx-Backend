@@ -1,0 +1,6 @@
+module Pods_Hx {
+  umbrella header "Pods-Hx-umbrella.h"
+
+  export *
+  module * { export * }
+}

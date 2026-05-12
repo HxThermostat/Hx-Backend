@@ -1,0 +1,48 @@
+diff --git a/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m b/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m
+index cf6a0b1..4d187db 100644
+--- a/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m
++++ b/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m
+@@ -14,13 +14,20 @@
+ 
+ @implementation RCTScrollContentView
+ 
++- (void)didMoveToWindow
++{
++    [super didMoveToWindow];
++    RCTScrollView *scrollView = (RCTScrollView *)self.superview.superview;
++    [scrollView updateContentOffsetIfNeeded];
++}
++
+ - (void)reactSetFrame:(CGRect)frame
+ {
+   [super reactSetFrame:frame];
+ 
+   RCTScrollView *scrollView = (RCTScrollView *)self.superview.superview;
+ 
+-  if (!scrollView) {
++  if (!scrollView || !self.window) {
+     return;
+   }
+ 
+diff --git a/node_modules/react-native/template/android/build.gradle b/node_modules/react-native/template/android/build.gradle
+index ed5a568..50636ba 100644
+--- a/node_modules/react-native/template/android/build.gradle
++++ b/node_modules/react-native/template/android/build.gradle
+@@ -9,7 +9,7 @@ buildscript {
+     }
+     repositories {
+         google()
+-        jcenter()
++        mavenCentral()
+     }
+     dependencies {
+         classpath("com.android.tools.build:gradle:3.5.3")
+@@ -31,7 +31,7 @@ allprojects {
+         }
+ 
+         google()
+-        jcenter()
++        mavenCentral()
+         maven { url 'https://www.jitpack.io' }
+     }
+ }

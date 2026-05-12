@@ -1,0 +1,22 @@
+fragment Screen_SelectZone_Controller on Controller {
+  __typename
+  id
+  name
+}
+
+fragment Screen_SelectZone_Location on Location {
+  __typename
+  id
+  name
+  activeFault
+  connectionStatus
+  controllers {
+    ...Screen_SelectZone_Controller
+  }
+}
+
+query SelectZone {
+  locations {
+    ...Screen_SelectZone_Location
+  }
+}

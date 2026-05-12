@@ -1,0 +1,21 @@
+fragment Screen_NameDevice_Controller on Controller {
+  __typename
+  id
+  name
+  zone
+}
+
+fragment Screen_NameDevice_Location on Location {
+  __typename
+  id
+  name
+  controllers {
+    ...Screen_NameDevice_Controller
+  }
+}
+
+query NameDevice($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_NameDevice_Location
+  }
+}

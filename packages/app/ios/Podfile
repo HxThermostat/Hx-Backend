@@ -1,0 +1,67 @@
+
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/react-native-unimodules/cocoapods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '11.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+# We don't want to build Flipper in production builds. There's no way
+# to actually do this on a DEBUG / RELEASE basis, so we're just
+# going to manually opt-in to including Flipper in any given build
+include_flipper = !!ENV["INCLUDE_FLIPPER"]
+IS_CI = ENV['APPCENTER_BUILD_ID']
+
+target 'Hx' do
+  # Pods for Hx
+  config = use_native_modules!
+  use_react_native!(:path => config["reactNativePath"])
+  use_unimodules!
+  use_native_modules!
+
+  target 'HxTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  use_flipper! if include_flipper and not IS_CI
+
+  post_install do |installer|
+    flipper_post_install(installer) if include_flipper and not IS_CI
+
+    # Inherit IPHONEOS_DEPLOYMENT_TARGET for all pods
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+      end
+    end
+  end
+end
+
+target 'Hx-tvOS' do
+  # Pods for Hx-tvOS
+
+  target 'Hx-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+target 'Hx Watch Extension' do
+  use_frameworks!
+  platform :watchos, '4.0'
+
+end
+
+target 'HxGraph' do
+  use_frameworks!
+  platform :watchos, '4.0'
+
+  pod "Apollo"
+end

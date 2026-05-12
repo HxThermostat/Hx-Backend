@@ -1,0 +1,30 @@
+diff --git a/node_modules/react-native-wifi-reborn/android/build.gradle b/node_modules/react-native-wifi-reborn/android/build.gradle
+index 94a7f3b..a7bb18c 100644
+--- a/node_modules/react-native-wifi-reborn/android/build.gradle
++++ b/node_modules/react-native-wifi-reborn/android/build.gradle
+@@ -2,7 +2,7 @@
+ buildscript {
+     repositories {
+         google()
+-        jcenter()
++        mavenCentral()
+     }
+ 
+     dependencies {
+@@ -29,13 +29,13 @@ repositories {
+         url "$projectDir/../node_modules/react-native/android"
+     }
+     google()
+-    jcenter()
++    mavenCentral()
+ }
+ 
+ dependencies {
+     //noinspection GradleDynamicVersion
+     implementation 'com.facebook.react:react-native:+'
+ 
+-    implementation 'com.thanosfisherman.wifiutils:wifiutils:1.6.4'
++    implementation 'io.github.thanosfisherman.wifiutils:wifiutils:1.6.6'
+ }
+   
+\ No newline at end of file

@@ -1,0 +1,5 @@
+mutation RequestShare($input: RequestShareInput!) {
+  requestShare(input: $input) {
+    __typename
+  }
+}

@@ -1,0 +1,22 @@
+diff --git a/node_modules/jsc-android/README.md b/node_modules/jsc-android/README.md
+index 8ceb9c7..a100a4d 100644
+--- a/node_modules/jsc-android/README.md
++++ b/node_modules/jsc-android/README.md
+@@ -75,7 +75,7 @@ then run `npm install` or `yarn` (depending on which npm client you use) in orde
+ allprojects {
+     repositories {
+         mavenLocal()
+-        jcenter()
++        mavenCentral()
+         maven {
+             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+             url "$rootDir/../node_modules/react-native/android"
+@@ -131,7 +131,7 @@ then run `npm install` or `yarn` (depending which npm client you use) in order f
+ allprojects {
+     repositories {
+         mavenLocal()
+-        jcenter()
++        mavenCentral()
+         maven {
+             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+             url "$rootDir/../node_modules/react-native/android"

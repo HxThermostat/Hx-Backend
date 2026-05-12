@@ -1,0 +1,62 @@
+fragment Screen_AirflowSettings_Controller on Controller {
+  __typename
+  id
+  airflow
+  airflowTestActive
+  name
+  zone
+}
+
+fragment Screen_AirflowSettings_Location on Location {
+  __typename
+  id
+  airflow {
+    __typename
+    active
+    max
+    min
+  }
+  name
+}
+
+query AirflowSettings($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_AirflowSettings_Controller
+    location {
+      ...Screen_AirflowSettings_Location
+    }
+  }
+}
+
+mutation ChangeAirflow($controllerId: ID!, $value: Int!) {
+  changeAirflow(input: { id: $controllerId, value: $value }) {
+    __typename
+    ... on ChangeAirflowSuccess {
+      controller {
+        ...Screen_AirflowSettings_Controller
+      }
+    }
+  }
+}
+
+mutation StartAirflowTest($controllerId: ID!) {
+  toggleAirflowTest(input: { id: $controllerId, running: true }) {
+    __typename
+    ... on ToggleAirflowTestSuccess {
+      controller {
+        ...Screen_AirflowSettings_Controller
+      }
+    }
+  }
+}
+
+mutation StopAirflowTest($controllerId: ID!) {
+  toggleAirflowTest(input: { id: $controllerId, running: false }) {
+    __typename
+    ... on ToggleAirflowTestSuccess {
+      controller {
+        ...Screen_AirflowSettings_Controller
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+mutation RegisterLocation($input: RegisterLocationInput!) {
+  registerLocation(input: $input) {
+    __typename
+    ... on RegisterLocationSuccess {
+      location {
+        ...LocationFields
+        controllers {
+          ...ControllerFields
+        }
+      }
+    }
+  }
+}

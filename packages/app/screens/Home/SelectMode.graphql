@@ -1,0 +1,111 @@
+fragment Screen_SelectMode_Location on Location {
+  __typename
+  id
+  override
+  controllers {
+    __typename
+    id
+    away {
+      __typename
+      active
+      setpoints {
+        __typename
+        cool
+        heat
+      }
+    }
+
+    setpoints {
+      __typename
+      cool
+      heat
+    }
+    mode
+  }
+  name
+}
+
+fragment Screen_SelectMode_Controller on Controller {
+  __typename
+  id
+  accessLevel
+  mode
+  modes
+  away {
+    __typename
+    active
+    setpoints {
+      __typename
+      cool
+      heat
+    }
+  }
+  location {
+    ...Screen_SelectMode_Location
+  }
+  name
+  setpoints {
+    __typename
+    cool
+    heat
+  }
+  tempOverride
+}
+
+query SelectMode($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_SelectMode_Controller
+  }
+}
+
+mutation ChangeMode($input: ChangeModeInput!) {
+  changeMode(input: $input) {
+    __typename
+    ... on ChangeModeSuccess {
+      controller {
+        ...Screen_SelectMode_Controller
+      }
+    }
+  }
+}
+
+fragment ControllerAway on Controller {
+  __typename
+  id
+  away {
+    __typename
+    active
+  }
+  setpoints {
+    __typename
+    cool
+    heat
+  }
+}
+
+mutation ChangeAway($input: ChangeAwayInput!) {
+  changeAway(input: $input) {
+    __typename
+    ... on ChangeAwaySuccess {
+      controller {
+        ...ControllerAway
+      }
+    }
+  }
+}
+
+mutation ChangeLocationAway($input: ChangeLocationAwayInput!) {
+  changeLocationAway(input: $input) {
+    __typename
+    ... on ChangeLocationAwaySuccess {
+      location {
+        __typename
+        id
+        controllers {
+          ...ControllerAway
+        }
+        override
+      }
+    }
+  }
+}

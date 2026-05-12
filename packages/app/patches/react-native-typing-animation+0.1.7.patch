@@ -1,0 +1,22 @@
+diff --git a/node_modules/react-native-typing-animation/example/android/build.gradle b/node_modules/react-native-typing-animation/example/android/build.gradle
+index a1e8085..f06c6f6 100644
+--- a/node_modules/react-native-typing-animation/example/android/build.gradle
++++ b/node_modules/react-native-typing-animation/example/android/build.gradle
+@@ -10,7 +10,7 @@ buildscript {
+     }
+     repositories {
+         google()
+-        jcenter()
++        mavenCentral()
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:3.1.4'
+@@ -24,7 +24,7 @@ allprojects {
+     repositories {
+         mavenLocal()
+         google()
+-        jcenter()
++        mavenCentral()
+         maven {
+             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+             url "$rootDir/../node_modules/react-native/android"

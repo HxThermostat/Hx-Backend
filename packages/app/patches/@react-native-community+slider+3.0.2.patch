@@ -1,0 +1,21 @@
+diff --git a/node_modules/@react-native-community/slider/android/build.gradle b/node_modules/@react-native-community/slider/android/build.gradle
+index ed09d94..d46ee4f 100644
+--- a/node_modules/@react-native-community/slider/android/build.gradle
++++ b/node_modules/@react-native-community/slider/android/build.gradle
+@@ -1,7 +1,7 @@
+ buildscript {
+   repositories {
+     google()
+-    jcenter()
++    mavenCentral()
+   }
+ 
+   dependencies {
+@@ -31,7 +31,6 @@ android {
+ 
+ repositories {
+   google()
+-  jcenter()
+   mavenCentral()
+ }
+ 

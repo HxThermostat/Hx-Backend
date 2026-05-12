@@ -1,0 +1,54 @@
+fragment Screen_Settings_SystemInfo_Location on Location {
+  __typename
+  id
+  dealer {
+    email
+    name
+  }
+  controllers {
+    ...Screen_Settings_SystemInfo_Controller
+  }
+  version {
+    application
+    bootloader
+    outdoorControl
+  }
+}
+
+fragment Screen_Settings_SystemInfo_Controller on Controller {
+  __typename
+  id
+  name
+  zoneSensor {
+    sensor
+    version
+  }
+}
+
+query SystemInfo($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_SystemInfo_Location
+  }
+}
+
+query GetFaults($locationId: ID!) {
+  location(id: $locationId) {
+    __typename
+    id
+    accessLevel
+    dealer {
+      email
+      name
+    }
+    faults {
+      createdAt
+      value
+    }
+  }
+}
+
+mutation ResetLogs($locationId: ID!, $logType: LogType!) {
+  resetLogs(input: { id: $locationId, logType: $logType }) {
+    __typename
+  }
+}

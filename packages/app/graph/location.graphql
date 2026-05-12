@@ -1,0 +1,38 @@
+fragment BootstrapLocationFields on Location {
+  __typename
+  id
+}
+
+fragment ProBootstrapLocationFields on Location {
+  __typename
+  ...Screen_ProHome_Location
+}
+
+fragment LocationFields on Location {
+  __typename
+  ...Screen_Home_Location
+  ...Screen_GrantAccess_Location
+  ...Screen_NameDevice_Location
+  ...Screen_SelectZone_Location
+  ...Screen_Settings_Location
+  ...Screen_Settings_Away_Location
+  ...Screen_Settings_Dealer_Location
+  ...Screen_Settings_ManageHumidities_Location
+  ...Screen_Settings_Names_Location
+  ...Screen_Settings_Notifications_Location
+  ...Screen_Settings_Schedule_Location
+  ...Screen_Settings_Support_Location
+  ...Screen_Settings_SystemInfo_Location
+  ...Screen_Settings_Vacation_Location
+  ...Screen_Schedules_Location
+  ...Component_ControlledDial_Location
+  ...Background_OverrideStatus_Location
+}
+
+fragment ProLocationFields on Location {
+  __typename
+  ...Screen_AirflowConfig_Location
+  ...Screen_AirflowSettings_Location
+  ...Screen_InstallerView_Location
+  ...Screen_ProHome_Location
+}

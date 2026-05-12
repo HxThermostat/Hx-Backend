@@ -1,0 +1,5 @@
+mutation ConvertToProAccount($code: String!) {
+  convertToProAccount(input: { code: $code }) {
+    __typename
+  }
+}

@@ -1,0 +1,92 @@
+fragment Screen_Settings_ManageHumidities_Location on Location {
+  __typename
+  id
+  accessLevel
+  controllers {
+    ...Screen_Settings_ManageHumidities_Controller
+  }
+}
+
+fragment Screen_Settings_ManageHumidities_Controller on Controller {
+  __typename
+  id
+  name
+  dehumidification {
+    ...HumidificationFields
+  }
+  humidification {
+    ...HumidificationFields
+  }
+}
+
+query HumidityController($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_Settings_ManageHumidities_Controller
+  }
+}
+
+query HumiditLocation($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_ManageHumidities_Location
+  }
+}
+
+mutation ChangeHumidificationMode($input: ChangeHumidificationModeInput!) {
+  changeHumidificationMode(input: $input) {
+    __typename
+    ... on ChangeHumidificationModeSuccess {
+      controller {
+        __typename
+        id
+        humidification {
+          ...HumidificationFields
+        }
+      }
+    }
+  }
+}
+
+mutation ChangeDehumidificationMode($input: ChangeHumidificationModeInput!) {
+  changeDehumidificationMode(input: $input) {
+    __typename
+    ... on ChangeHumidificationModeSuccess {
+      controller {
+        __typename
+        id
+        dehumidification {
+          ...HumidificationFields
+        }
+      }
+    }
+  }
+}
+
+mutation ChangeHumidification($input: ChangeHumidificationInput!) {
+  changeHumidification(input: $input) {
+    __typename
+    ... on ChangeHumidificationSuccess {
+      controller {
+        __typename
+        id
+        humidification {
+          ...HumidificationFields
+        }
+      }
+    }
+  }
+}
+
+mutation ChangeDehumidification($input: ChangeHumidificationInput!) {
+  changeDehumidification(input: $input) {
+    __typename
+    ... on ChangeHumidificationSuccess {
+      controller {
+        __typename
+        id
+        dehumidification {
+          ...HumidificationFields
+        }
+      }
+    }
+  }
+}

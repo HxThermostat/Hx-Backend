@@ -1,0 +1,10 @@
+directive @access(
+  requires: AccessLevel = INSTALLER
+) on OBJECT | FIELD_DEFINITION
+
+enum AccessLevel {
+  OWNER
+  INSTALLER
+  DIAGNOSTIC
+  STATUS
+}

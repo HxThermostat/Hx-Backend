@@ -1,0 +1,140 @@
+extend type Mutation {
+  checkEmail(input: CheckEmailInput!): CheckEmailResult!
+  sendToken(input: SendTokenInput!): SendTokenResult!
+  signUp(input: SignUpInput!): SignUpResult!
+  signIn(input: SignInInput!): SignInResult!
+  refreshToken(input: RefreshTokenInput!): RefreshTokenResult!
+  signOut(input: SignOutInput!): SignOutResult!
+  generateLoginToken: GenerateLoginTokenResult!
+  generateShareToken: GenerateShareTokenResult!
+  removeAccount(input: RemoveAccountInput!): RemoveAccountResult!
+}
+
+input CheckEmailInput {
+  email: String!
+}
+
+type CheckEmailResult {
+  available: Boolean!
+}
+
+input SendTokenInput {
+  email: String!
+  skipDeepLink: Boolean
+}
+
+enum AccountStatus {
+  CONFIRMED
+  UNCONFIRMED
+}
+
+type SendTokenSuccess {
+  accountStatus: AccountStatus
+}
+
+union SendTokenResult = SendTokenSuccess | NotFound
+
+input SignUpInput {
+  email: String!
+  firstName: String!
+  lastName: String!
+  country: String!
+}
+
+type SignUpSuccess {
+  _: Boolean
+}
+
+type EmailInvalid implements Error {
+  message: String!
+}
+
+type EmailTaken implements Error {
+  message: String!
+}
+
+type FirstNameInvalid implements Error {
+  message: String!
+}
+
+type LastNameInvalid implements Error {
+  message: String!
+}
+
+type CountryInvalid implements Error {
+  message: String!
+}
+
+union SignUpResult =
+    SignUpSuccess
+  | EmailInvalid
+  | EmailTaken
+  | FirstNameInvalid
+  | LastNameInvalid
+  | CountryInvalid
+
+input SignInInput {
+  email: String!
+  token: String!
+}
+
+type SignInSuccess {
+  accessToken: String!
+  refreshToken: String!
+  ttl: Int!
+  user: User!
+}
+
+type TokenInvalid implements Error {
+  message: String!
+}
+
+union SignInResult = SignInSuccess | TokenInvalid | EmailInvalid
+
+input RefreshTokenInput {
+  token: String!
+}
+
+type RefreshTokenSuccess {
+  accessToken: String!
+  refreshToken: String!
+  ttl: Int!
+}
+
+union RefreshTokenResult = RefreshTokenSuccess | TokenInvalid
+
+input SignOutInput {
+  token: String!
+}
+
+type AccessTokenInvalid implements Error {
+  message: String!
+}
+
+type SignOutSuccess {
+  _: Boolean
+}
+
+union SignOutResult = SignOutSuccess | AccessTokenInvalid
+
+type GenerateLoginTokenSuccess {
+  token: String!
+}
+
+union GenerateLoginTokenResult = GenerateLoginTokenSuccess
+
+type GenerateShareTokenSuccess {
+  token: String!
+}
+
+union GenerateShareTokenResult = GenerateShareTokenSuccess
+
+input RemoveAccountInput {
+  token: String!
+}
+
+type RemoveAccountSuccess {
+  _: Boolean
+}
+
+union RemoveAccountResult = RemoveAccountSuccess | TokenInvalid

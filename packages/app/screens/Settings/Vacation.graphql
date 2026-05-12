@@ -1,0 +1,66 @@
+fragment Screen_Settings_Vacation_Location on Location {
+  __typename
+  id
+  controllers {
+    __typename
+    id
+    coolRange {
+      max
+      min
+    }
+    deadband
+    heatRange {
+      max
+      min
+    }
+  }
+  modes
+  override
+  vacation {
+    active
+    setpoints {
+      heat
+      cool
+    }
+  }
+}
+
+query Vacation($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_Vacation_Location
+  }
+}
+
+mutation ChangeVacation($input: ChangeVacationInput!) {
+  changeVacation(input: $input) {
+    __typename
+    ... on ChangeVacationSuccess {
+      location {
+        __typename
+        id
+        override
+        vacation {
+          active
+        }
+      }
+    }
+  }
+}
+
+mutation ChangeVacationSetpoints($input: ChangeVacationSetpointsInput!) {
+  changeVacationSetpoints(input: $input) {
+    __typename
+    ... on ChangeVacationSetpointsSuccess {
+      location {
+        __typename
+        id
+        vacation {
+          setpoints {
+            heat
+            cool
+          }
+        }
+      }
+    }
+  }
+}

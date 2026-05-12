@@ -1,0 +1,8 @@
+mutation GenerateShareToken {
+  generateShareToken {
+    __typename
+    ... on GenerateShareTokenSuccess {
+      token
+    }
+  }
+}

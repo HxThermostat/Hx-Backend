@@ -1,0 +1,18 @@
+fragment Screen_GrantAccess_Location on Location {
+  __typename
+  id
+  dealer {
+    email
+  }
+  name
+}
+
+query GrantAccess($locationId: ID!, $includeLocation: Boolean!) {
+  location(id: $locationId) @include(if: $includeLocation) {
+    ...Screen_GrantAccess_Location
+  }
+
+  locations {
+    ...Screen_GrantAccess_Location
+  }
+}

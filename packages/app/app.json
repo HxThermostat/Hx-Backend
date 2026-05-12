@@ -1,0 +1,13 @@
+{
+  "name": "Hx",
+  "displayName": "Hx™",
+  "expo": {
+    "name": "Hx",
+    "slug": "hx",
+    "sdkVersion": "38.0.0",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "useNextNotificationsApi": true
+    }
+  }
+}

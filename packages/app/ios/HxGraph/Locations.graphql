@@ -1,0 +1,9 @@
+query Locations {
+  me {
+    id
+    temperatureUnit
+  }
+  locations {
+    ...LocationFragment
+  }
+}

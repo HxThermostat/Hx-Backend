@@ -1,0 +1,12 @@
+fragment LocationFragment on Location {
+  __typename
+  id
+  accessLevel
+  name
+  connectionStatus
+  override
+  programmable
+  controllers {
+    ...ZoneFragment
+  }
+}

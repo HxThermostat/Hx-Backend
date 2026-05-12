@@ -1,0 +1,67 @@
+/* 
+  Localizable.strings
+  Hx
+
+  Created by Max Meyers on 7/21/20.
+  Copyright © 2020 Max Meyers. All rights reserved.
+*/
+
+"ZoneList.Title" = "Select zone";
+
+"Zone.IndoorTemp.Caption" = "Indoor";
+"Zone.OutdoorTemp.Caption" = "Outdoor";
+"Zone.Humidity.Caption" = "Humidity";
+"Zone.Toggle.Away" = "Away";
+"Zone.Row.Away" = "Away";
+"Zone.Row.Temperature" = "Temperature";
+"Zone.Row.Fan" = "Fan";
+"Zone.Row.Mode" = "Mode";
+
+"ZoneOffline.Title" = "Thermostat offline";
+
+"Temperature.CancelOverrideButton" = "Back to schedule";
+
+"Temperature.Title" = "Temperature";
+"Temperature.ModeLabel.Cool" = "Cool";
+"Temperature.ModeLabel.Heat" = "Heat";
+"Temperature.ModeLabel.Emergency" = "Emergency";
+
+"AutoTemperature.Title" = "Temperature";
+"AutoTemperature.ModeLabel.Auto" = "Auto";
+
+"Fan.Title" = "Fan";
+"Fan.Mode.Auto" = "Auto";
+"Fan.Mode.Always" = "Always";
+"Fan.Mode.Fifteen" = "15 mins per hour";
+"Fan.Mode.Thirty" = "30 mins per hour";
+"Fan.Mode.FortyFive" = "45 mins per hour";
+"Fan.Airflow.SectionHeader" = "Airflow";
+
+"Mode.Title" = "Mode";
+"Mode.Advanced.SectionHeader" = "Advanced";
+"Mode.Mode.Auto" = "Auto";
+"Mode.Mode.Cool" = "Cool";
+"Mode.Mode.Heat" = "Heat";
+"Mode.Mode.Off" = "Off";
+"Mode.Mode.MaxHeat" = "Max heat";
+"Mode.Mode.MaxCool" = "Max cool";
+"Mode.Mode.Emergency" = "Emergency";
+
+"Away.Title" = "Away";
+"Away.Home.Switch" = "Home";
+"Away.Zone.Switch" = "Zone";
+
+"Message.LoggedOut" = "Log in on your phone";
+"Message.NoZones" = "Connect thermostat on your phone";
+
+"Error.LoadFailed" = "Thermostat data didn't load.";
+"Error.Retry" = "Try again";
+
+"Error.ZoneUpdate.Away" = "Couldn't change the away status.";
+"Error.ZoneUpdate.Setpoint" = "Couldn't change the temperature.";
+"Error.ZoneUpdate.Mode" = "Couldn't change the mode.";
+"Error.ZoneUpdate.FanMode" = "Couldn't change the fan mode.";
+"Error.ZoneUpdate.CancelTempOverride" = "Couldn't go back to schedule.";
+
+"Error.LocationUpdate.Away" = "Couldn't change the home away status.";
+"Error.LocationUpdate.Airflow" = "Couldn't change the airflow.";

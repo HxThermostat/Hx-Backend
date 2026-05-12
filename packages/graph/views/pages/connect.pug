@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block content
+  
+  include ../static/icon.svg
+
+  form(method="POST")
+    fieldset
+      legend Connect to Google
+      p You are allowing Google to view and control all of the thermostats connected to your account.
+      p Your personal information will be kept private, and you can always disconnect from the Google Home app.
+
+      .button
+        button(class="button", type="submit") Connect
+        p.caption
+          a(href="/auth") Cancel

@@ -1,0 +1,81 @@
+enum ShareAccessLevel {
+  INSTALLER
+  DIAGNOSTIC
+  STATUS
+}
+
+type Share {
+  id: ID!
+  accessLevel: ShareAccessLevel!
+  email: String!
+  expiresAt: String
+}
+
+type Sharer {
+  email: String!
+  name: String!
+}
+
+extend type Location {
+  accessLevel: AccessLevel!
+  share: Share
+  sharer: Sharer
+  shares: [Share!]!
+}
+
+extend type Controller {
+  accessLevel: AccessLevel!
+}
+
+extend type Mutation {
+  shareLocation(input: ShareLocationInput!): ShareLocationResult!
+  revokeShare(input: RevokeShareInput!): RevokeShareResult!
+  requestShare(input: RequestShareInput!): RequestShareResult!
+}
+
+input ShareLocationInput {
+  id: ID!
+  accessLevel: ShareAccessLevel!
+  email: String!
+  expiresAt: String
+}
+
+type ShareLocationSuccess {
+  location: Location!
+}
+
+type InvalidEmail implements Error {
+  message: String!
+}
+
+type InvalidDate implements Error {
+  message: String!
+}
+
+union ShareLocationResult =
+    ShareLocationSuccess
+  | InvalidDate
+  | InvalidEmail
+  | NotFound
+
+input RevokeShareInput {
+  id: ID!
+}
+
+type RevokeShareSuccess {
+  location: Location!
+}
+
+union RevokeShareResult = RevokeShareSuccess | NotFound
+
+input RequestShareInput {
+  accessLevel: ShareAccessLevel!
+  email: String!
+  duration: Int
+}
+
+type RequestShareSuccess {
+  _: Boolean
+}
+
+union RequestShareResult = RequestShareSuccess | InvalidEmail

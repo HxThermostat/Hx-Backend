@@ -1,0 +1,10 @@
+mutation RenameController($input: RenameControllerInput!) {
+  renameController(input: $input) {
+    __typename
+    ... on RenameControllerSuccess {
+      controller {
+        ...ControllerFields
+      }
+    }
+  }
+}

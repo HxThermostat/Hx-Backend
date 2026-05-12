@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Hx™</string>
+    <bool name="portrait_only">true</bool>
+</resources>

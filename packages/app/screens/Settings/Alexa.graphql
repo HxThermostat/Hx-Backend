@@ -1,0 +1,8 @@
+mutation GenerateLoginToken {
+  generateLoginToken {
+    __typename
+    ... on GenerateLoginTokenSuccess {
+      token
+    }
+  }
+}

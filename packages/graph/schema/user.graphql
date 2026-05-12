@@ -1,0 +1,60 @@
+enum AccountType {
+  HOMEOWNER
+  PRO
+}
+
+enum TemperatureUnit {
+  F
+  C
+}
+
+type User {
+  id: String!
+  accountType: AccountType!
+  email: String!
+  temperatureUnit: TemperatureUnit!
+}
+
+extend type Query {
+  me: User
+}
+
+extend type Mutation {
+  changeTemperatureUnit(
+    input: ChangeTemperatureUnitInput!
+  ): ChangeTemperatureUnitResult!
+  convertToHomeownerAccount: ConvertToHomeownerAccountResult!
+  convertToProAccount(
+    input: ConvertToProAccountInput!
+  ): ConvertToProAccountResult!
+}
+
+input ChangeTemperatureUnitInput {
+  temperatureUnit: TemperatureUnit!
+}
+
+type ChangeTemperatureUnitSuccess {
+  user: User!
+}
+
+union ChangeTemperatureUnitResult = ChangeTemperatureUnitSuccess
+
+type ConvertToHomeownerAccountSuccess {
+  user: User!
+}
+
+union ConvertToHomeownerAccountResult = ConvertToHomeownerAccountSuccess
+
+input ConvertToProAccountInput {
+  code: String!
+}
+
+type InvalidCode implements Error {
+  message: String!
+}
+
+type ConvertToProAccountSuccess {
+  user: User!
+}
+
+union ConvertToProAccountResult = ConvertToProAccountSuccess | InvalidCode

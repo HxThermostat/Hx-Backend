@@ -1,0 +1,108 @@
+fragment Screen_Home_Controller on Controller {
+  __typename
+  id
+  accessLevel
+  activeScheduleEvent {
+    fanMode
+    setpoints {
+      heat
+      cool
+    }
+  }
+  away {
+    active
+  }
+  disabled
+  fan {
+    mode
+    override
+    active
+  }
+  humidity
+  location {
+    ...Screen_Home_Location
+  }
+  mode
+  name
+  outdoorTemp
+  scheduleOverride
+  tempOverride
+}
+
+fragment Screen_Home_Location on Location {
+  __typename
+  id
+  name
+  activeFault
+  connectionStatus
+  override
+  vacation {
+    active
+    setpoints {
+      heat
+      cool
+    }
+  }
+  controllers {
+    __typename
+    id
+    away {
+      __typename
+      active
+    }
+  }
+}
+
+fragment Screen_Home_User on User {
+  __typename
+  id
+  email
+}
+
+query Home($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_Home_Controller
+  }
+  controllers {
+    id
+    location {
+      id
+    }
+  }
+  me {
+    ...Screen_Home_User
+  }
+}
+
+mutation CancelTemperatureHold($input: CancelTemperatureHoldInput!) {
+  cancelTemperatureHold(input: $input) {
+    __typename
+    ... on CancelTemperatureHoldSuccess {
+      controller {
+        __typename
+        id
+        setpoints {
+          cool
+          heat
+        }
+        tempOverride
+      }
+    }
+  }
+}
+
+mutation CancelFanHold($input: CancelFanHoldInput!) {
+  cancelFanHold(input: $input) {
+    __typename
+    ... on CancelFanHoldSuccess {
+      controller {
+        __typename
+        id
+        fan {
+          mode
+          override
+        }
+      }
+    }
+  }
+}

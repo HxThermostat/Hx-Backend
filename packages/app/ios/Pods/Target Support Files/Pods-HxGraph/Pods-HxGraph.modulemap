@@ -1,0 +1,6 @@
+framework module Pods_HxGraph {
+  umbrella header "Pods-HxGraph-umbrella.h"
+
+  export *
+  module * { export * }
+}

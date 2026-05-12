@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changeDealer it treats missing parameters as a noop 1`] = `
+Object {
+  "data": Object {
+    "changeDealer": Object {
+      "location": Object {
+        "dealer": Object {
+          "email": "tom@hvacpro.com",
+          "name": "Tom Harris",
+          "phone": "510-123-4567",
+          "website": "https://hvacpro.com/",
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeDealer it updates the dealer properties 1`] = `
+Object {
+  "data": Object {
+    "changeDealer": Object {
+      "location": Object {
+        "dealer": Object {
+          "email": "tom@hvacpro.com",
+          "name": "Tom Harris",
+          "phone": "510-123-4567",
+          "website": "https://hvacpro.com/",
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeProgrammable it disables programmable mode 1`] = `
+Object {
+  "data": Object {
+    "changeProgrammable": Object {
+      "location": Object {
+        "programmable": false,
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeProgrammable it enables programmable mode 1`] = `
+Object {
+  "data": Object {
+    "changeProgrammable": Object {
+      "location": Object {
+        "programmable": true,
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeVacation it disables vacation mode 1`] = `
+Object {
+  "data": Object {
+    "changeVacation": Object {
+      "location": Object {
+        "vacation": Object {
+          "active": false,
+          "setpoints": Object {
+            "cool": 85,
+            "heat": 62,
+          },
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeVacation it enables vacation mode 1`] = `
+Object {
+  "data": Object {
+    "changeVacation": Object {
+      "location": Object {
+        "vacation": Object {
+          "active": true,
+          "setpoints": Object {
+            "cool": 85,
+            "heat": 62,
+          },
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeVacationSetpoints it changes the setpoints 1`] = `
+Object {
+  "data": Object {
+    "changeVacationSetpoints": Object {
+      "location": Object {
+        "vacation": Object {
+          "active": false,
+          "setpoints": Object {
+            "cool": 82,
+            "heat": 65,
+          },
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`location it returns the correct fields 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "__typename": "Location",
+      "connectionStatus": "ONLINE",
+      "dealer": Object {
+        "name": "Tom Harris",
+      },
+      "faults": Array [],
+      "id": "AC000W000426300",
+      "lat": 37.8487,
+      "lng": -122.2209,
+      "modes": Array [
+        "OFF",
+        "HEAT",
+        "MAXHEAT",
+        "COOL",
+        "MAXCOOL",
+        "EHEAT",
+        "AUTO",
+      ],
+      "name": "Oakland",
+      "override": null,
+      "programmable": false,
+      "version": Object {
+        "application": "JCI-APPF-LO-02.21nz",
+        "bootloader": "JCI-BOOT-XX-01.01bt",
+        "outdoorControl": "",
+      },
+      "zones": null,
+      "zoning": false,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`locations it returns the correct fields 1`] = `
+Object {
+  "data": Object {
+    "locations": Array [
+      Object {
+        "__typename": "Location",
+        "connectionStatus": "ONLINE",
+        "dealer": Object {
+          "name": "Tom Harris",
+        },
+        "faults": Array [],
+        "id": "AC000W000426300",
+        "lat": 37.8487,
+        "lng": -122.2209,
+        "modes": Array [
+          "OFF",
+          "HEAT",
+          "MAXHEAT",
+          "COOL",
+          "MAXCOOL",
+          "EHEAT",
+          "AUTO",
+        ],
+        "name": "Oakland",
+        "override": null,
+        "programmable": false,
+        "vacation": null,
+        "version": Object {
+          "application": "JCI-APPF-LO-02.21nz",
+          "bootloader": "JCI-BOOT-XX-01.01bt",
+          "outdoorControl": "",
+        },
+        "zones": null,
+        "zoning": false,
+      },
+      Object {
+        "__typename": "Location",
+        "connectionStatus": "OFFLINE",
+        "dealer": Object {
+          "name": "",
+        },
+        "faults": Array [],
+        "id": "AC000W001132899",
+        "lat": 37.6624,
+        "lng": -97.3156,
+        "modes": Array [
+          "OFF",
+          "HEAT",
+          "MAXHEAT",
+          "COOL",
+          "MAXCOOL",
+          "EHEAT",
+          "AUTO",
+        ],
+        "name": "Kraftful HQ",
+        "override": "VACATION",
+        "programmable": true,
+        "vacation": Object {
+          "active": true,
+          "setpoints": Object {
+            "cool": 85,
+            "heat": 58,
+          },
+        },
+        "version": Object {
+          "application": "JCI-APPF-LO-91.23zn",
+          "bootloader": "JCI-BOOT-XX-01.01bt",
+          "outdoorControl": "  1.10",
+        },
+        "zones": 3,
+        "zoning": true,
+      },
+      Object {
+        "__typename": "Location",
+        "connectionStatus": "OFFLINE",
+        "dealer": Object {
+          "name": "Mr Bob",
+        },
+        "faults": Array [
+          Object {
+            "createdAt": "2020-07-23T01:39:59.000Z",
+            "value": "COM ERROR ZONE MODULE",
+          },
+        ],
+        "id": "AC000W005851005",
+        "lat": 37.803916,
+        "lng": -122.26118,
+        "modes": Array [
+          "OFF",
+          "HEAT",
+          "MAXHEAT",
+          "COOL",
+          "MAXCOOL",
+          "EHEAT",
+          "AUTO",
+        ],
+        "name": "Essex",
+        "override": null,
+        "programmable": true,
+        "vacation": Object {
+          "active": false,
+          "setpoints": Object {
+            "cool": 82,
+            "heat": 65,
+          },
+        },
+        "version": Object {
+          "application": "JCI-APPF-LO-02.02zn",
+          "bootloader": "JCI-BOOT-XX-01.01bt",
+          "outdoorControl": "  1.01",
+        },
+        "zones": 4,
+        "zoning": true,
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

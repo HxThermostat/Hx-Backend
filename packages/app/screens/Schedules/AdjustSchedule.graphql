@@ -1,0 +1,60 @@
+fragment Screen_AdjustSchedule_Controller on Controller {
+  __typename
+  id
+  name
+  schedule {
+    day
+    events {
+      ...ScheduleEventFields
+    }
+  }
+  deadband
+  coolRange {
+    min
+    max
+  }
+  heatRange {
+    min
+    max
+  }
+  modes
+}
+
+query AdjustSchedule($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_AdjustSchedule_Controller
+  }
+}
+
+mutation AddLeaveArrive($input: AddLeaveArriveInput!) {
+  addLeaveArrive(input: $input) {
+    __typename
+    ... on AddLeaveArriveSuccess {
+      controller {
+        ...Screen_AdjustSchedule_Controller
+      }
+    }
+  }
+}
+
+mutation ChangeSchedule($input: ChangeScheduleInput!) {
+  changeSchedule(input: $input) {
+    __typename
+    ... on ChangeScheduleSuccess {
+      controller {
+        ...Screen_AdjustSchedule_Controller
+      }
+    }
+  }
+}
+
+mutation RemoveLeaveArrive($input: RemoveLeaveArriveInput!) {
+  removeLeaveArrive(input: $input) {
+    __typename
+    ... on RemoveLeaveArriveSuccess {
+      controller {
+        ...Screen_AdjustSchedule_Controller
+      }
+    }
+  }
+}

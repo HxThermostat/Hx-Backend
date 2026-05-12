@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["**/node_modules"]
+}

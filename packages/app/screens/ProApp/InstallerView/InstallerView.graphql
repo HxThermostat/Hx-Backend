@@ -1,0 +1,32 @@
+fragment Screen_InstallerView_Location on Location {
+  __typename
+  id
+  airflow {
+    __typename
+  }
+  connectionStatus
+  controllers {
+    __typename
+    id
+  }
+  name
+  share {
+    __typename
+    id
+    accessLevel
+    expiresAt
+  }
+  zoning
+}
+
+query InstallerView($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_InstallerView_Location
+  }
+}
+
+mutation ReturnAccess($shareId: ID!) {
+  revokeShare(input: { id: $shareId }) {
+    __typename
+  }
+}

@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  Hx
+
+  Created by Max Meyers on 7/21/20.
+  Copyright © 2020 Max Meyers. All rights reserved.
+*/
+
+"ZoneList.Title" = "Sélectionnez la zone";
+"Zone.IndoorTemp.Caption" = "Intérieure";
+"Zone.OutdoorTemp.Caption" = "Extérieur";
+"Zone.Humidity.Caption" = "Humidité";
+"Zone.Toggle.Away" = "Absent";
+"Zone.Row.Away" = "Absent";
+"Zone.Row.Temperature" = "Température";
+"Zone.Row.Fan" = "Ventilateur";
+"Zone.Row.Mode" = "Mode";
+"ZoneOffline.Title" = "Thermostat est déconnecté ";
+"Temperature.CancelOverrideButton" = "Retour à l'horaire";
+"Temperature.Title" = "Température";
+"Temperature.ModeLabel.Cool" = "Clim";
+"Temperature.ModeLabel.Heat" = "Chauf";
+"Temperature.ModeLabel.Emergency" = "Urgence";
+"AutoTemperature.Title" = "Température";
+"AutoTemperature.ModeLabel.Auto" = "Auto";
+"Fan.Title" = "Ventilateur";
+"Fan.Mode.Auto" = "Auto";
+"Fan.Mode.Always" = "Toujours ";
+"Fan.Mode.Fifteen" = "15 min par heure";
+"Fan.Mode.Thirty" = "30 min par heure";
+"Fan.Mode.FortyFive" = "45 min par heure";
+"Fan.Airflow.SectionHeader" = "Débit d'air ";
+"Mode.Title" = "Mode";
+"Mode.Advanced.SectionHeader" = "Avancés";
+"Mode.Mode.Auto" = "Auto";
+"Mode.Mode.Cool" = "Climatisation";
+"Mode.Mode.Heat" = "Chauffage";
+"Mode.Mode.Off" = "Éteint";
+"Mode.Mode.MaxHeat" = "Max chauf";
+"Mode.Mode.MaxCool" = "Max clim";
+"Mode.Mode.Emergency" = "Urgence";
+"Away.Title" = "Absent";
+"Away.Home.Switch" = "Maison";
+"Away.Zone.Switch" = "Zone";
+"Message.LoggedOut" = "Connectez-vous sur votre téléphone";
+"Message.NoZones" = "Appareiller le thermostat à votre téléphone";
+"Error.LoadFailed" = "Les données du thermostat ne se sont pas chargées.";
+"Error.Retry" = "Réessayez";
+"Error.ZoneUpdate.Away" = "N'a pas pu changer le mode absent.";
+"Error.ZoneUpdate.Setpoint" = "N'a pas pu modifier la température";
+"Error.ZoneUpdate.Mode" = "N'a pas pu changer de mode.";
+"Error.ZoneUpdate.FanMode" = "N'a pas pu changer le mode du ventilateur.";
+"Error.ZoneUpdate.CancelTempOverride" = "N'a pas pu retour à l'horaire.";
+"Error.LocationUpdate.Away" = "N'a pas pu modifier le mode hors domicile.";
+"Error.LocationUpdate.Airflow" = "N'a pas pu modifier le débit d'air.";

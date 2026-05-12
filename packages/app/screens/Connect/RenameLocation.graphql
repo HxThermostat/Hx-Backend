@@ -1,0 +1,10 @@
+mutation RenameLocation($input: RenameLocationInput!) {
+  renameLocation(input: $input) {
+    __typename
+    ... on RenameLocationSuccess {
+      location {
+        ...LocationFields
+      }
+    }
+  }
+}

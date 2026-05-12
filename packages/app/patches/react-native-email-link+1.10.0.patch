@@ -1,0 +1,26 @@
+diff --git a/node_modules/react-native-email-link/android/build.gradle b/node_modules/react-native-email-link/android/build.gradle
+index fb760fd..486b20b 100755
+--- a/node_modules/react-native-email-link/android/build.gradle
++++ b/node_modules/react-native-email-link/android/build.gradle
+@@ -23,11 +23,11 @@ buildscript {
+         compileSdkVersion = 29
+         targetSdkVersion = 29
+         gradlePluginVersion = "3.5.1"
+-        reactNativeVersion = "+" // The react native versioning on jcenter is messed up: https://github.com/facebook/react-native/issues/13094
++        reactNativeVersion = "+" // The react native versioning on mavenCentral is messed up: https://github.com/facebook/react-native/issues/13094
+     }
+ 
+     repositories {
+-        jcenter()
++        mavenCentral()
+         google()
+     }
+ 
+@@ -59,7 +59,6 @@ repositories {
+     maven {
+         url "$projectDir/../../react-native/android"
+     }
+-    jcenter()
+     google()
+ }
+ 

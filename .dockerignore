@@ -1,0 +1,9 @@
+**/Dockerfile
+**/.git
+**/node_modules
+**/*.log
+
+packages/app
+
+packages/graph/dist
+packages/graph/coverage

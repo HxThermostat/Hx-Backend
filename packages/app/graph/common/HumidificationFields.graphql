@@ -1,0 +1,7 @@
+fragment HumidificationFields on Humidification {
+  __typename
+  mode
+  max
+  min
+  value
+}

@@ -1,0 +1,21 @@
+extends ../layout.pug
+
+block content
+
+  include ../static/icon.svg
+
+  form(method="POST")
+    fieldset
+      legend Confirm your account
+      p To sign in, enter the code you copied from the Hx app:
+      input(name="email", type="hidden", value=email)
+      input(autocomplete="none", name="token", placeholder="Code", type="text", required="", minlength=8)
+      p.error
+        if error
+          | That code was invalid or was already used
+        else
+          | &nbsp;
+      p.caption You can also sign in with the code emailed to #[strong #{email}].
+
+      .button
+        button(class="button", type="submit") Sign In

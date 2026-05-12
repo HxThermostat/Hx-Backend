@@ -1,0 +1,213 @@
+interface Notification {
+  enabled: Boolean!
+}
+
+type FaultNotification implements Notification {
+  enabled: Boolean!
+}
+
+type FilterNotification implements Notification {
+  enabled: Boolean!
+}
+
+type HumidityNotification implements Notification {
+  enabled: Boolean!
+  min: Float!
+  max: Float!
+}
+
+type OfflineNotification implements Notification {
+  enabled: Boolean!
+}
+
+type ServiceReminderDate {
+  day: Int!
+  month: Int!
+}
+
+type ServiceReminder implements Notification {
+  enabled: Boolean!
+  spring: ServiceReminderDate
+  fall: ServiceReminderDate
+}
+
+type TemperatureNotification implements Notification {
+  enabled: Boolean!
+  min: Int!
+  max: Int!
+}
+
+enum PushTokenStatus {
+  ENABLED
+  DISABLED
+}
+
+type PushToken {
+  id: ID!
+  platform: Platform!
+  status: PushTokenStatus!
+  token: String!
+}
+
+extend type Controller {
+  humidityNotification: HumidityNotification @access(requires: OWNER)
+  temperatureNotification: TemperatureNotification @access(requires: OWNER)
+}
+
+extend type Location {
+  faultNotification: FaultNotification @access(requires: OWNER)
+  offlineNotification: OfflineNotification @access(requires: OWNER)
+  serviceReminder: ServiceReminder!
+}
+
+extend type User {
+  pushTokens: [PushToken!]!
+}
+
+extend type Mutation {
+  subscribeToNotifications(
+    input: SubscribeToNotificationsInput!
+  ): SubscribeToNotificationsResult!
+  unsubscribeFromNotifications(
+    input: UnsubscribeFromNotificationsInput!
+  ): UnsubscribeFromNotificationsResult!
+  toggleFaultNotification(
+    input: ToggleFaultNotificationInput!
+  ): ToggleFaultNotificationResult!
+  toggleHumidityNotification(
+    input: ToggleHumidityNotificationInput!
+  ): ToggleHumidityNotificationResult!
+  adjustHumidityNotificationThreshold(
+    input: AdjustHumidityNotificationThresholdInput!
+  ): AdjustHumidityNotificationThresholdResult!
+  toggleServiceReminder(
+    input: ToggleServiceReminderInput!
+  ): ToggleServiceReminderResult!
+  adjustServiceReminderDates(
+    input: AdjustServiceReminderDatesInput!
+  ): AdjustServiceReminderDatesResult!
+  toggleTemperatureNotification(
+    input: ToggleTemperatureNotificationInput!
+  ): ToggleTemperatureNotificationResult!
+  adjustTemperatureNotificationThreshold(
+    input: AdjustTemperatureNotificationThresholdInput!
+  ): AdjustTemperatureNotificationThresholdResult!
+}
+
+input SubscribeToNotificationsInput {
+  token: String!
+  platform: Platform!
+}
+
+type SubscribeToNotificationsSuccess {
+  pushToken: PushToken!
+}
+
+union SubscribeToNotificationsResult = SubscribeToNotificationsSuccess
+
+input UnsubscribeFromNotificationsInput {
+  id: ID!
+}
+
+type UnsubscribeFromNotificationsSuccess {
+  _: Boolean
+}
+
+union UnsubscribeFromNotificationsResult =
+    UnsubscribeFromNotificationsSuccess
+  | NotFound
+
+input ToggleFaultNotificationInput {
+  id: ID!
+  enabled: Boolean!
+}
+
+type ToggleFaultNotificationSuccess {
+  location: Location!
+}
+
+union ToggleFaultNotificationResult = ToggleFaultNotificationSuccess | NotFound
+
+input ToggleHumidityNotificationInput {
+  id: ID!
+  enabled: Boolean!
+}
+
+type ToggleHumidityNotificationSuccess {
+  controller: Controller!
+}
+
+union ToggleHumidityNotificationResult =
+    ToggleHumidityNotificationSuccess
+  | NotFound
+
+input AdjustHumidityNotificationThresholdInput {
+  id: ID!
+  min: Float!
+  max: Float!
+}
+
+type AdjustHumidityNotificationThresholdSuccess {
+  controller: Controller!
+}
+
+union AdjustHumidityNotificationThresholdResult =
+    AdjustHumidityNotificationThresholdSuccess
+  | NotFound
+
+input ToggleServiceReminderInput {
+  id: ID!
+  enabled: Boolean!
+}
+
+type ToggleServiceReminderSuccess {
+  location: Location!
+}
+
+union ToggleServiceReminderResult = ToggleServiceReminderSuccess | NotFound
+
+input AdjustServiceReminderDateInput {
+  month: Int!
+  day: Int!
+}
+
+input AdjustServiceReminderDatesInput {
+  id: ID!
+  spring: AdjustServiceReminderDateInput
+  fall: AdjustServiceReminderDateInput
+}
+
+type AdjustServiceReminderDatesSuccess {
+  location: Location!
+}
+
+union AdjustServiceReminderDatesResult =
+    AdjustServiceReminderDatesSuccess
+  | NotFound
+
+input ToggleTemperatureNotificationInput {
+  id: ID!
+  enabled: Boolean!
+}
+
+type ToggleTemperatureNotificationSuccess {
+  controller: Controller!
+}
+
+union ToggleTemperatureNotificationResult =
+    ToggleTemperatureNotificationSuccess
+  | NotFound
+
+input AdjustTemperatureNotificationThresholdInput {
+  id: ID!
+  min: Int!
+  max: Int!
+}
+
+type AdjustTemperatureNotificationThresholdSuccess {
+  controller: Controller!
+}
+
+union AdjustTemperatureNotificationThresholdResult =
+    AdjustTemperatureNotificationThresholdSuccess
+  | NotFound

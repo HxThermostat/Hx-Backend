@@ -1,0 +1,20 @@
+fragment Context_Controllers_Controller on Controller {
+  __typename
+  id
+  location {
+    __typename
+    id
+  }
+}
+
+query ControllersContext {
+  controllers {
+    ...Context_Controllers_Controller
+  }
+}
+
+mutation SetAppActive($controllerId: ID!) {
+  setAppActive(input: { id: $controllerId, active: true }) {
+    __typename
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.jci.RIPL",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 78,
+      "versionName": "3.1.0",
+      "enabled": true,
+      "outputFile": "app-release.apk"
+    }
+  ]
+}

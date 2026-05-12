@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Root" id="AgC-eL-Hgc" customClass="RootInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="overlap" id="qEy-P8-tYw">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="mCB-XY-FOM"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityImage" destination="mCB-XY-FOM" id="2is-oo-hji"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="137" y="30"/>
+        </scene>
+        <!--ZoneOffline-->
+        <scene sceneID="CNg-FK-1Zd">
+            <objects>
+                <controller identifier="ZoneOffline" id="cRT-xo-OxI" customClass="ZoneOfflineInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" id="wiI-Pj-6Fl">
+                            <items>
+                                <imageView alignment="left" verticalAlignment="center" image="warning" contentMode="scaleAspectFit" id="AQP-5y-dE4"/>
+                                <label width="1" widthAdjustment="-42" alignment="right" verticalAlignment="center" text="Thermostat offline [NL]" numberOfLines="0" id="OSp-OP-quC">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="titleLabel" destination="OSp-OP-quC" id="uMm-ip-GHn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="410" y="-296"/>
+        </scene>
+        <!--Zone-->
+        <scene sceneID="a1j-pP-oQc">
+            <objects>
+                <controller identifier="Zone" spacing="4" id="yxP-Pr-F3f" customClass="ZoneInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" height="0.0" alignment="left" radius="0.0" id="iDM-1g-QJR">
+                            <items>
+                                <group alignment="left" spacing="0.0" id="qTx-g7-3m4">
+                                    <items>
+                                        <group alignment="left" layout="vertical" spacing="0.0" id="vjU-ih-pH6">
+                                            <items>
+                                                <label alignment="center" text="0" textAlignment="center" id="wCr-xc-m0j">
+                                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                                </label>
+                                                <label alignment="center" text="Indoor [NL]" textAlignment="center" id="k2g-lj-mTY">
+                                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <label alignment="right" text="º" textAlignment="center" id="PZP-4j-CZg">
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group alignment="center" spacing="0.0" id="Z3w-UX-yBW">
+                                    <items>
+                                        <group alignment="left" layout="vertical" spacing="0.0" id="6jr-QJ-4Of">
+                                            <items>
+                                                <label alignment="center" text="0" textAlignment="center" id="m7l-A1-k3D">
+                                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                                </label>
+                                                <label alignment="center" text="Outdoor [NL]" textAlignment="center" id="CmL-AS-JAE">
+                                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <label alignment="right" text="º" textAlignment="center" id="iWb-I7-w1e">
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group alignment="right" spacing="2" id="Uyj-T4-qqW">
+                                    <items>
+                                        <group alignment="left" layout="vertical" spacing="0.0" id="zmc-VZ-vhd">
+                                            <items>
+                                                <label alignment="center" text="0" textAlignment="center" id="aPw-dX-Rr9">
+                                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                                </label>
+                                                <label alignment="center" text="Humidity [NL]" textAlignment="center" id="8Uc-qZ-fht">
+                                                    <fontDescription key="font" type="system" pointSize="8"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group alignment="left" layout="vertical" id="Fh5-dH-bZw">
+                                            <items>
+                                                <group height="14" alignment="left" layout="vertical" spacing="0.0" id="F26-xk-bFk">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                                </group>
+                                                <label alignment="right" text="%" textAlignment="center" id="sVK-os-Swk">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="6"/>
+                        </group>
+                        <table alignment="left" id="UBR-8t-9kC">
+                            <items>
+                                <tableRow identifier="Away" id="iZi-hH-4I0" userLabel="Away" customClass="AwayRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="45" alignment="left" layout="overlap" id="gdJ-Cq-G0h">
+                                        <items>
+                                            <group height="1" alignment="left" verticalAlignment="center" spacing="12" id="soR-9u-tLW">
+                                                <items>
+                                                    <imageView width="20" height="20" alignment="left" verticalAlignment="center" image="away" contentMode="scaleAspectFit" id="K3M-hP-wf8"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Away [NL]" id="Y4E-jB-Yhj">
+                                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="9" right="0.0" top="0.0" bottom="0.0"/>
+                                                <variation key="device=watch38mm" spacing="4"/>
+                                            </group>
+                                            <switch width="1" height="1" alignment="right" verticalAlignment="center" value="YES" id="6ZF-30-mMS">
+                                                <color key="tintColor" red="0.94901960784313721" green="0.78823529411764703" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="handleToggledChanged:" destination="iZi-hH-4I0" id="iXJ-x3-fCW"/>
+                                                </connections>
+                                            </switch>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="Y4E-jB-Yhj" id="c1d-em-bdA"/>
+                                        <outlet property="toggle" destination="6ZF-30-mMS" id="s5H-Tp-MRx"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="Settings" id="a8u-xR-yjp" userLabel="Settings" customClass="SettingsRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="45" alignment="left" spacing="12" id="Lhs-bv-O1A">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="O7Y-nq-g0F"/>
+                                            <label alignment="left" verticalAlignment="center" text="Settings" id="RCr-tD-1m0">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="9" right="0.0" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm" spacing="4"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="O7Y-nq-g0F" id="Qe7-ws-Np0"/>
+                                        <outlet property="label" destination="RCr-tD-1m0" id="bFF-dm-VTT"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="DisabledSettings" selectable="NO" id="3Qc-xd-cET" userLabel="DisabledSettings" customClass="SettingsRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="45" alignment="left" spacing="12" id="IRa-MG-vST">
+                                        <items>
+                                            <imageView width="20" height="20" alignment="left" verticalAlignment="center" alpha="0.5" contentMode="scaleAspectFit" id="bA9-aE-PV0"/>
+                                            <label alignment="left" verticalAlignment="center" alpha="0.5" text="Settings" id="52M-22-W6Z">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="9" right="0.0" top="0.0" bottom="0.0"/>
+                                        <variation key="device=watch38mm" spacing="4"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="image" destination="bA9-aE-PV0" id="eUi-r4-9bZ"/>
+                                        <outlet property="label" destination="52M-22-W6Z" id="6RX-xq-x4W"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="humidityLabel" destination="8Uc-qZ-fht" id="D1w-u9-6bl"/>
+                        <outlet property="humidityPercentageLabel" destination="aPw-dX-Rr9" id="F0z-of-PpC"/>
+                        <outlet property="indoorLabel" destination="k2g-lj-mTY" id="EHi-lJ-YEW"/>
+                        <outlet property="indoorTempLabel" destination="wCr-xc-m0j" id="QqK-2s-gy1"/>
+                        <outlet property="outdoorLabel" destination="CmL-AS-JAE" id="wI1-Hw-Ufu"/>
+                        <outlet property="outdoorTempLabel" destination="m7l-A1-k3D" id="kh9-Nd-9ci"/>
+                        <outlet property="table" destination="UBR-8t-9kC" id="NBM-d8-MWe"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="410.61538461538464" y="30.948717948717952"/>
+        </scene>
+        <!--Temperature-->
+        <scene sceneID="fLZ-dr-zXa">
+            <objects>
+                <controller identifier="Temperature" fullBounds="YES" id="KAn-28-tpY" customClass="TemperatureInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="overlap" id="FJ5-0L-nVL">
+                            <items>
+                                <group width="119" height="136" alignment="center" layout="overlap" id="9vs-q0-3VH">
+                                    <items>
+                                        <imageView width="1" alignment="center" verticalAlignment="center" image="heat-frame" contentMode="scaleAspectFit" id="Duk-DH-yHE"/>
+                                        <group alignment="center" verticalAlignment="center" layout="overlap" spacing="0.0" id="haI-6q-d5Q">
+                                            <items>
+                                                <group alignment="left" layout="vertical" spacing="0.0" id="Giu-wQ-pcu">
+                                                    <items>
+                                                        <label alignment="center" alpha="0.73999999999999999" text="Heat [NL]" textAlignment="center" id="u9U-Tq-MWV">
+                                                            <fontDescription key="font" type="system" pointSize="11"/>
+                                                        </label>
+                                                        <group alignment="left" id="vLm-er-OPt">
+                                                            <items>
+                                                                <label alignment="center" verticalAlignment="center" text="60" textAlignment="center" id="lsB-lJ-s0Q">
+                                                                    <fontDescription key="font" type="system" pointSize="40"/>
+                                                                </label>
+                                                                <group alignment="right" spacing="0.0" id="Vt0-Ry-HGQ">
+                                                                    <items>
+                                                                        <group width="1" alignment="left" layout="vertical" id="jw5-Mt-2VR">
+                                                                            <items>
+                                                                                <label height="30" alignment="left" text="º" textAlignment="center" id="htm-UK-aYD">
+                                                                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                                                                </label>
+                                                                            </items>
+                                                                        </group>
+                                                                    </items>
+                                                                </group>
+                                                            </items>
+                                                        </group>
+                                                        <group alignment="center" hidden="YES" layout="overlap" id="ydu-ed-nwr">
+                                                            <items>
+                                                                <label alignment="center" verticalAlignment="center" text="Max" textAlignment="center" id="Nq2-Gi-Sk3">
+                                                                    <fontDescription key="font" type="system" pointSize="40"/>
+                                                                </label>
+                                                            </items>
+                                                        </group>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <label alignment="center" verticalAlignment="bottom" alpha="0.73999999999999999" text="Back to schedule [NL]" textAlignment="center" id="9Ym-Vx-sqd">
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="NkY-sp-YWi">
+                                            <connections>
+                                                <action selector="cancelOverrideTapped:" destination="KAn-28-tpY" id="G9P-AZ-6xU"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="20" bottom="0.0"/>
+                            <variation key="device=watch38mm">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="15" bottom="0.0"/>
+                            </variation>
+                            <variation key="device=watch40mm">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="18" bottom="0.0"/>
+                            </variation>
+                            <variation key="device=watch42mm">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="17" bottom="0.0"/>
+                            </variation>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="cancelOverrideLabel" destination="9Ym-Vx-sqd" id="v3h-NC-qwU"/>
+                        <outlet property="frameImage" destination="Duk-DH-yHE" id="pIy-ac-AUr"/>
+                        <outlet property="maxGroup" destination="ydu-ed-nwr" id="mK2-q3-reA"/>
+                        <outlet property="modeLabel" destination="u9U-Tq-MWV" id="Mc5-oH-heC"/>
+                        <outlet property="tempGroup" destination="vLm-er-OPt" id="pnI-Jy-G16"/>
+                        <outlet property="tempLabel" destination="lsB-lJ-s0Q" id="JQW-Vg-eGo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="664.47826086956513" y="29.598214285714285"/>
+        </scene>
+        <!--Fan-->
+        <scene sceneID="k23-DC-mOo">
+            <objects>
+                <controller identifier="Fan" id="mxJ-hK-laB" customClass="FanInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <table alignment="left" id="MYV-je-zx5">
+                            <items>
+                                <tableRow identifier="FanMode" id="DK1-2z-iRj" customClass="FanModeRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="45" alignment="left" id="5XQ-MT-Hti">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Fan setting [NL]" id="bNb-ia-K5a"/>
+                                            <imageView alignment="right" verticalAlignment="center" image="Check" id="zQl-TG-vAm"/>
+                                        </items>
+                                        <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="checkImage" destination="zQl-TG-vAm" id="utl-3h-6ZF"/>
+                                        <outlet property="nameLabel" destination="bNb-ia-K5a" id="4sN-mb-UTu"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="Airflow" id="3Ww-V5-vEi" customClass="AirflowRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="QMb-O4-xkj">
+                                        <items>
+                                            <group width="1" alignment="left" id="gZ2-J3-LMm">
+                                                <items>
+                                                    <label alignment="left" text="Airflow [NL]" textAlignment="left" id="TAy-kb-GHg">
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="8" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <group width="1" height="45" alignment="left" layout="overlap" id="Nlm-Sr-7OJ">
+                                                <items>
+                                                    <slider width="1" alignment="left" continuous="YES" value="0.25" steps="10" id="U4c-ZM-l7O">
+                                                        <color key="color" name="kraftful-yellow"/>
+                                                        <connections>
+                                                            <action selector="sliderValueChanged:" destination="3Ww-V5-vEi" id="jg7-56-pMw"/>
+                                                        </connections>
+                                                    </slider>
+                                                </items>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="slider" destination="U4c-ZM-l7O" id="GFq-Sj-kAw"/>
+                                        <outlet property="titleLabel" destination="TAy-kb-GHg" id="YXk-0S-CbB"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="MYV-je-zx5" id="WYW-5A-KVo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="664" y="325"/>
+        </scene>
+        <!--AutoTemperature-->
+        <scene sceneID="dpa-IZ-pNQ">
+            <objects>
+                <controller identifier="AutoTemperature" fullBounds="YES" id="PW9-99-VD4" customClass="AutoTemperatureInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="overlap" id="roa-XB-7D1">
+                            <items>
+                                <group width="119" height="136" alignment="center" layout="overlap" id="17y-mQ-oTd">
+                                    <items>
+                                        <imageView width="1" alignment="center" verticalAlignment="center" image="auto-frame" contentMode="scaleAspectFit" id="TWP-LU-000"/>
+                                        <group alignment="center" verticalAlignment="center" layout="vertical" spacing="15" id="yzh-Zp-pJl" userLabel="Auto Temp Group">
+                                            <items>
+                                                <label alignment="center" alpha="0.73999999999999999" text="Auto" id="QCv-vy-yIz">
+                                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                                </label>
+                                                <group alignment="left" verticalAlignment="bottom" spacing="12" id="VZL-on-AUH">
+                                                    <items>
+                                                        <group width="40" alignment="left" verticalAlignment="center" radius="2" id="gtE-Zr-8qI">
+                                                            <items>
+                                                                <group width="40" alignment="left" layout="overlap" radius="2" id="S5v-cf-Jha">
+                                                                    <items>
+                                                                        <label alignment="center" verticalAlignment="center" text="65º" id="8LL-LU-YIt">
+                                                                            <fontDescription key="font" type="system" pointSize="17"/>
+                                                                            <variation key="device=watch38mm">
+                                                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                                                            </variation>
+                                                                            <variation key="device=watch40mm">
+                                                                                <fontDescription key="font" type="system" pointSize="15"/>
+                                                                            </variation>
+                                                                            <variation key="device=watch42mm">
+                                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                    </items>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <variation key="device=watch38mm" width="30"/>
+                                                                    <variation key="device=watch40mm" width="35"/>
+                                                                    <variation key="device=watch42mm" width="34"/>
+                                                                </group>
+                                                            </items>
+                                                            <gestureRecognizers>
+                                                                <tapGestureRecognizer id="tEf-vM-kKF">
+                                                                    <connections>
+                                                                        <action selector="lowTemperatureGroupTapped:" destination="PW9-99-VD4" id="gHC-3j-8WJ"/>
+                                                                    </connections>
+                                                                </tapGestureRecognizer>
+                                                            </gestureRecognizers>
+                                                            <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
+                                                            <variation key="device=watch38mm" width="30"/>
+                                                            <variation key="device=watch40mm" width="35"/>
+                                                            <variation key="device=watch42mm" width="34"/>
+                                                        </group>
+                                                        <group width="40" alignment="left" verticalAlignment="center" radius="2" id="clm-TO-z6l">
+                                                            <items>
+                                                                <group width="40" alignment="left" layout="overlap" radius="2" id="FBK-zp-pPO">
+                                                                    <items>
+                                                                        <label alignment="center" verticalAlignment="center" text="75º" id="C6R-8d-xOR">
+                                                                            <fontDescription key="font" type="system" pointSize="17"/>
+                                                                            <variation key="device=watch38mm">
+                                                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                                                            </variation>
+                                                                            <variation key="device=watch40mm">
+                                                                                <fontDescription key="font" type="system" pointSize="15"/>
+                                                                            </variation>
+                                                                            <variation key="device=watch42mm">
+                                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                    </items>
+                                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <variation key="device=watch38mm" width="30"/>
+                                                                    <variation key="device=watch40mm" width="35"/>
+                                                                    <variation key="device=watch42mm" width="34"/>
+                                                                </group>
+                                                            </items>
+                                                            <gestureRecognizers>
+                                                                <tapGestureRecognizer id="nr8-su-SL0">
+                                                                    <connections>
+                                                                        <action selector="highTemperatureGroupTapped:" destination="PW9-99-VD4" id="zi7-W8-6OQ"/>
+                                                                    </connections>
+                                                                </tapGestureRecognizer>
+                                                            </gestureRecognizers>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <edgeInsets key="margins" left="1" right="1" top="1" bottom="1"/>
+                                                            <variation key="device=watch38mm" width="30"/>
+                                                            <variation key="device=watch40mm" width="35"/>
+                                                            <variation key="device=watch42mm" width="34"/>
+                                                        </group>
+                                                    </items>
+                                                    <variation key="device=watch38mm" spacing="9"/>
+                                                    <variation key="device=watch40mm" spacing="11"/>
+                                                    <variation key="device=watch42mm" spacing="10"/>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <label alignment="center" verticalAlignment="bottom" alpha="0.73999999999999999" text="Back to schedule [NL]" textAlignment="center" id="YMA-17-qWD">
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="oBG-Yp-rpo">
+                                            <connections>
+                                                <action selector="cancelOverrideTapped:" destination="PW9-99-VD4" id="fpq-xH-bI0"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="20" bottom="0.0"/>
+                            <variation key="device=watch38mm">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="15" bottom="0.0"/>
+                            </variation>
+                            <variation key="device=watch40mm">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="18" bottom="0.0"/>
+                            </variation>
+                            <variation key="device=watch42mm">
+                                <edgeInsets key="margins" left="0.0" right="0.0" top="17" bottom="0.0"/>
+                            </variation>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="cancelOverrideLabel" destination="YMA-17-qWD" id="PaA-li-6qh"/>
+                        <outlet property="highBorderGroup" destination="clm-TO-z6l" id="Mal-Wg-XxZ"/>
+                        <outlet property="highTempLabel" destination="C6R-8d-xOR" id="cyr-el-r8R"/>
+                        <outlet property="lowBorderGroup" destination="gtE-Zr-8qI" id="Hvp-WK-A6T"/>
+                        <outlet property="lowTempLabel" destination="8LL-LU-YIt" id="m4q-qh-43o"/>
+                        <outlet property="modeLabel" destination="QCv-vy-yIz" id="qwb-k8-og4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="926.86956521739125" y="29.598214285714285"/>
+        </scene>
+        <!--Error-->
+        <scene sceneID="21R-Wv-L3P">
+            <objects>
+                <controller identifier="Error" id="E0J-cA-96D" customClass="ErrorInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="40" id="8ZN-s3-WxQ">
+                            <items>
+                                <label alignment="center" text="The error message goes here [NL]." textAlignment="center" numberOfLines="0" id="j6B-Te-OKl">
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
+                                <button width="1" alignment="center" verticalAlignment="bottom" title="Action [NL]" id="6lQ-JA-xod">
+                                    <connections>
+                                        <action selector="actionButtonPressed" destination="E0J-cA-96D" id="1Zw-yD-sov"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="actionButton" destination="6lQ-JA-xod" id="h1b-jD-nFM"/>
+                        <outlet property="titleLabel" destination="j6B-Te-OKl" id="QKJ-Vn-Y13"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-135" y="325"/>
+        </scene>
+        <!--ZoneList-->
+        <scene sceneID="CPf-z9-gO7">
+            <objects>
+                <controller identifier="ZoneList" id="QwN-Kw-DyY" customClass="ZoneListInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <table alignment="left" id="WUY-DY-rgo">
+                            <items>
+                                <tableRow identifier="Zone" id="HIB-NB-6wF" customClass="ZoneRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="4hX-cf-pLr">
+                                        <items>
+                                            <group width="1" alignment="left" id="ilE-ew-Xte">
+                                                <items>
+                                                    <label alignment="left" text="Group Name" id="UyT-gz-eO0">
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="12" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <group width="1" height="45" alignment="left" verticalAlignment="bottom" radius="8" id="DBR-y0-8fk">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" id="bN5-uc-grZ"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="groupNameGroup" destination="ilE-ew-Xte" id="zcV-oC-HFJ"/>
+                                        <outlet property="groupNameLabel" destination="UyT-gz-eO0" id="OV7-YL-41w"/>
+                                        <outlet property="nameLabel" destination="bN5-uc-grZ" id="c0v-OV-spz"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="Spacer" selectable="NO" id="Bnr-w0-NZL">
+                                    <group key="rootItem" width="1" height="2" alignment="left" id="kix-M6-k20">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="WUY-DY-rgo" id="qBh-yr-Ygs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="137" y="325"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="90U-6y-0Ov">
+            <objects>
+                <controller identifier="Message" fullBounds="YES" id="84W-w4-iiG" customClass="MessageInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="0.65700000000000003" height="1" alignment="center" verticalAlignment="center" layout="overlap" id="KRF-L7-B7Y">
+                            <items>
+                                <imageView width="1" alignment="center" verticalAlignment="center" image="message-frame" contentMode="scaleAspectFit" id="6GG-yM-csB"/>
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" id="DWf-8i-fc7">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Connect thermostat on your phone. [NL]" textAlignment="center" numberOfLines="0" id="VhU-fu-IXV">
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                            </variation>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                            </variation>
+                                            <variation key="device=watch42mm">
+                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                            </variation>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="12" right="12" top="0.0" bottom="0.0"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="messageLabel" destination="VhU-fu-IXV" id="U72-0Q-Bfu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-134" y="620"/>
+        </scene>
+        <!--Away-->
+        <scene sceneID="418-X0-qdx">
+            <objects>
+                <controller identifier="Away" id="hMD-7G-B3g" customClass="AwayInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="Gky-rf-zE7">
+                            <items>
+                                <switch width="1" alignment="right" verticalAlignment="center" title="Away from home [NL]" id="UD2-ht-VSE">
+                                    <color key="tintColor" red="0.94901960780000005" green="0.78823529410000004" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="homeAwaySwitchValueChanged:" destination="hMD-7G-B3g" id="OtU-r6-m5c"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="right" verticalAlignment="center" value="YES" title="Away from zone [NL]" id="cib-Z4-xgN">
+                                    <color key="tintColor" red="0.94901960780000005" green="0.78823529410000004" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="zoneAwaySwitchValueChanged:" destination="hMD-7G-B3g" id="ZwI-WY-TmV"/>
+                                    </connections>
+                                </switch>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="homeAwaySwitch" destination="UD2-ht-VSE" id="BFy-Fp-h7M"/>
+                        <outlet property="zoneAwaySwitch" destination="cib-Z4-xgN" id="7Zn-eD-eFC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="137" y="625"/>
+        </scene>
+        <!--Mode-->
+        <scene sceneID="i9M-hS-YZS">
+            <objects>
+                <controller identifier="Mode" id="vsU-bq-pUD" customClass="ModeInterfaceController" customModule="Hx_Watch_Extension">
+                    <items>
+                        <table alignment="left" id="byu-Sm-BWu">
+                            <items>
+                                <tableRow identifier="Mode" id="D9u-F8-7Ed" customClass="ModeRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="i7R-63-u1d">
+                                        <items>
+                                            <group width="1" alignment="left" id="3J6-nS-dxJ">
+                                                <items>
+                                                    <label alignment="left" text="Group Name" id="Nzu-Y8-wKY">
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="12" right="0.0" top="12" bottom="0.0"/>
+                                            </group>
+                                            <group width="1" height="45" alignment="left" verticalAlignment="bottom" radius="8" id="bzn-vK-emZ">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" id="2gb-jN-Heh"/>
+                                                    <imageView alignment="right" verticalAlignment="center" image="Check" id="bN5-ui-btt"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="checkImage" destination="bN5-ui-btt" id="iOB-NL-TZf"/>
+                                        <outlet property="groupNameGroup" destination="3J6-nS-dxJ" id="HwI-WH-3WA"/>
+                                        <outlet property="groupNameLabel" destination="Nzu-Y8-wKY" id="gsT-7Q-1lP"/>
+                                        <outlet property="nameLabel" destination="2gb-jN-Heh" id="vgV-Sh-VRr"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="DisabledMode" selectable="NO" id="Zfa-04-CNg" userLabel="DisabledMode" customClass="DisabledModeRowController" customModule="Hx_Watch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" spacing="2" id="arL-GX-byY">
+                                        <items>
+                                            <group width="1" alignment="left" id="V1j-RX-b6L">
+                                                <items>
+                                                    <label alignment="left" text="Group Name" id="dXR-DN-yHd">
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </label>
+                                                </items>
+                                                <edgeInsets key="margins" left="12" right="0.0" top="12" bottom="0.0"/>
+                                            </group>
+                                            <group width="1" height="45" alignment="left" verticalAlignment="bottom" radius="8" id="c61-si-cjR">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" alpha="0.5" text="Label" id="0f0-Rt-nCa"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="groupNameGroup" destination="V1j-RX-b6L" id="ijW-DS-arp"/>
+                                        <outlet property="groupNameLabel" destination="dXR-DN-yHd" id="bER-wd-VUg"/>
+                                        <outlet property="nameLabel" destination="0f0-Rt-nCa" id="cgg-dJ-m4k"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="byu-Sm-BWu" id="10M-tv-lCm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="410" y="325"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Check" width="12.5" height="9"/>
+        <image name="auto-frame" width="121" height="135"/>
+        <image name="away" width="20" height="20"/>
+        <image name="heat-frame" width="121" height="135"/>
+        <image name="message-frame" width="121" height="135"/>
+        <image name="warning" width="30" height="30"/>
+        <namedColor name="kraftful-yellow">
+            <color red="0.94901960784313721" green="0.78823529411764703" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705878" green="0.44313725490196082" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

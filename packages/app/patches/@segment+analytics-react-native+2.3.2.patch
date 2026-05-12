@@ -1,0 +1,73 @@
+diff --git a/node_modules/@segment/analytics-react-native/android/build.gradle b/node_modules/@segment/analytics-react-native/android/build.gradle
+index 7384f3c..599ce7a 100644
+--- a/node_modules/@segment/analytics-react-native/android/build.gradle
++++ b/node_modules/@segment/analytics-react-native/android/build.gradle
+@@ -4,7 +4,7 @@ buildscript {
+ 
+   repositories {
+     google()
+-    jcenter()
++    mavenCentral()
+   }
+ 
+   dependencies {
+@@ -54,7 +54,6 @@ android {
+ 
+ repositories {
+   mavenCentral()
+-  jcenter()
+   google()
+ 
+   def found = false
+diff --git a/node_modules/@segment/analytics-react-native/src/api.ts b/node_modules/@segment/analytics-react-native/src/api.ts
+index 0dddc16..fd23b4c 100644
+--- a/node_modules/@segment/analytics-react-native/src/api.ts
++++ b/node_modules/@segment/analytics-react-native/src/api.ts
+@@ -9,17 +9,35 @@ export const sendEvents = async ({
+   config: Config;
+   events: SegmentEvent[];
+ }) => {
+-  const requestUrl = config.proxy || batchApi;
+-  await fetch(requestUrl, {
+-    method: 'POST',
+-    body: JSON.stringify({
+-      batch: events,
+-      sentAt: new Date().toISOString(),
+-      writeKey: config.writeKey,
+-    }),
+-    headers: {
+-      'Authorization': `Basic ${Base64.encode(`${config.writeKey}:`)}`,
+-      'Content-Type': 'text/plain',
+-    },
++  const body = JSON.stringify({
++    batch: events,
++    sentAt: new Date().toISOString(),
++    writeKey: config.writeKey
+   });
++  const headers = {
++    'Authorization': `Basic ${Base64.encode(`${config.writeKey}:`)}`,
++    'Content-Type': 'text/plain'
++  };
++
++  // Send to Segment batch api always
++  const segmentFetch =
++    fetch(batchApi, {
++      method: 'POST',
++      body,
++      headers,
++    });
++
++  if (config.proxy != null) {
++    await Promise.all([
++      segmentFetch,
++      // Also send to proxy api if present
++      fetch(config.proxy, {
++        method: 'POST',
++        body,
++        headers,
++      }),
++    ]);
++  } else {
++    await segmentFetch;
++  }
+ };

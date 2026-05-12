@@ -1,0 +1,160 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+require "dotenv/load"
+require_relative "s3_folder_uploader"
+
+Dotenv.load('../../.env')
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Configure build for AppCenter"
+  lane :app_center do |options|
+    update_project_team(path: "Hx.xcodeproj", teamid: "KX36WH5R5N")
+
+    # App
+    update_app_identifier(
+      xcodeproj: "Hx.xcodeproj",
+      plist_path: "./Hx/Info.plist",
+      app_identifier: "com.jci.thermostat280"
+    )
+    update_code_signing_settings(
+      path: "Hx.xcodeproj",
+      use_automatic_signing: false,
+      profile_name: "Hx Thermostat App Store 2021",
+      code_sign_identity: "iPhone Distribution",
+      targets: ["Hx"]
+    )
+
+    # Watch app
+    update_app_identifier(
+      xcodeproj: "Hx.xcodeproj",
+      plist_path: "./Hx Watch/Info.plist",
+      app_identifier: "com.jci.thermostat280.watch"
+    )
+    update_info_plist(
+      xcodeproj: "Hx.xcodeproj",
+      plist_path: "./Hx Watch/Info.plist",
+      block: proc do |plist|
+        plist["WKCompanionAppBundleIdentifier"] = "com.jci.thermostat280"
+      end
+    )
+    update_code_signing_settings(
+      path: "Hx.xcodeproj",
+      use_automatic_signing: false,
+      profile_name: "Hx Thermostat Watch App Store 2022",
+      code_sign_identity: "iPhone Distribution",
+      targets: ["Hx Watch"]
+    )
+
+    # Watch extension
+    update_app_identifier(
+      xcodeproj: "Hx.xcodeproj",
+      plist_path: "./Hx Watch Extension/Info.plist",
+      app_identifier: "com.jci.thermostat280.watch.extension"
+    )
+    update_info_plist(
+      xcodeproj: "Hx.xcodeproj",
+      plist_path: "./Hx Watch Extension/Info.plist",
+      block: proc do |plist|
+        plist["NSExtension"]["NSExtensionAttributes"]["WKAppBundleIdentifier"] = "com.jci.thermostat280.watch"
+      end
+    )
+    update_code_signing_settings(
+      path: "Hx.xcodeproj",
+      use_automatic_signing: false,
+      profile_name: "Hx Thermostat Watch Extension App Store 2022",
+      code_sign_identity: "iPhone Distribution",
+      targets: ["Hx Watch Extension"]
+    )
+    
+    # Hx Graph
+    update_app_identifier(
+      xcodeproj: "Hx.xcodeproj",
+      plist_path: "./HxGraph/Info.plist",
+      app_identifier: "com.jci.thermostat280.HxGraph"
+    )
+    update_code_signing_settings(
+      path: "Hx.xcodeproj",
+      use_automatic_signing: false,
+      code_sign_identity: "iPhone Distribution",
+      targets: ["HxGraph"]
+    )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do |options|
+    match(type: "appstore", readonly: options[:readonly] != false)
+
+    build_app(
+      workspace: "Hx.xcworkspace",
+      scheme: "Hx",
+      include_bitcode: false,
+      include_symbols: false
+    )
+
+    upload_to_testflight(app_identifier: "com.kraftful.dev.hx.homeowner")
+    upload_symbols
+  end
+
+  lane :upload_symbols do
+    download_dsyms
+    sentry_upload_dsym(
+      auth_token: 'f0ab3135a67a41fa871a794b196a427917e26c2582874bfca1c21136e98973ef',
+      org_slug: 'kraftful',
+      project_slug: 'hx-app'
+    )
+    clean_build_artifacts
+  end
+
+  lane :update_registered_devices do
+    register_devices(devices_file: "fastlane/devices.txt")
+    match(type: "development", force_for_new_devices: true)
+  end
+
+  desc "Pulls keys, certificates and profiles for all targets"
+  lane :certificates do |options|
+    puts options.inspect
+    match(
+      app_identifier: [
+        "com.kraftful.dev.hx.homeowner",
+        "com.kraftful.dev.hx.homeowner.watchkitapp",
+        "com.kraftful.dev.hx.homeowner.watchkitapp.watchkitextension",
+        "com.kraftful.dev.hx.HxGraph",
+      ],
+      readonly: options[:readonly] != false
+    )
+  end
+
+  lane :publish_js_bundles_and_assets do |options| 
+    BASE_URL = "https://hx.kraftful.app/update"
+
+    package = read_json(json_path: "../package.json")
+    version =  package[:version]
+    # all OTA updates exist under their equivalent "x.x.0" release
+    version.gsub!(/.$/, "0")
+
+    Dir.chdir("../../") do
+      sh "yarn expo export --public-url #{BASE_URL}/#{version} --target bare  --dump-sourcemap"
+    end
+    upload_s3(version: version)
+  end
+
+  private_lane :upload_s3 do |options|
+    uploader = S3FolderUploader.new('../../dist', options[:version])
+    uploader.upload!
+  end
+end

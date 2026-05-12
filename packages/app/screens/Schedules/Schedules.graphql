@@ -1,0 +1,45 @@
+fragment Screen_Schedules_Location on Location {
+  __typename
+  id
+  name
+  programmable
+}
+
+fragment Screen_Schedules_Controller on Controller {
+  __typename
+  id
+  accessLevel
+  location {
+    ...Screen_Schedules_Location
+  }
+  name
+  schedule {
+    day
+    events {
+      ...ScheduleEventFields
+    }
+  }
+}
+
+query Schedules($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_Schedules_Controller
+  }
+  controllers {
+    id
+    location {
+      id
+    }
+  }
+}
+
+mutation EnableProgrammable($locationId: ID!) {
+  changeProgrammable(input: { id: $locationId, programmable: true }) {
+    __typename
+    ... on ChangeProgrammableSuccess {
+      location {
+        ...Screen_Schedules_Location
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+fragment Screen_Settings_Away_Controller on Controller {
+  __typename
+  id
+  name
+  away {
+    setpoints {
+      heat
+      cool
+    }
+  }
+  coolRange {
+    max
+    min
+  }
+  deadband
+  heatRange {
+    max
+    min
+  }
+  modes
+}
+
+fragment Screen_Settings_Away_Location on Location {
+  __typename
+  id
+  accessLevel
+  lat
+  lng
+  name
+  controllers {
+    ...Screen_Settings_Away_Controller
+  }
+}
+
+query AwayController($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_Settings_Away_Controller
+  }
+}
+
+query AwayLocation($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_Away_Location
+  }
+}
+
+mutation ChangeAwaySetpoints($input: ChangeAwaySetpointsInput!) {
+  changeAwaySetpoints(input: $input) {
+    __typename
+    ... on ChangeAwaySetpointsSuccess {
+      controller {
+        ...Screen_Settings_Away_Controller
+      }
+    }
+  }
+}

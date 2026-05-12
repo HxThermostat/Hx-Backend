@@ -1,0 +1,13 @@
+mutation RefreshToken($input: RefreshTokenInput!) {
+  refreshToken(input: $input) {
+    __typename
+    ... on RefreshTokenSuccess {
+      accessToken
+      refreshToken
+      ttl
+    }
+    ... on TokenInvalid {
+      message
+    }
+  }
+}

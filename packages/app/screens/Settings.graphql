@@ -1,0 +1,65 @@
+fragment Screen_Settings_Location on Location {
+  __typename
+  id
+  accessLevel
+  controller {
+    ...Screen_Settings_Controller
+  }
+  controllers {
+    ...Screen_Settings_Controller
+    zone
+  }
+  dealer {
+    name
+  }
+  name
+  vacation {
+    setpoints {
+      heat
+      cool
+    }
+  }
+}
+
+fragment Screen_Settings_Controller on Controller {
+  __typename
+  id
+  name
+  away {
+    setpoints {
+      heat
+      cool
+    }
+  }
+  humidification {
+    ...HumidificationFields
+  }
+  dehumidification {
+    ...HumidificationFields
+  }
+}
+
+query Settings {
+  locations {
+    ...Screen_Settings_Location
+  }
+}
+
+query SettingsLocation($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_Location
+  }
+}
+
+mutation ChangeTemperatureUnit($input: ChangeTemperatureUnitInput!) {
+  changeTemperatureUnit(input: $input) {
+    __typename
+    ... on ChangeTemperatureUnitSuccess {
+      user {
+        __typename
+        id
+        temperatureUnit
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+fragment Screen_Settings_Support_Location on Location {
+  __typename
+  id
+  name
+  dealer {
+    name
+  }
+}
+
+query Support {
+  locations {
+    ...Screen_Settings_Support_Location
+  }
+}

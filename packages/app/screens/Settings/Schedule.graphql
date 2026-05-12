@@ -1,0 +1,69 @@
+fragment Screen_Settings_Schedule_Controller on Controller {
+  __typename
+  id
+  name
+  scheduleOverride
+}
+
+fragment Screen_Settings_Schedule_Location on Location {
+  __typename
+  id
+  accessLevel
+  controllers {
+    ...Screen_Settings_Schedule_Controller
+  }
+  programmable
+}
+
+query SettingsScheduleLocation($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_Schedule_Location
+  }
+}
+
+query SettingsScheduleController($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_Settings_Schedule_Controller
+  }
+}
+
+mutation ChangeProgrammable($input: ChangeProgrammableInput!) {
+  changeProgrammable(input: $input) {
+    __typename
+    ... on ChangeProgrammableSuccess {
+      location {
+        ...Screen_Settings_Schedule_Location
+      }
+    }
+  }
+}
+
+mutation ChangeScheduleOverride($input: ChangeScheduleOverrideInput!) {
+  changeScheduleOverride(input: $input) {
+    __typename
+    ... on ChangeScheduleOverrideSuccess {
+      controller {
+        ...Screen_Settings_Schedule_Controller
+      }
+    }
+  }
+}
+
+mutation RestoreDefaultSchedule($controllerId: ID!, $days: [Day!]!) {
+  restoreDefaultSchedule(input: { id: $controllerId, days: $days }) {
+    __typename
+    ... on RestoreDefaultScheduleSuccess {
+      controller {
+        __typename
+        id
+        name
+        schedule {
+          day
+          events {
+            ...ScheduleEventFields
+          }
+        }
+      }
+    }
+  }
+}

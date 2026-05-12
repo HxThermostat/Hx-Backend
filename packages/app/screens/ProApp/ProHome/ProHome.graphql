@@ -1,0 +1,35 @@
+fragment Screen_ProHome_Location on Location {
+  __typename
+  id
+  accessLevel
+  activeFault
+  connectionStatus
+  dsn
+  name
+  share {
+    __typename
+    id
+    accessLevel
+    expiresAt
+  }
+  sharer {
+    name
+    email
+  }
+  shares {
+    accessLevel
+    expiresAt
+  }
+}
+
+query ProHome {
+  locations {
+    ...Screen_ProHome_Location
+  }
+}
+
+query LocationItem($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_ProHome_Location
+  }
+}

@@ -1,0 +1,12 @@
+fragment MeFields on User {
+  __typename
+  id
+  accountType
+  email
+  temperatureUnit
+}
+
+fragment ProMeFields on User {
+  __typename
+  id
+}

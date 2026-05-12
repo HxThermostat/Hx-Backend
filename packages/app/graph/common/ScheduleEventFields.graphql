@@ -1,0 +1,18 @@
+fragment ScheduleEventFields on ScheduleEvent {
+  fanMode
+  setpoints {
+    heat
+    cool
+  }
+  slot
+  start {
+    day
+    hour
+    minute
+  }
+  stop {
+    day
+    hour
+    minute
+  }
+}

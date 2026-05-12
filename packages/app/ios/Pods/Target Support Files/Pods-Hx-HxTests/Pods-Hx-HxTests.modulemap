@@ -1,0 +1,6 @@
+module Pods_Hx_HxTests {
+  umbrella header "Pods-Hx-HxTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

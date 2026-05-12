@@ -1,0 +1,32 @@
+fragment BootstrapControllerFields on Controller {
+  __typename
+  id
+  ...Component_ControlledDial_Controller
+  ...Context_Controllers_Controller
+  ...Screen_Home_Controller
+}
+
+fragment ControllerFields on Controller {
+  __typename
+  ...Screen_ChangeFanMode_Controller
+  ...Screen_Home_Controller
+  ...Screen_NameDevice_Controller
+  ...Screen_SelectMode_Controller
+  ...Screen_SelectZone_Controller
+  ...Screen_Settings_Away_Controller
+  ...Screen_Settings_ManageHumidities_Controller
+  ...Screen_Settings_Names_Controller
+  ...Screen_Settings_Notifications_Controller
+  ...Screen_Settings_Schedule_Controller
+  ...Screen_Settings_SystemInfo_Controller
+  ...Screen_Schedules_Controller
+  ...Screen_CopySchedule_Controller
+  ...Component_ControlledDial_Controller
+  ...Context_Controllers_Controller
+}
+
+fragment ProControllerFields on Controller {
+  __typename
+  ...Screen_AirflowSettings_Controller
+  ...Screen_AirflowConfig_Controller
+}

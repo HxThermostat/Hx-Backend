@@ -1,0 +1,61 @@
+fragment Screen_Settings_Dealer_Location on Location {
+  __typename
+  id
+  accessLevel
+  name
+  dealer {
+    email
+    name
+    phone
+    website
+  }
+  shares {
+    __typename
+    id
+    accessLevel
+    email
+    expiresAt
+  }
+}
+
+query Dealer($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_Settings_Dealer_Location
+  }
+}
+
+mutation ShareLocation($input: ShareLocationInput!) {
+  shareLocation(input: $input) {
+    __typename
+    ... on ShareLocationSuccess {
+      location {
+        ...Screen_Settings_Dealer_Location
+      }
+    }
+    ... on InvalidEmail {
+      message
+    }
+  }
+}
+
+mutation RevokeShare($input: RevokeShareInput!) {
+  revokeShare(input: $input) {
+    __typename
+    ... on RevokeShareSuccess {
+      location {
+        ...Screen_Settings_Dealer_Location
+      }
+    }
+  }
+}
+
+mutation ChangeDealer($input: ChangeDealerInput!) {
+  changeDealer(input: $input) {
+    __typename
+    ... on ChangeDealerSuccess {
+      location {
+        ...Screen_Settings_Dealer_Location
+      }
+    }
+  }
+}

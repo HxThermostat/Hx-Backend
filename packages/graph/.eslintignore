@@ -1,0 +1,5 @@
+**/*.js
+
+# Generated GraphQL schema
+**/resolvers-types.ts
+**/operations-types.ts

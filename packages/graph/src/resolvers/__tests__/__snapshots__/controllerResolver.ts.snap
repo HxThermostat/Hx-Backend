@@ -1,0 +1,6822 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changeDehumidification it fails with a NotSupported status for unsupported systems 1`] = `
+Object {
+  "data": Object {
+    "changeDehumidification": Object {
+      "__typename": "NotSupported",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeDehumidification it sets the value 1`] = `
+Object {
+  "data": Object {
+    "changeDehumidification": Object {
+      "controller": Object {
+        "dehumidification": Object {
+          "mode": "MANUAL",
+          "value": 0.5,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeDehumidificationMode it fails with a NotSupported status for unsupported systems 1`] = `
+Object {
+  "data": Object {
+    "changeDehumidificationMode": Object {
+      "__typename": "NotSupported",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeDehumidificationMode it sets the mode 1`] = `
+Object {
+  "data": Object {
+    "changeDehumidificationMode": Object {
+      "controller": Object {
+        "dehumidification": Object {
+          "mode": "AUTO",
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeHumidification it fails with a NotSupported status for unsupported systems 1`] = `
+Object {
+  "data": Object {
+    "changeHumidification": Object {
+      "__typename": "NotSupported",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeHumidification it sets the humidification value 1`] = `
+Object {
+  "data": Object {
+    "changeHumidification": Object {
+      "controller": Object {
+        "humidification": Object {
+          "mode": "MANUAL",
+          "value": 0.35,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeHumidificationMode it fails with a NotSupported status for unsupported systems 1`] = `
+Object {
+  "data": Object {
+    "changeHumidificationMode": Object {
+      "__typename": "NotSupported",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeHumidificationMode it sets the mode 1`] = `
+Object {
+  "data": Object {
+    "changeHumidificationMode": Object {
+      "controller": Object {
+        "humidification": Object {
+          "mode": "AUTO",
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`changeScheduleOverride changes the override 1`] = `
+Object {
+  "data": Object {
+    "changeScheduleOverride": Object {
+      "controller": Object {
+        "scheduleOverride": "NEXT_EVENT",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it adds and removes the leave/arrive events 1`] = `
+Object {
+  "data": Object {
+    "addLeaveArrive": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "day": "SUN",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 58,
+                },
+                "start": Object {
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 66,
+                },
+                "start": Object {
+                  "hour": 17,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "MON",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "TUE",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "WED",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "THU",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 0,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 0,
+                  "minute": 15,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "FRI",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "start": Object {
+                  "hour": 21,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "SAT",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 20,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 20,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it adds and removes the leave/arrive events 2`] = `
+Object {
+  "data": Object {
+    "removeLeaveArrive": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "day": "SUN",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "MON",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "TUE",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "WED",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "THU",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 0,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 0,
+                  "minute": 15,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "FRI",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "start": Object {
+                  "hour": 21,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "SAT",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 20,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 20,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it cancels a fan hold 1`] = `
+Object {
+  "data": Object {
+    "cancelFanHold": Object {
+      "controller": Object {
+        "fan": Object {
+          "mode": "AUTO",
+          "override": false,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it cancels a temperature hold 1`] = `
+Object {
+  "data": Object {
+    "cancelTemperatureHold": Object {
+      "controller": Object {
+        "setpoints": Object {
+          "cool": 85,
+          "heat": 62,
+        },
+        "tempOverride": false,
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it changes away 1`] = `
+Object {
+  "data": Object {
+    "changeAway": Object {
+      "controller": Object {
+        "away": Object {
+          "active": true,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it changes modes 1`] = `
+Object {
+  "data": Object {
+    "changeMode": Object {
+      "controller": Object {
+        "mode": "OFF",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it changes setpoints 1`] = `
+Object {
+  "data": Object {
+    "changeSetpoint": Object {
+      "controller": Object {
+        "setpoints": Object {
+          "heat": 68,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it changes the schedule 1`] = `
+Object {
+  "data": Object {
+    "changeSchedule": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "SUN",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "MON",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "TUE",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "WED",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 0,
+                "minute": 0,
+              },
+            },
+            "day": "THU",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "FRI",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "SAT",
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it copies the schedule 1`] = `
+Object {
+  "data": Object {
+    "copySchedule": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "SUN",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "MON",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "TUE",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "WED",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 0,
+                "minute": 0,
+              },
+            },
+            "day": "THU",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "FRI",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "SAT",
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`non-zoning controllers it returns the correct fields 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "controller": Object {
+        "id": "NAC000W000426300",
+      },
+      "controllers": Array [
+        Object {
+          "activeScheduleEvent": Object {
+            "day": "TUE",
+            "fanMode": "AUTO",
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+            "slot": "LEAVE",
+            "start": Object {
+              "day": "TUE",
+              "hour": 10,
+              "minute": 0,
+            },
+            "stop": Object {
+              "day": "TUE",
+              "hour": 18,
+              "minute": 0,
+            },
+          },
+          "away": Object {
+            "active": false,
+            "setpoints": Object {
+              "cool": 76,
+              "heat": 62,
+            },
+          },
+          "coolRange": Object {
+            "max": 90,
+            "min": 52,
+          },
+          "deadband": 2,
+          "dehumidification": null,
+          "fan": Object {
+            "cfm": null,
+            "mode": "AUTO",
+            "modes": Array [
+              "ALWAYS",
+              "AUTO",
+              "FIFTEEN",
+              "THIRTY",
+              "FORTYFIVE",
+            ],
+            "override": false,
+          },
+          "heatRange": Object {
+            "max": 88,
+            "min": 50,
+          },
+          "humidification": null,
+          "humidity": 0.5,
+          "id": "NAC000W000426300",
+          "indoorTemp": 81,
+          "mode": "COOL",
+          "modes": Array [
+            "OFF",
+            "HEAT",
+            "MAXHEAT",
+            "COOL",
+            "MAXCOOL",
+            "EHEAT",
+            "AUTO",
+          ],
+          "name": "Bedroom",
+          "outdoorTemp": 73,
+          "schedule": Array [
+            Object {
+              "arrive": null,
+              "awake": Object {
+                "day": "SUN",
+                "fanMode": "FIFTEEN",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 9,
+                  "minute": 45,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 30,
+                },
+              },
+              "bed": Object {
+                "day": "SUN",
+                "fanMode": "FORTYFIVE",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 30,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "day": "SUN",
+              "events": Array [
+                Object {
+                  "day": "SUN",
+                  "fanMode": "FIFTEEN",
+                  "setpoints": Object {
+                    "cool": 89,
+                    "heat": 66,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 9,
+                    "minute": 45,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 30,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "FORTYFIVE",
+                  "setpoints": Object {
+                    "cool": 89,
+                    "heat": 66,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 30,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": null,
+            },
+            Object {
+              "arrive": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 21,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "MON",
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 21,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "day": "MON",
+              "events": Array [
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 10,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 10,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 21,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "ALWAYS",
+                  "setpoints": Object {
+                    "cool": 89,
+                    "heat": 66,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 21,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 10,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 21,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "TUE",
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 21,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "TUE",
+              "events": Array [
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 10,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 10,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 21,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "ALWAYS",
+                  "setpoints": Object {
+                    "cool": 89,
+                    "heat": 66,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 21,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 10,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 0,
+                  "minute": 0,
+                },
+              },
+              "day": "WED",
+              "events": Array [
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 0,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": null,
+              "awake": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 0,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 0,
+                  "minute": 15,
+                },
+              },
+              "bed": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 0,
+                  "minute": 15,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "day": "THU",
+              "events": Array [
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 0,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 0,
+                    "minute": 15,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 0,
+                    "minute": 15,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": null,
+            },
+            Object {
+              "arrive": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 21,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "FRI",
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 89,
+                  "heat": 66,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 21,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "FRI",
+              "events": Array [
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 10,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 10,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 21,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "ALWAYS",
+                  "setpoints": Object {
+                    "cool": 89,
+                    "heat": 66,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 21,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 10,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 20,
+                  "minute": 15,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 20,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 9,
+                  "minute": 45,
+                },
+              },
+              "day": "SAT",
+              "events": Array [
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 20,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 20,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 20,
+                    "minute": 15,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 20,
+                    "minute": 15,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 9,
+                    "minute": 45,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 20,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 20,
+                  "minute": 15,
+                },
+              },
+            },
+          ],
+          "scheduleOverride": "CANCELLED",
+          "setpoints": Object {
+            "cool": 70,
+            "heat": 68,
+          },
+          "tempOverride": true,
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it adds and removes the leave/arrive events 1`] = `
+Object {
+  "data": Object {
+    "addLeaveArrive": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "day": "SUN",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 58,
+                },
+                "start": Object {
+                  "hour": 10,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "ALWAYS",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 66,
+                },
+                "start": Object {
+                  "hour": 17,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "MON",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "TUE",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "WED",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "THU",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "FRI",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "SAT",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it adds and removes the leave/arrive events 2`] = `
+Object {
+  "data": Object {
+    "removeLeaveArrive": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "day": "SUN",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "MON",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "TUE",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 68,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 15,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "WED",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "THU",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "FRI",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+          Object {
+            "day": "SAT",
+            "events": Array [
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "start": Object {
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+              Object {
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "start": Object {
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it cancels a fan hold 1`] = `
+Object {
+  "data": Object {
+    "cancelFanHold": Object {
+      "controller": Object {
+        "fan": Object {
+          "mode": "AUTO",
+          "override": false,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it cancels a temperature hold 1`] = `
+Object {
+  "data": Object {
+    "cancelTemperatureHold": Object {
+      "controller": Object {
+        "setpoints": Object {
+          "cool": 85,
+          "heat": 62,
+        },
+        "tempOverride": false,
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it changes away 1`] = `
+Object {
+  "data": Object {
+    "changeAway": Object {
+      "controller": Object {
+        "away": Object {
+          "active": true,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it changes modes 1`] = `
+Object {
+  "data": null,
+  "errors": Array [
+    Object {
+      "extensions": Object {
+        "code": "INTERNAL_SERVER_ERROR",
+        "exception": Object {
+          "code": undefined,
+          "columnNumber": undefined,
+          "config": Object {
+            "adapter": [Function],
+            "baseURL": "https://ads-field.aylanetworks.com/",
+            "data": "{\\"batch_datapoints\\":[{\\"dsn\\":\\"AC000W001132899\\",\\"name\\":\\"TmpOvrSt\\",\\"datapoint\\":{\\"value\\":1}},{\\"dsn\\":\\"AC000W001132899\\",\\"name\\":\\"UsrMd2Prev\\",\\"datapoint\\":{\\"value\\":2}},{\\"dsn\\":\\"AC000W001132899\\",\\"name\\":\\"UsrMd2\\",\\"datapoint\\":{\\"value\\":0}}]}",
+            "headers": Object {
+              "Accept": "application/json",
+              "Authorization": "auth_token 01d5b17855c84905ad3e920a6a4081c5",
+              "Content-Length": 226,
+              "Content-Type": "application/json",
+              "User-Agent": "axios/0.19.2",
+            },
+            "maxContentLength": -1,
+            "method": "post",
+            "timeout": 0,
+            "transformRequest": Array [
+              [Function],
+            ],
+            "transformResponse": Array [
+              [Function],
+            ],
+            "url": "/apiv1/batch_datapoints",
+            "validateStatus": [Function],
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+          },
+          "description": undefined,
+          "fileName": undefined,
+          "lineNumber": undefined,
+          "message": undefined,
+          "name": undefined,
+          "number": undefined,
+          "stack": undefined,
+        },
+      },
+      "locations": Array [
+        Object {
+          "column": 3,
+          "line": 2,
+        },
+      ],
+      "message": "Request failed with status code 422",
+      "path": Array [
+        "changeMode",
+      ],
+    },
+  ],
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it changes setpoints 1`] = `
+Object {
+  "data": Object {
+    "changeSetpoint": Object {
+      "controller": Object {
+        "setpoints": Object {
+          "heat": 68,
+        },
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it changes the schedule 1`] = `
+Object {
+  "data": Object {
+    "changeSchedule": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "SUN",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "ALWAYS",
+              "setpoints": Object {
+                "cool": 89,
+                "heat": 58,
+              },
+              "start": Object {
+                "hour": 5,
+                "minute": 0,
+              },
+            },
+            "day": "MON",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "ALWAYS",
+              "setpoints": Object {
+                "cool": 89,
+                "heat": 58,
+              },
+              "start": Object {
+                "hour": 5,
+                "minute": 0,
+              },
+            },
+            "day": "TUE",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "WED",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "THU",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "FRI",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "SAT",
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it copies the schedule 1`] = `
+Object {
+  "data": Object {
+    "copySchedule": Object {
+      "controller": Object {
+        "schedule": Array [
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "SUN",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "MON",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 68,
+              },
+              "start": Object {
+                "hour": 8,
+                "minute": 0,
+              },
+            },
+            "day": "TUE",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "WED",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "THU",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "FRI",
+          },
+          Object {
+            "awake": Object {
+              "fanMode": "AUTO",
+              "setpoints": Object {
+                "cool": 78,
+                "heat": 70,
+              },
+              "start": Object {
+                "hour": 6,
+                "minute": 0,
+              },
+            },
+            "day": "SAT",
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`zoning controllers it returns the correct fields 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "controllers": Array [
+        Object {
+          "activeScheduleEvent": Object {
+            "day": "TUE",
+            "fanMode": "AUTO",
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+            "slot": "LEAVE",
+            "start": Object {
+              "day": "TUE",
+              "hour": 8,
+              "minute": 0,
+            },
+            "stop": Object {
+              "day": "TUE",
+              "hour": 18,
+              "minute": 0,
+            },
+          },
+          "away": Object {
+            "active": false,
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+          },
+          "coolRange": Object {
+            "max": 90,
+            "min": 52,
+          },
+          "deadband": 2,
+          "dehumidification": Object {
+            "max": 0.65,
+            "min": 0.35,
+            "mode": "AUTO",
+            "value": 0.65,
+          },
+          "fan": Object {
+            "cfm": 0.7,
+            "mode": "AUTO",
+            "modes": Array [
+              "ALWAYS",
+              "AUTO",
+              "FIFTEEN",
+              "THIRTY",
+              "FORTYFIVE",
+            ],
+            "override": true,
+          },
+          "heatRange": Object {
+            "max": 88,
+            "min": 50,
+          },
+          "humidification": Object {
+            "max": 0.5,
+            "min": 0.15,
+            "mode": "AUTO",
+            "value": 0.15,
+          },
+          "humidity": 0.67,
+          "id": "ZAC000W001132899-0",
+          "indoorTemp": 70,
+          "mode": "AUTO",
+          "modes": Array [
+            "OFF",
+            "HEAT",
+            "MAXHEAT",
+            "COOL",
+            "MAXCOOL",
+            "EHEAT",
+            "AUTO",
+          ],
+          "name": "Lobby",
+          "outdoorTemp": 61,
+          "schedule": Array [
+            Object {
+              "arrive": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 50,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 10,
+                  "minute": 15,
+                },
+              },
+              "bed": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "SUN",
+              "events": Array [
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 50,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 10,
+                    "minute": 15,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 75,
+                    "heat": 65,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 10,
+                    "minute": 15,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 75,
+                  "heat": 65,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 10,
+                  "minute": 15,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": null,
+              "awake": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "MON",
+              "events": Array [
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": null,
+            },
+            Object {
+              "arrive": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "TUE",
+              "events": Array [
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "WED",
+                "fanMode": "FORTYFIVE",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "WED",
+              "events": Array [
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "FORTYFIVE",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "THU",
+              "events": Array [
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "FRI",
+                "fanMode": "FIFTEEN",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "FRI",
+              "events": Array [
+                Object {
+                  "day": "FRI",
+                  "fanMode": "FIFTEEN",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "SAT",
+              "events": Array [
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+          ],
+          "scheduleOverride": "CANCELLED",
+          "setpoints": Object {
+            "cool": 77,
+            "heat": 55,
+          },
+          "tempOverride": true,
+          "zone": "1",
+          "zoneSensor": Object {
+            "sensor": "MAIN_CONTROL",
+            "version": "01.02",
+          },
+        },
+        Object {
+          "activeScheduleEvent": Object {
+            "day": "TUE",
+            "fanMode": "AUTO",
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+            "slot": "LEAVE",
+            "start": Object {
+              "day": "TUE",
+              "hour": 8,
+              "minute": 0,
+            },
+            "stop": Object {
+              "day": "TUE",
+              "hour": 18,
+              "minute": 0,
+            },
+          },
+          "away": Object {
+            "active": false,
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+          },
+          "coolRange": Object {
+            "max": 90,
+            "min": 52,
+          },
+          "deadband": 2,
+          "dehumidification": Object {
+            "max": 0.65,
+            "min": 0.35,
+            "mode": "AUTO",
+            "value": 0.65,
+          },
+          "fan": Object {
+            "cfm": 0.7,
+            "mode": "AUTO",
+            "modes": Array [
+              "ALWAYS",
+              "AUTO",
+              "FIFTEEN",
+              "THIRTY",
+              "FORTYFIVE",
+            ],
+            "override": false,
+          },
+          "heatRange": Object {
+            "max": 88,
+            "min": 50,
+          },
+          "humidification": Object {
+            "max": 0.5,
+            "min": 0.15,
+            "mode": "AUTO",
+            "value": 0.15,
+          },
+          "humidity": null,
+          "id": "ZAC000W001132899-1",
+          "indoorTemp": null,
+          "mode": "COOL",
+          "modes": Array [
+            "OFF",
+            "HEAT",
+            "MAXHEAT",
+            "COOL",
+            "MAXCOOL",
+            "EHEAT",
+            "AUTO",
+          ],
+          "name": "Conference Room",
+          "outdoorTemp": 61,
+          "schedule": Array [
+            Object {
+              "arrive": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "SUN",
+              "events": Array [
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "MON",
+              "events": Array [
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "TUE",
+              "events": Array [
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "WED",
+              "events": Array [
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "THU",
+              "events": Array [
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "FRI",
+              "events": Array [
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "SAT",
+              "events": Array [
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+          ],
+          "scheduleOverride": "CANCELLED",
+          "setpoints": Object {
+            "cool": 85,
+            "heat": 62,
+          },
+          "tempOverride": false,
+          "zone": "2",
+          "zoneSensor": Object {
+            "sensor": "ZONE_THERMOSTAT_HX",
+            "version": "91.23",
+          },
+        },
+        Object {
+          "activeScheduleEvent": Object {
+            "day": "TUE",
+            "fanMode": "AUTO",
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+            "slot": "LEAVE",
+            "start": Object {
+              "day": "TUE",
+              "hour": 8,
+              "minute": 0,
+            },
+            "stop": Object {
+              "day": "TUE",
+              "hour": 18,
+              "minute": 0,
+            },
+          },
+          "away": Object {
+            "active": false,
+            "setpoints": Object {
+              "cool": 85,
+              "heat": 62,
+            },
+          },
+          "coolRange": Object {
+            "max": 90,
+            "min": 52,
+          },
+          "deadband": 2,
+          "dehumidification": Object {
+            "max": 0.65,
+            "min": 0.35,
+            "mode": "AUTO",
+            "value": 0.65,
+          },
+          "fan": Object {
+            "cfm": 0.7,
+            "mode": "AUTO",
+            "modes": Array [
+              "ALWAYS",
+              "AUTO",
+              "FIFTEEN",
+              "THIRTY",
+              "FORTYFIVE",
+            ],
+            "override": false,
+          },
+          "heatRange": Object {
+            "max": 88,
+            "min": 50,
+          },
+          "humidification": Object {
+            "max": 0.5,
+            "min": 0.15,
+            "mode": "AUTO",
+            "value": 0.15,
+          },
+          "humidity": null,
+          "id": "ZAC000W001132899-2",
+          "indoorTemp": null,
+          "mode": "OFF",
+          "modes": Array [
+            "OFF",
+            "HEAT",
+            "MAXHEAT",
+            "COOL",
+            "MAXCOOL",
+            "EHEAT",
+            "AUTO",
+          ],
+          "name": "Office",
+          "outdoorTemp": 61,
+          "schedule": Array [
+            Object {
+              "arrive": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "SUN",
+              "events": Array [
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SUN",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SUN",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SUN",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SUN",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "MON",
+              "events": Array [
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "MON",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "MON",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "MON",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "MON",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "MON",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "MON",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "TUE",
+              "events": Array [
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "TUE",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "TUE",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "TUE",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "TUE",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "TUE",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "TUE",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "WED",
+              "events": Array [
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "WED",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "WED",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "WED",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "WED",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "WED",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "THU",
+              "events": Array [
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "THU",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "THU",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "THU",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "THU",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "THU",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "THU",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "FRI",
+              "events": Array [
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "FRI",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "FRI",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "FRI",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "FRI",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "FRI",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "FRI",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+            Object {
+              "arrive": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "ARRIVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 18,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+              },
+              "awake": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 78,
+                  "heat": 70,
+                },
+                "slot": "AWAKE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 6,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 8,
+                  "minute": 0,
+                },
+              },
+              "bed": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 82,
+                  "heat": 62,
+                },
+                "slot": "BED",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 22,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SUN",
+                  "hour": 6,
+                  "minute": 0,
+                },
+              },
+              "day": "SAT",
+              "events": Array [
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "AWAKE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 85,
+                    "heat": 62,
+                  },
+                  "slot": "LEAVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 8,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 78,
+                    "heat": 70,
+                  },
+                  "slot": "ARRIVE",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 18,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                },
+                Object {
+                  "day": "SAT",
+                  "fanMode": "AUTO",
+                  "setpoints": Object {
+                    "cool": 82,
+                    "heat": 62,
+                  },
+                  "slot": "BED",
+                  "start": Object {
+                    "day": "SAT",
+                    "hour": 22,
+                    "minute": 0,
+                  },
+                  "stop": Object {
+                    "day": "SUN",
+                    "hour": 6,
+                    "minute": 0,
+                  },
+                },
+              ],
+              "leave": Object {
+                "day": "SAT",
+                "fanMode": "AUTO",
+                "setpoints": Object {
+                  "cool": 85,
+                  "heat": 62,
+                },
+                "slot": "LEAVE",
+                "start": Object {
+                  "day": "SAT",
+                  "hour": 8,
+                  "minute": 0,
+                },
+                "stop": Object {
+                  "day": "SAT",
+                  "hour": 18,
+                  "minute": 0,
+                },
+              },
+            },
+          ],
+          "scheduleOverride": "CANCELLED",
+          "setpoints": Object {
+            "cool": 85,
+            "heat": 62,
+          },
+          "tempOverride": false,
+          "zone": "3",
+          "zoneSensor": Object {
+            "sensor": "ZONE_THERMOSTAT_HX",
+            "version": "91.23",
+          },
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "545458359482",
+    "firebase_url": "https://hx-thermostat-289021.firebaseio.com",
+    "project_id": "hx-thermostat-289021",
+    "storage_bucket": "hx-thermostat-289021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545458359482:android:11c83548b7370e79480683",
+        "android_client_info": {
+          "package_name": "com.jci.RIPL"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545458359482-oh10e71mh0ns3l2rjkt2ilekoamkkkdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATQm66Hj_42uxObktcP_k5d_LAcJGAo5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545458359482-oh10e71mh0ns3l2rjkt2ilekoamkkkdd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545458359482:android:398e4793decba87e480683",
+        "android_client_info": {
+          "package_name": "com.kraftful.dev.hx.homeowner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545458359482-oh10e71mh0ns3l2rjkt2ilekoamkkkdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATQm66Hj_42uxObktcP_k5d_LAcJGAo5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545458359482-oh10e71mh0ns3l2rjkt2ilekoamkkkdd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

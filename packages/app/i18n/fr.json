@@ -1,0 +1,1082 @@
+{
+  "Common": {
+    "continue": "Continuer",
+    "done": "Terminé",
+    "home": "Accueil",
+    "save": "Sauvegarder",
+    "other": "Autre",
+    "schedules": "Horaire",
+    "settings": "Réglages",
+    "fan": "Fan",
+    "mode": "Mode",
+    "modes": {
+      "OFF": "Éteint",
+      "AUTO": "Auto",
+      "HEAT": "Chauf",
+      "COOL": "Clim",
+      "EHEAT": "Urgence",
+      "MAXHEAT": "Max chauf",
+      "MAXCOOL": "Max clim"
+    },
+    "fanModeTitles": {
+      "AUTO": "Auto",
+      "ALWAYS": "Toujours",
+      "FIFTEEN": "15 min par heure",
+      "THIRTY": "30 min par heure",
+      "FORTYFIVE": "45 min par heure"
+    },
+    "ScheduleOptions": {
+      "awake": "Réveil",
+      "leave": "Départ",
+      "return": "Retour",
+      "sleep": "Sommeil",
+      "leaveAndReturn": "Départ et Retour",
+      "statusAccess": "état"
+    },
+    "next": "Suivant",
+    "prev": "Retour",
+    "cancel": "Annuler",
+    "back": "Retour",
+    "delete": "Effacer",
+    "Notifications": {
+      "alertTitle": "Autorisation requise",
+      "alertDescription": "Vous devrez accéder à votre application de paramètres pour activer l'autorisation de la caméra afin de continuer.",
+      "openSettings": "Ouvrir Réglages"
+    },
+    "logoutSheet": {
+      "logout": "Déconnecter",
+      "message": "Êtes-vous sûr de vouloir vous déconnecter ?"
+    },
+    "offlineAlert": {
+      "title": "Impossible de charger le compte",
+      "message": "Les détails de votre compte n'ont pas pu être chargés. Assurez-vous que vous êtes sur WiFi ou cellulaire avec accès Internet.",
+      "logout": "Déconnecter",
+      "tryAgain": "Réessayer"
+    },
+    "removeAccountSheet": {
+      "removeAccount": "Supprimer le compte",
+      "message": "Votre thermostat continuera à fonctionner sans le contrôle de l'application mobile.",
+      "title": "Êtes-vous sûr de vouloir supprimer votre compte ?"
+    }
+  },
+  "Components": {
+    "AccessBlock": {
+      "accessLevel": {
+        "INSTALLER": "Installateur",
+        "DIAGNOSTIC": "Diagnostic",
+        "STATUS": "État"
+      },
+      "permanentAccessDescription": "%{email} dispose d'un accès à distance permanent au Hx système « %{locationName} ».",
+      "temporaryAccessDescription": "%{email} dispose d'un accès à distance au Hx système « %{locationName} » jusqu'au %{expiresAt}.",
+      "accessDetails": {
+        "STATUS": "Avec l'accès à l'état, votre revendeur n'a accès qu'aux données de dépannage. Votre revendeur ne peut ni lire ni modifier les paramètres de votre thermostat."
+      },
+      "revoke": "Retirer"
+    }
+  },
+  "Screens": {
+    "Unauthenticated": {
+      "EnterEmailAddress": {
+        "title": "Quelle est votre adresse email ?",
+        "placeholder": "Adresse email",
+        "label": "Adresse email",
+        "description": "Vérifions si cette adresse a déjà un compte Hx."
+      },
+      "EnterEmailConfirmation": {
+        "screenTitle": "Confirmation",
+        "headerBackTitle": "Adresse email",
+        "title": "Vérifiez votre email",
+        "instructions": "Pour vous connecter, cliquez sur le bouton dans l'email que nous vous avons envoyé à",
+        "button": "Ouvrir l'email",
+        "fallbackInstructions": "Vous pouvez également vous connecter avec le code dans cet email.",
+        "emailNotReceived": "Vous n'avez pas reçu d'email ?",
+        "placeholder": "Code",
+        "headerRightText": "Continuer",
+        "alertManual": {
+          "title": "Code incorrect",
+          "message": "Assurez-vous que le code correspond à l’email envoyé à %{email}",
+          "defaultButton": "Réessayez",
+          "cancelButton": "Envoyer un nouveau code"
+        },
+        "alertDeeplink": {
+          "title": "Code incorrect",
+          "message": "Le code n'était pas valide ou a déjà été utilisé",
+          "defaultButton": "Envoyer un nouveau code"
+        },
+        "alertEmailNotReceived": {
+          "title": "Vous n'avez pas reçu d'email ?",
+          "message": "L'email peut prendre quelques minutes.\nEssayez d'actualiser votre boîte aux lettres et vérifiez votre courrier indésirable.",
+          "defaultButton": "Renvoyer",
+          "cancelButton": "Annuler"
+        }
+      },
+      "EnterNewSignUpInfo": {
+        "screenTitle": "S'inscrire",
+        "headerBackTitle": "Adresse email",
+        "title": "Pas de compte trouvé",
+        "createAccountFor": "Créons un nouveau compte pour",
+        "firstNameLabel": "Prénom",
+        "firstNamePlaceholder": "Prénom",
+        "lastNameLabel": "Nom",
+        "lastNamePlaceholder": "Nom",
+        "button": "S'inscrire"
+      },
+      "UpdateRequired": {
+        "updateRequired": "Mise à jour de l'application requise",
+        "downloadUpdate": "Vous pouvez installer la dernière mise à jour depuis le %{store}."
+      }
+    },
+    "Authenticated": {
+      "WhatsNew": {
+        "title": "Quoi de neuf",
+        "easier": {
+          "label": "Utilisation plus simple",
+          "description": "Disposition et navigation intuitives."
+        },
+        "temperatureControl": {
+          "label": "Contrôle de température accessible",
+          "description": "Choisissez le mode et ajustez la température ou le ventilateur directement depuis l'écran d'accueil."
+        },
+        "schedules": {
+          "label": "Horaires intuitifs",
+          "description": "Ajustez facilement les horaires par défaut pour des économies d'énergie maximales."
+        },
+        "settings": {
+          "label": "Nouveaux paramètres",
+          "description": "Connectez Alexa, accordez l'accès au revendeur et d'autres fonctionnalités avancées."
+        },
+        "passwordless": {
+          "label": "Sans mot de passe",
+          "description": "Connexion simple par email pour une plus grande sécurité. Restez connecté !"
+        },
+        "setup": {
+          "label": "Configuration plus rapide",
+          "description": "La nouvelle présentation de l'application avec des cibles tactiles plus importantes accélère le processus de configuration."
+        },
+        "pro": {
+          "label": "Meilleure expérience professionnelle",
+          "description": "Accès à distance facile et meilleures fonctionnalités de dépannage."
+        }
+      },
+      "ConnectThermostatNavigator": {
+        "ScreenTitles": {
+          "welcome": "Bienvenue",
+          "addThermostat": "Ajouter un thermostat",
+          "addThermostatShort": "Ajouter",
+          "setup": "Configuration",
+          "findThermostat": "Trouvez le thermostat",
+          "joinNetwork": "Rejoindre le réseau",
+          "wifiLogin": "Connexion Wi‑Fi",
+          "find": "Trouvez",
+          "selectWifi": "Sélectionnez Wi‑Fi",
+          "location": "Emplacement",
+          "connected": "Thermostat connecté",
+          "professionalAccess": "Accès professionnel"
+        },
+        "Welcome": {
+          "title": "Connectez votre thermostat",
+          "instructions": "Depuis l’écran d’accueil du thermostat, appuyez sur l’icone Wi‑Fi.",
+          "secondaryButtonLabel": "Accès professionnel"
+        },
+        "Setup": {
+          "title": "Appuyez sur « Setup »",
+          "instructions": "Si le thermostat est déjà connecté à un autre réseau WiFi, déconnectez-le d'abord."
+        },
+        "ScanQRCode": {
+          "title": "Scannez le code QR",
+          "instructions": "Un code QR devrait apparaître sur votre thermostat. Cette application devra accéder à la caméra du téléphone pour le scanner.",
+          "instructionsDenied": "Vous devez activer la caméra pour scanner le code QR. Accédez aux paramètres de votre téléphone pour activer les autorisations de l'appareil photo.",
+          "button": "Scannez",
+          "alertTitle": "Autorisation requise",
+          "alertDescription": "Vous devrez accéder à votre application de paramètres pour activer l'autorisation de la caméra afin de continuer.",
+          "cancel": "Annuler",
+          "openSettings": "Ouvrir Réglages",
+          "enterManually": "Entrez le SSID code manuellement"
+        },
+        "SSID": {
+          "title": "Entrez SSID",
+          "instructions": "Entrez le SSID à 12 caractères.\nC'est sensible à la casse.",
+          "placeholder": "Thermostat SSID",
+          "button": "Continuer"
+        },
+        "JoinNetwork": {
+          "instructions": "Pour continuer à connecter le thermostat, vous devez rejoindre son réseau Wi‑Fi.\n\nCela peut prendre 1 à 2 minutes.",
+          "title": "Rejoignez le Wi‑Fi du thermostat"
+        },
+        "SelectWifi": {
+          "title": "Sélectionnez votre réseau Wi‑Fi"
+        },
+        "JoinWifi": {
+          "title": "Connectez-vous à votre réseau Wi‑Fi",
+          "ssidLabel": "Nom de réseau",
+          "passwordLabel": "Mot de passe",
+          "loading": "Connexion du thermostat au réseau Wi‑Fi ...",
+          "button": "Se Connecter",
+          "setupIncompleteAlert": {
+            "title": "Configuration incomplète",
+            "message": "Impossible de vérifier la connexion de votre thermostat avec le cloud.\n\nAssurez-vous que vous êtes connecté au Wi‑Fi ou au réseau cellulaire et que vous avez accès à Internet.",
+            "tryAgain": "Réessayer",
+            "restart": "Redémarrez la configuration"
+          },
+          "setupFailedAlert": {
+            "title": "Échec de la configuration",
+            "message": "Impossible d'enregistrer votre thermostat dans le cloud.",
+            "tryAgain": "Réessayer"
+          },
+          "loginFailedAlert": {
+            "title": "Échec de la connexion",
+            "message": "Impossible de vous connecter à votre réseau Wi‑Fi",
+            "tryAgain": "Réessayer"
+          }
+        },
+        "NameDevice": {
+          "title": {
+            "one": "Où est le thermostat ?",
+            "other": "Où sont les thermostats ?"
+          },
+          "placeholders": {
+            "location": "Maison",
+            "room": "Pièce",
+            "zone": "Zone %{number}"
+          },
+          "labels": {
+            "location": "Nommez votre emplacement",
+            "room": "Nommez votre pièce"
+          },
+          "location": "L’emplacement",
+          "room": {
+            "one": "Pièce",
+            "other": "Pièces"
+          },
+          "picker": {
+            "home": "Maison",
+            "vacation": "Maison de vacances",
+            "living": "Salon",
+            "hallway": "L'entrée",
+            "bedroom": "Chambre principale",
+            "upstairs": "En étage",
+            "downstairs": "Au rez-de-chaussée",
+            "basement": "Sous-sol",
+            "zone": "Zone %{number}",
+            "other": "Autre"
+          }
+        },
+        "Connected": {
+          "title": "Succès !",
+          "instructions": "Le thermostat est connecté. Vous pouvez maintenant le contrôler avec cette application.",
+          "button": "D'accord"
+        }
+      },
+      "HomeNavigator": {
+        "Home": {
+          "thermostatFault": "Anomalie du thermostat",
+          "indoor": "Intérieure",
+          "mode": "Mode",
+          "modes": {
+            "OFF": "Éteint",
+            "AUTO": "Auto",
+            "HEAT": "Chauf",
+            "COOL": "Clim",
+            "EHEAT": "Urgence",
+            "MAXHEAT": "Max",
+            "MAXCOOL": "Max"
+          },
+          "overrideSchedule": "Remplacement des horaires %{period}",
+          "period": {
+            "CANCELLED": "Jusqu’à annulation",
+            "NEXT_EVENT": "Prochain programme",
+            "HOURS_01": "Pour 1 h",
+            "HOURS_02": "Pour 2 h",
+            "HOURS_03": "Pour 3 h",
+            "HOURS_04": "Pour 4 h",
+            "HOURS_05": "Pour 5 h",
+            "HOURS_06": "Pour 6 h",
+            "HOURS_07": "Pour 7 h",
+            "HOURS_08": "Pour 8 h",
+            "HOURS_09": "Pour 9 h",
+            "HOURS_10": "Pour 10 h",
+            "HOURS_11": "Pour 11 h",
+            "HOURS_12": "Pour 12 h"
+          },
+          "backTo": {
+            "both": "Retour à la température et au ventilateur programmés",
+            "fan": "Retour au ventilateur programmé",
+            "temperature": "Retour à la température programmée"
+          },
+          "backToSchedule": "Retour à l'horaire",
+          "thermostatOffline": "Thermostat est déconnecté",
+          "turnOffAwayMode": "Désactiver le mode absence",
+          "turnOffVacationMode": "Désactiver le mode vacances",
+          "awayModeAlert": {
+            "title": "Absent mode",
+            "message": "Ouvrez Réglages pour régler la plage de température du mode Absent.",
+            "cancel": "Annuler",
+            "openSettings": "Ouvrir Réglages"
+          },
+          "vacationModeAlert": {
+            "title": "Vacances mode",
+            "message": "Ouvrez Réglages pour régler la plage de température du mode Vacances.",
+            "cancel": "Annuler",
+            "openSettings": "Ouvrir Réglages"
+          },
+          "survey": {
+            "prompt": "Discutez avec un membre de notre équipe",
+            "chat": {
+              "screenTitle": "Retour d'information",
+              "intro": "Appréciez-vous l'application ? Discutez avec notre équipe pour l'améliorer."
+            }
+          }
+        },
+        "SelectModeSimple": {
+          "screenTitle": "Sélectionnez le mode",
+          "linkTo": "Modes avancés",
+          "autoDescription": "Maintenez automatiquement votre température dans la plage souhaitée",
+          "heatDescription": "Maintenez la température au-dessus du point de consigne",
+          "coolDescription": "Maintenez la température en dessous du point de consigne",
+          "offDescription": "Chauffage et climatisation désactivés",
+          "away": "Absent",
+          "zone": "Zone",
+          "home": "Maison",
+          "awayFromZone": "Économisez de l'énergie lorsque personne n'est dans %{zone}",
+          "awayFromHome": "Économisez de l'énergie lorsque personne n'est à la maison"
+        },
+        "SelectModeAdvanced": {
+          "screenTitle": "Avancés",
+          "maxHeatDescription": "Active le plein système de chauffage pour 10 minutes ou 10 degrés.",
+          "maxCoolDescription": "Active le plein système de climatisation pour 10 minutes ou 10 degrés.",
+          "emergencyTitle": "D'urgence",
+          "emergencyDescription": "Active chauffage d'appoint."
+        },
+        "SelectFan": {
+          "screenTitle": "Ventilateur",
+          "airflow": "Débit d'air",
+          "fanModes": {
+            "AUTO": "Auto",
+            "FIFTEEN": "15 min par heure",
+            "THIRTY": "30 min par heure",
+            "FORTYFIVE": "45 min par heure",
+            "ALWAYS": "Toujours"
+          }
+        },
+        "SelectZone": {
+          "screenTitle": "Sélectionnez l'emplacement",
+          "thermostatFault": "Anomalie du thermostat",
+          "thermostatOffline": "Thermostat est déconnecté"
+        }
+      },
+      "SchedulesNavigator": {
+        "Schedules": {
+          "title": "Horaire",
+          "copySchedule": {
+            "SUN": "Copier l'horaire du dimanche",
+            "MON": "Copier l'horaire du lundi",
+            "TUE": "Copier l'horaire du mardi",
+            "WED": "Copier l'horaire du mercredi",
+            "THU": "Copier l'horaire du jeudi",
+            "FRI": "Copier le programme du vendredi",
+            "SAT": "Copy Saturday's Schedule"
+          },
+          "notProgrammableAlert": {
+            "title": "Les horaires sont décalés",
+            "message": "Souhaitez-vous l'activer et demander à votre thermostat de suivre un programme ?",
+            "messagePro": "Le propriétaire doit activer la planification pour que son thermostat suive un horaire.",
+            "goBack": "Non merci",
+            "ok": "D'accord",
+            "turnOn": "Allumer"
+          }
+        },
+        "CopySchedule": {
+          "screenTitle": "Copier l'horaire",
+          "title": "Des jours",
+          "button": "Copier"
+        },
+        "AdjustSchedule": {
+          "title": {
+            "AWAKE": "Réveil",
+            "LEAVE": "Départ",
+            "ARRIVE": "Retour",
+            "BED": "Sommeil"
+          },
+          "editTitle": "Modifier l'horaire",
+          "createTitle": "Créer un horaire",
+          "startAt": "À partir de",
+          "scheduleEnds": "Se termine au démarrage du programme suivant.",
+          "coolTo": "Refroidir à",
+          "heatTo": "Chauffer à",
+          "fanSchedule": "Horaire du ventilateur",
+          "leaveAndReturnDelete": "Effacer Départ et Retour",
+          "leaveNeedsReturn": "Cet horaire de départ doit être accompagné d'un horaire de retour. Créez ensuite un horaire de retour.",
+          "fanSettings": {
+            "AUTO": {
+              "label": "Auto",
+              "itemLabel": "Auto"
+            },
+            "ALWAYS": {
+              "label": "Toujours",
+              "itemLabel": "Toujours"
+            },
+            "FIFTEEN": {
+              "label": "15 min/h",
+              "itemLabel": "15 min par heure"
+            },
+            "THIRTY": {
+              "label": "30 min/h",
+              "itemLabel": "30 min par heure"
+            },
+            "FORTYFIVE": {
+              "label": "45 min/h",
+              "itemLabel": "45 min par heure"
+            }
+          }
+        }
+      },
+      "SettingsNavigator": {
+        "Settings": {
+          "screenTitle": "Réglages",
+          "sections": {
+            "general": {
+              "title": "Général",
+              "about": "À propos Hx",
+              "manuals": "Manuels",
+              "support": "Support",
+              "rate": "Évaluer"
+            },
+            "account": {
+              "title": "Compte",
+              "manageAccount": "Gérer son compte",
+              "addThermostat": "Ajouter un thermostat",
+              "temperatureUnit": "Unité de température",
+              "temperatureUnitSheet": {
+                "title": "Unité de température",
+                "F": "Fahrenheit",
+                "C": "Celsius"
+              }
+            },
+            "locations": {
+              "title": "Emplacements"
+            },
+            "voiceControl": {
+              "title": "Commande vocale",
+              "connectAlexa": "Connectez Alexa",
+              "connectGoogleHome": "Connectez Google Home"
+            }
+          },
+          "done": "Terminé"
+        },
+        "About": {
+          "screenTitle": "À propos",
+          "version": "Version",
+          "terms": "Conditions d'utilisation",
+          "privacy": "Politique de confidentialité",
+          "professionalAccess": "Accès professionnel",
+          "submitFeedback": "Soumettre des commentaires",
+          "submitFeedbackAlert": {
+            "title": "Pouvez-vous nous envoyer un email ?",
+            "message": "Nous apprécions vraiment vos commentaires pour nous aider à améliorer l'application.",
+            "cancelButton": "Non merci",
+            "defaultButton": "Oui"
+          },
+          "submitFeedbackEmail": {
+            "subject": "Hx app feedback",
+            "body": "Hi app development team,\n\nI was using the Hx app and thought you might like to know..."
+          }
+        },
+        "ProfessionalAccess": {
+          "screenTitle": "Accès professionnel",
+          "signIn": "Déverrouiller",
+          "title": "Êtes-vous un professionnel du CVC ?",
+          "body1": "Si vous vous êtes inscrit sur",
+          "bodyLink1": "Navigator",
+          "body2": " vous pouvez déverrouiller l'expérience Hx Pro pour accéder aux fonctionnalités professionnelles.",
+          "body3": "Se connecter à Navigator, ouvrez la page",
+          "bodyLink2": "« Documents & Guides »",
+          "body4": " Hx, et recherchez « Hx App - Pro Experience Access ».",
+          "inputTitle": "Déverrouiller avec le code fourni sur Navigator",
+          "inputPlaceholder": "Code",
+          "alert": {
+            "title": "Code invalide",
+            "message": "Vérifiez que le code que vous avez entré correspond au code de Navigator.",
+            "defaultButton": "Réessayez"
+          }
+        },
+        "Manuals": {
+          "screenTitle": "Manuels",
+          "thermostatManual": "Hx3 Thermostat Manual",
+          "zoningManual": "Hx3 Zoning Manual",
+          "techGuide": "Hx3 Tech Guide",
+          "quickReference": "Hx3 Quick Reference"
+        },
+        "Support": {
+          "screenTitle": "Support",
+          "manufacturerSupport": "Soutien du fabricant",
+          "email": "Adresse email",
+          "phone": "Téléphone",
+          "userManual": "Manuel de l'utilisateur",
+          "dealerSupport": "Assistance aux revendeurs",
+          "footer": "Pour les demandes de service et une assistance immédiate, veuillez contacter votre revendeur agréé."
+        },
+        "ManageAccount": {
+          "screenTitle": "Gérer son compte",
+          "email": "Adresse email",
+          "shareAccount": "Partagez votre compte",
+          "removeAccount": "Supprimer le compte",
+          "logout": "Déconnecter"
+        },
+        "ShareAccount": {
+          "screenTitle": "Partagez votre compte",
+          "share": {
+            "subject": "Partager mon compte Hx",
+            "message": "J'utilise l'application Hx Thermostat pour contrôler notre thermostat. Après avoir téléchargé l'application, tu peux appuyer sur ce lien pour partager mon compte:\n%{url}\n\nOu tu peux utiliser mon email pour tu connecter:\n%{email}\n\nEt entrais ce code quand on tu le demande:\n%{code}\n\nCe code ne fonctionnera que pendant une semaine. Faites-moi savoir si tu souhaites que j'envoie un nouveau code."
+          },
+          "title": "Partagez votre compte",
+          "subtitle": "Vous pouvez partager votre compte avec d'autres membres de votre foyer en leur envoyant un code de connexion.",
+          "bulletsHeading": "Pour se connecter, l'autre utilisateur doit:",
+          "bulletEnterEmail": "Saisissez votre adresse email lors de la connexion à l'application",
+          "bulletEnterCode": "Entrez le code que vous partagez avec eux sur l'écran de confirmation",
+          "button": "Partager le code"
+        },
+        "Location": {
+          "screenTitle": "L’emplacement",
+          "names": "Noms",
+          "dealer": "Revendeur",
+          "schedule": "Horaire",
+          "notifications": "Notifications",
+          "away": "Absent",
+          "vacation": "Vacances",
+          "humidity": "Humidité",
+          "systemInfo": "Information système",
+          "deleteThermostat": "Effacer thermostat",
+          "deleteThermostatSheet": {
+            "title": "Voulez-vous vraiment supprimer ce thermostat ?",
+            "message": "Vous pouvez l'ajouter à nouveau plus tard à l'aide de l'application.",
+            "confirm": "Effacer"
+          }
+        },
+        "Names": {
+          "screenTitle": "Noms",
+          "location": "L’emplacement",
+          "room": "Pièce",
+          "rooms": "Zones"
+        },
+        "Locations": {
+          "screenTitle": "L’emplacements"
+        },
+        "RoomNames": {
+          "screenTitle": "Zones"
+        },
+        "Dealer": {
+          "screenTitle": "Revendeur",
+          "dealerAccess": "Accès revendeur",
+          "name": "Nom",
+          "phone": "Téléphone",
+          "email": "Adresse email",
+          "website": "Web"
+        },
+        "EditDealer": {
+          "screenTitle": "Modifier informations sur le Revendeur",
+          "website": "WEB",
+          "email": "ADRESSE EMAIL",
+          "phone": "TÉLÉPHONE",
+          "name": "NOM"
+        },
+        "DealerAccess": {
+          "screenTitle": "Accès revendeur",
+          "noAccessGranted": "Pas de thermostats partagés",
+          "grantAccess": "Accorder l'accès",
+          "revokeAccessSheet": {
+            "title": "Voulez-vous vraiment révoquer l'accès ?",
+            "message": "Vous pourrez à nouveau accorder l'accès plus tard à l'aide de l'application.",
+            "confirm": "Retirer"
+          }
+        },
+        "GrantAccess": {
+          "screenTitle": "Accorder l'accès",
+          "title": "Accorder l'accès au thermostat",
+          "send": "Envoyer",
+          "emailAddress": "Adresse email",
+          "location": "L’emplacement",
+          "typeOfAccess": "Type d'accès",
+          "accessMoreInfo": "En savoir plus sur les types d'accès.",
+          "limitAccess": "Limitez à 48 heures",
+          "canRevokeAccess": "Vous pouvez toujours révoquer l'accès.",
+          "accessTypes": {
+            "INSTALLER": "Installateur",
+            "DIAGNOSTIC": "Diagnostic",
+            "STATUS": "État"
+          },
+          "invalidEmail": "Veuillez saisir l'adresse email de votre revendeur."
+        },
+        "AccessTypes": {
+          "screenTitle": "Types",
+          "title": "Type d'accès",
+          "optionDescriptions": {
+            "INSTALLER": {
+              "title": "Installateur",
+              "description": "Installateur peut contrôler entièrement le thermostat, tout comme un propriétaire."
+            },
+            "DIAGNOSTIC": {
+              "title": "Diagnostic",
+              "description": "Revendeur peut afficher toutes les données du thermostat, mais pas les contrôler."
+            },
+            "STATUS": {
+              "title": "État",
+              "description": "Revendeur ne peut afficher que des données limitées, mais pas les paramètres personnels."
+            },
+            "TEMPORARY": {
+              "title": "48 heures",
+              "description": "L'un des types d'accès ci-dessus peut être limité à 48 heures. Quelle que soit la durée, un propriétaire peut mettre fin à l'accès à tout moment."
+            }
+          },
+          "tableTitle": "Que peuvent voir ou contrôler les installateurs ?",
+          "columnHeadings": {
+            "INSTALLER": "Installateur",
+            "DIAGNOSTIC": "Diagnostic",
+            "STATUS": "État"
+          },
+          "rowLabels": {
+            "mode": "Mode actuel",
+            "setpoints": "Points de consigne",
+            "schedules": "Horaire",
+            "fan": "Ventilateur",
+            "vacation": "Vacances",
+            "settings": "Réglages",
+            "zones": "Zones",
+            "locations": "L’emplacements",
+            "airflow": "Coniguration du débit d'air",
+            "faults": "Anomalie",
+            "dealer": "Informations sur le Revendeur",
+            "service": "Rappels de Service"
+          },
+          "tableValues": {
+            "control": "Contrôle",
+            "viewOnly": "Voir seulement",
+            "noAccess": "Non accessible"
+          }
+        },
+        "RenameLocation": {
+          "screenTitle": "Renommer",
+          "label": "NOM DE L’EMPLACEMENT",
+          "validation": {
+            "title": "Nom de lieu non valide",
+            "message": "Les noms de lieu ne doivent pas être vides",
+            "button": "D'accord"
+          }
+        },
+        "RenameRoom": {
+          "screenTitle": "Renommer",
+          "label": "Nom de la pièce",
+          "inputLabel": "Nommez votre pièce",
+          "inputPlaceholder": "Pièce",
+          "picker": {
+            "living": "Salon",
+            "hallway": "L'entrée",
+            "bedroom": "Chambre principale",
+            "upstairs": "En étage",
+            "downstairs": "Au rez-de-chaussée",
+            "basement": "Sous-sol"
+          }
+        },
+        "Schedule": {
+          "screenTitle": "Horaire",
+          "programmable": "Programmable",
+          "holdLength": "La durée du maintien",
+          "restoreDefaults": "Rétablir les horaires par défaut"
+        },
+        "ScheduleZoneNames": {
+          "screenTitle": "Sélectionnez la zone"
+        },
+        "RestoreDefaultSchedule": {
+          "screenTitle": "Rétablir les options par défaut",
+          "title": "Des jours",
+          "button": "Rétablir"
+        },
+        "HoldLength": {
+          "screenTitle": "La durée du maintien",
+          "holdLengths": {
+            "CANCELLED": "Jusqu’à annulation",
+            "NEXT_EVENT": "Prochain programme",
+            "HOURS_01": "Pour 1 h",
+            "HOURS_02": "Pour 2 h",
+            "HOURS_03": "Pour 3 h",
+            "HOURS_04": "Pour 4 h",
+            "HOURS_05": "Pour 5 h",
+            "HOURS_06": "Pour 6 h",
+            "HOURS_07": "Pour 7 h",
+            "HOURS_08": "Pour 8 h",
+            "HOURS_09": "Pour 9 h",
+            "HOURS_10": "Pour 10 h",
+            "HOURS_11": "Pour 11 h",
+            "HOURS_12": "Pour 12 h"
+          }
+        },
+        "Notifications": {
+          "screenTitle": "Notifications",
+          "notificationEnabled": "Allumé",
+          "temperatureThreshold": "Température",
+          "humidityThreshold": "Humidité",
+          "serviceReminders": "Rappels d’entretien",
+          "faults": "Anomalies"
+        },
+        "Faults": {
+          "screenTitle": "Anomalies",
+          "title": "Notifications",
+          "body": "Active les notifications d’alerte pour les occurrences d’anomalie"
+        },
+        "ServiceReminders": {
+          "screenTitle": "D’entretien",
+          "title1": "Notification",
+          "body1": "Recevez une notification push au moment du service",
+          "title2": "Adresse email",
+          "body2": "Recevez un email au moment du service",
+          "sectionHeader": "Planifier des rappels",
+          "spring": "Printemps",
+          "fall": "Automne"
+        },
+        "ListTemperatures": {
+          "screenTitle": "Température"
+        },
+        "TemperatureNotification": {
+          "screenTitle": "Température",
+          "title": "Notification",
+          "body": "Recevez une notification push lorsque la température intérieure est en dehors de votre plage définie",
+          "warmerThan": "Plus chaud que",
+          "coolerThan": "Plus frais que"
+        },
+        "ListHumidities": {
+          "screenTitle": "Humidité"
+        },
+        "HumidityNotification": {
+          "screenTitle": "Humidité",
+          "title": "Notification",
+          "body": "Recevez une notification push lorsque l'humidité est en dehors de votre plage définie",
+          "higherThan": "Plus haut que",
+          "lowerThan": "Plus bas que"
+        },
+        "Away": {
+          "screenTitle": "Absent",
+          "geofencing": "Géoblocage",
+          "geofencingEnabled": "Allumé",
+          "temperatureRange": "Plage de température"
+        },
+        "AdjustAway": {
+          "screenTitle": "Température",
+          "awayMode": "Absent mode",
+          "saveEnergyDescription": "Économisez de l'énergie en réglant une plage de température plus large lorsque personne n'est à la maison.",
+          "coolTo": "Refroidir à",
+          "heatTo": "Chauffer à"
+        },
+        "Geofence": {
+          "screenTitle": "Géoblocage",
+          "disclosureTitle": "Utilisez votre emplacement",
+          "disclosureDescription": "Hx utilisera l'emplacement en arrière-plan pour vous rappeler automatiquement d'activer le mode absent, même lorsque l'application est fermée ou non utilisée",
+          "reminder": "Rappel",
+          "getNotificationDescription": "Recevez une notification push pour définir le mode absent lorsque vous quittez votre domicile",
+          "locationPermissionAlert": {
+            "title": "Autorisation de localisation requise",
+            "message": "Ouvrez les paramètres et autorisez Hx™ à accéder à votre position même lorsque vous n'utilisez pas l'application.",
+            "openSettings": "Ouvrir Réglages"
+          }
+        },
+        "Vacation": {
+          "screenTitle": "Vacances",
+          "title": "Vacances mode",
+          "body": "Économisez de l'énergie en réglant une plage de température plus large pendant vos vacances.",
+          "coolTo": "Refroidir à",
+          "heatTo": "Chauffer à"
+        },
+        "ManageHumidities": {
+          "screenTitle": "Humidité",
+          "humidify": "Humidifier",
+          "dehumidify": "Déshumidifier",
+          "auto": "Auto",
+          "na": "N'est pas applicable"
+        },
+        "ManageHumidityThreshold": {
+          "screenTitle": "Humidifier",
+          "auto": "Auto",
+          "automaticallyManageAir": "Humidifiez automatiquement votre air pour des performances optimales.",
+          "threshold": "Pourcentage d'humidification"
+        },
+        "ManageDehumidityThreshold": {
+          "screenTitle": "Déshumidifier",
+          "auto": "Auto",
+          "automaticallyManageAir": "Déshumidifiez automatiquement votre air pour des performances optimales.",
+          "threshold": "Seuil de déshumidification"
+        },
+        "SystemInfo": {
+          "screenTitle": "Informations système",
+          "thermostatSoftware": "Software de thermostat",
+          "software": "Software",
+          "systemLog": "Registre de système"
+        },
+        "Software": {
+          "screenTitle": "Software",
+          "outdoorControl": "Contrôle extérieur",
+          "thermostat": "Thermostat",
+          "primaryZoneControl": "Contrôle de zone principale",
+          "app": "Software d'application",
+          "zoneSoftware": "Software de zone",
+          "zoneVersion": "%{sensor} : %{version}",
+          "sensor": {
+            "MAIN_CONTROL": "Principale",
+            "ZONE_THERMOSTAT_HX": "Hx thermostat",
+            "ZONE_THERMOSTAT": "Thermostat",
+            "ZONE_SENSOR": "Détecteur",
+            "N_A": "N'est pas applicable"
+          }
+        },
+        "SystemLogUser": {
+          "screenTitle": "Registre de système",
+          "emailDealer": "Détaillant de courriel",
+          "emailSubject": "registres de Hx système",
+          "emailBody": "Bonjour %{name},\n\nVoici les registres de mon Hx système :\n\n%{logs}",
+          "empty": "Aucun défaut enregistré",
+          "reset": "Réinitialiser",
+          "actionSheet": {
+            "title": "Voulez-vous vraiment réinitialiser les journaux ?",
+            "message": "Cette action effacera les journaux existants du thermostat.",
+            "resetThermostatLogs": "Réinitialiser les journaux du thermostat",
+            "resetSystemLogs": "Réinitialiser les journaux système",
+            "cancel": "Annuler"
+          },
+          "notSupportedAlert": {
+            "title": "Non supporté",
+            "message": "Votre système ne supporte pas la suppression des journaux de l'application. Vous pouvez effacer les journaux du thermostat."
+          }
+        },
+        "Alexa": {
+          "screenTitle": "Connectez Alexa",
+          "instructions": "Pour contrôler votre thermostat avec des commandes vocales, connectez-le dans l'application Alexa :",
+          "step1": "1. Appuyez sur ACTIVER L'UTILISATION",
+          "step2": "2. Copiez ce token et entrez-le dans le champ du mot de passe pour lier votre compte à Alexa :",
+          "step3": "3. Une fois le compte lié, appuyez sur OK",
+          "step4": "4. Appuyez sur DÉCOUVRIR LES APPAREILS",
+          "step5": "5. Une fois découvert, appuyez sur CONFIGURER L'APPAREIL et suivez les instructions à l'écran pour terminer la configuration",
+          "copyToken": "Copier code",
+          "openAlexaApp": "Ouvrez l'application Alexa"
+        },
+        "GoogleHome": {
+          "screenTitle": "Connectez Google Home",
+          "instructions": "Pour contrôler votre thermostat avec des commandes vocales, connectez-le dans l'application Google Home :",
+          "step1": "1. Copiez ce code",
+          "step2": "2. Ouvrez l'application Google Home",
+          "step3": "3. Entrez votre adresse email et collez le code",
+          "step4": "4. Appuyez sur Connecter",
+          "copyToken": "Copier code",
+          "openGoogleHomeApp": "Ouvrez l'application Google Home"
+        }
+      }
+    },
+    "ProApp": {
+      "ProAppNavigator": {
+        "Welcome": {
+          "title": "Bienvenue !",
+          "requestOrConnect": "Vous pouvez demander l'accès à un thermostat client ou connecter un nouveau thermostat.",
+          "requestAccess": "Demander accès",
+          "connectThermostat": "Appareiller le thermostat"
+        },
+        "ProHome": {
+          "screenTitle": "Appareils",
+          "requestAcccessButton": "Demander accès",
+          "access": {
+            "permanent": {
+              "INSTALLER": "Accès permanent installateur",
+              "DIAGNOSTIC": "Accès permanent diagnostic",
+              "STATUS": "Accès permanent état"
+            },
+            "temporary": {
+              "INSTALLER": "Accès installateur jusqu'au %{expiresAt}",
+              "DIAGNOSTIC": "Accès diagnostic jusqu'au %{expiresAt}",
+              "STATUS": "Accès état jusqu'au %{expiresAt}"
+            }
+          },
+          "myDevice": "Mon appareil",
+          "ONLINE": "En ligne",
+          "OFFLINE": "Hors ligne"
+        },
+        "RequestAccess": {
+          "screenTitle": "Demander accès",
+          "title": "Accéder au thermostat client",
+          "typeOfAccess": "Type d'accès",
+          "accessLabel": {
+            "INSTALLER": "Installateur",
+            "DIAGNOSTIC": "Diagnostic",
+            "STATUS": "État"
+          },
+          "accessItemLabel": {
+            "INSTALLER": "Installateur - accès total",
+            "DIAGNOSTIC": "Diagnostic - accès en lecture",
+            "STATUS": "État - accès limité"
+          },
+          "accessInstaller": "Installateur",
+          "accessDiagnostic": "Diagnostic",
+          "accessStatus": "État",
+          "fullAccess": "Accès total",
+          "readAccess": "Accès en lecture",
+          "limitedAccess": "Accès limité",
+          "accessMoreInfo": "En savoir plus sur les types d'accès.",
+          "limit48hours": "Limité à 48 heures",
+          "revokeAccess": "Le client peut toujours révoquer l'accès.",
+          "emailLabel": "Adresse email",
+          "emailPlaceholder": "Adresse email du client",
+          "shareRequestLink": "envoyer le lien de demande",
+          "submit": "Demande",
+          "requestAccess": "Demande d'accès",
+          "invalidEmailError": {
+            "title": "Adresse email invalide",
+            "message": "Confirmez que vous êtes en possession de la bonne adresse du propriétaire et réessayez."
+          }
+        },
+        "InstallerView": {
+          "screenTitle": "Vue installateur",
+          "sectionHeadings": {
+            "access": "Accès",
+            "general": "Général"
+          },
+          "accessType": "Type de accès",
+          "accessDuration": "Durée d'accès",
+          "thermostatSoftware": "Software de thermostat",
+          "systemLog": "Registre de système",
+          "equipmentStatus": "État de l'équipement",
+          "zoneAirflowConfiguration": "Configuration du débit d'air de la zone",
+          "customerView": "Vue client",
+          "returnAccess": "Mettre fin à l’assistance à distance",
+          "access": {
+            "INSTALLER": "Installateur",
+            "DIAGNOSTIC": "Diagnostic",
+            "STATUS": "État"
+          },
+          "duration": {
+            "permanent": "Permanent",
+            "temporary": "Jusqu'au %{expiresAt}"
+          },
+          "returnAccessSheet": {
+            "title": "Renoncer à l'accès à %{location} ?",
+            "message": "Vous pouvez demander à nouveau l'accès plus tard.",
+            "destructive": "Renvoyez accès"
+          }
+        },
+        "Software": {
+          "screenTitle": "Software"
+        },
+        "SystemLog": {
+          "screenTitle": "Registre de système"
+        },
+        "ZoneAirflowConfig": {
+          "screenTitle": "Coniguration du débit d'air",
+          "title": "Coniguration du débit d'air de la zone",
+          "readInstructions": "Lisez les instructions avant d'exécuter les tests",
+          "cfm": "%{cfm} CFM",
+          "readInstructionsAlert": {
+            "title": "Avez-vous lu les instructions ?",
+            "message": "Il existe des exigences de sécurité spécifiques pour l'exécution des tests de débit d'air.",
+            "readNow": "Lisez maintenant",
+            "yes": "je comprends"
+          }
+        },
+        "AirflowSettings": {
+          "screenTitle": "Test de débit d'air",
+          "zone": "Zone %{zone}",
+          "test": "Test",
+          "stop": "Arrêtez",
+          "restoreDefault": "Rétablir les options par défaut:",
+          "defaultCfm": "%{cfm} CFM",
+          "testInProgress": "Test en cours : %{remaining}",
+          "waitingToStart": "En attente du démarrage du test ...",
+          "activeCfm": "Système actif (CFM) : %{cfm}",
+          "onsiteAlert": {
+            "title": "Êtes-vous sur place ?",
+            "message": "Les tests de configuration du flux d'air ne doivent pas être effectués à distance.",
+            "cancel": "Non",
+            "default": "Oui"
+          }
+        },
+        "AirflowTest": {
+          "screenTitle": "Test en cours",
+          "activeSystem": "Système actif (CFM) : 0",
+          "activeLocation": "Emplacement actif (zone) 1",
+          "cancel": "Annuler",
+          "configuration": "coniguration"
+        },
+        "AirflowInstructions": {
+          "screenTitle": "Instructions",
+          "performedOnsite": "Le test doit être effectué sur place.",
+          "ozoneExposure": "Si le débit d'air d'une zone est réglé à moins de 400 CFM et qu'un filtre à air électrique est présent, cela peut entraîner une exposition à l'ozone.",
+          "adjacentBleeding": "Si le débit d'air pour une zone est réglé sur moins que le débit d'air minimum du système, l'excès d'air s'échappera dans les zones adjacentes.",
+          "bypassDamper": "Si la purge a été désactivée, un registre de dérivation est recommandé.",
+          "excessDemand": "Si la somme des débits d’air pour toutes les zones est supérieure au maximum du système, le système peut ne pas fonctionner au débit d’air demandé dans toutes les zones.",
+          "installerAccess": "Avec un accès installateur, vous pourrez ajuster, tester et enregistrer les flux d'air mis à jour pour chaque zone."
+        },
+        "CustomerView": {
+          "screenTitle": "Vue du client"
+        },
+        "EquipmentStatus": {
+          "screenTitle": "État de l'équipement",
+          "offlineAlert": {
+            "title": "Appareil est hors ligne",
+            "message": "L'état de l'équipement n'est pas disponible lorsque l'appareil est hors ligne"
+          },
+          "refresh": "Rafraîchir",
+          "Detail": {
+            "screenTitle": "Détails de l'état de l'équipement",
+            "screenTitles": {
+              "INDOOR": "Contrôle intérieur",
+              "INDOOREEV": "Contrôle intérieur (EEV)",
+              "OUTDOOR": "Contrôle extérieur",
+              "THERMOSTAT": "Thermostat",
+              "ZONE": "Contrôle de zone"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Notifications": {
+    "geofence": {
+      "leave": {
+        "title": "Loin de la maison ?",
+        "body": "Appuyez pour activer le mode absent.",
+        "alert": {
+          "title": "Loin de la maison ?",
+          "message": "Activer le mode absent pour économiser de l'énergie",
+          "cancelButton": "Non merci",
+          "enableButton": "Activer le mode absent"
+        }
+      }
+    }
+  },
+  "Utils": {
+    "provisioning": {
+      "connect": {
+        "android": {
+          "locationPermission": {
+            "title": "L'autorisation de localisation est requise pour les connexions Wi‑Fi",
+            "message": "Cette application nécessite une autorisation de localisation, car elle est nécessaire pour rechercher les réseaux Wi‑Fi.",
+            "allow": "AUTORISER",
+            "deny": "NIER"
+          },
+          "locationServicesOffAlert": {
+            "title": "Localisation désactivée",
+            "message": "Vous devez activer la localisation sur cet appareil avant de continuer",
+            "openSettings": "Ouvrir Réglages"
+          },
+          "couldNotEnableWifiAlert": {
+            "title": "Wi‑Fi désactivé",
+            "message": "Vous devez activer le Wi‑Fi sur votre téléphone avant de continuer",
+            "openSettings": "Ouvrir Réglages"
+          },
+          "couldNotScanAlert": {
+            "title": "Impossible de rechercher les réseaux Wi‑Fi",
+            "message": "Veuillez patienter 1 à 2 minutes et réessayer"
+          }
+        },
+        "ios": {
+          "unableToConnectAlert": {
+            "title": "Impossible de se connecter au Wi‑Fi",
+            "message": "Assurez-vous que le Wi‑Fi est activé sur cet appareil"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+fragment StateFields on Controller {
+  id
+  activeDemand
+  away {
+    active
+  }
+  fan {
+    cfm
+  }
+  indoorTemp
+  humidity
+  location {
+    accessLevel
+    connectionStatus
+    id
+  }
+  mode
+  setpoints {
+    cool
+    heat
+  }
+}
+
+query LocationId($controllerId: ID!) {
+  controller(id: $controllerId) {
+    location {
+      id
+    }
+  }
+}
+
+query Controller($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...StateFields
+  }
+}
+
+query Query {
+  controllers {
+    ...StateFields
+  }
+}
+
+mutation SetFanSpeed($locationId: ID!, $cfm: Float!) {
+  changeFanCfm(input: { id: $locationId, cfm: $cfm }) {
+    __typename
+    ... on ChangeFanCfmSuccess {
+      location {
+        controllers {
+          ...StateFields
+        }
+      }
+    }
+  }
+}
+
+mutation SetMode($controllerId: ID!, $mode: Mode!) {
+  changeMode(input: { id: $controllerId, mode: $mode }) {
+    __typename
+    ... on ChangeModeSuccess {
+      controller {
+        ...StateFields
+      }
+    }
+  }
+}
+
+mutation ChangeOneSetpoint(
+  $controllerId: ID!
+  $setpoint: Setpoint!
+  $value: Int!
+) {
+  changeSetpoint(
+    input: { id: $controllerId, setpoint: $setpoint, value: $value }
+  ) {
+    __typename
+    ... on ChangeSetpointSuccess {
+      controller {
+        ...StateFields
+      }
+    }
+  }
+}
+
+mutation ChangeBothSetpoints($controllerId: ID!, $heat: Int!, $cool: Int!) {
+  _: changeSetpoint(
+    input: { id: $controllerId, setpoint: HEAT, value: $heat }
+  ) {
+    __typename
+  }
+  changeSetpoint(input: { id: $controllerId, setpoint: COOL, value: $cool }) {
+    __typename
+    ... on ChangeSetpointSuccess {
+      controller {
+        ...StateFields
+      }
+    }
+  }
+}
+
+query Sync {
+  controllers {
+    id
+    coolRange {
+      max
+      min
+    }
+    deadband
+    fan {
+      cfm
+    }
+    heatRange {
+      max
+      min
+    }
+    humidity
+    location {
+      accessLevel
+      brand
+      model
+      version {
+        application
+        outdoorControl
+      }
+    }
+    modes
+    name
+  }
+  me {
+    id
+    temperatureUnit
+  }
+}

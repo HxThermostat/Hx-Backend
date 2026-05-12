@@ -1,0 +1,53 @@
+fragment Screen_ChangeFanMode_Controller on Controller {
+  __typename
+  id
+  accessLevel
+  activeScheduleEvent {
+    fanMode
+  }
+  fan {
+    cfm
+    mode
+    modes
+    override
+  }
+  location {
+    __typename
+    id
+  }
+}
+
+query SelectFan($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Screen_ChangeFanMode_Controller
+  }
+}
+
+mutation ChangeFanMode($input: ChangeFanModeInput!) {
+  changeFanMode(input: $input) {
+    __typename
+    ... on ChangeFanModeSuccess {
+      controller {
+        ...Screen_ChangeFanMode_Controller
+      }
+    }
+  }
+}
+
+mutation ChangeFanCfm($input: ChangeFanCfmInput!) {
+  changeFanCfm(input: $input) {
+    __typename
+    ... on ChangeFanCfmSuccess {
+      location {
+        __typename
+        id
+        controllers {
+          ...Screen_ChangeFanMode_Controller
+        }
+        controller {
+          ...Screen_ChangeFanMode_Controller
+        }
+      }
+    }
+  }
+}

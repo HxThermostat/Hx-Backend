@@ -1,0 +1,95 @@
+mutation RefreshToken($refreshToken: String!) {
+  refreshToken(input: { token: $refreshToken }) {
+    ... on RefreshTokenSuccess {
+      accessToken
+      refreshToken
+      ttl
+    }
+    ... on TokenInvalid {
+      message
+    }
+  }
+}
+
+mutation ChangeLocationAway($locationId: ID!, $active: Boolean!) {
+  changeLocationAway(input: { id: $locationId, active: $active }) {
+    __typename
+    ... on ChangeLocationAwaySuccess {
+      location {
+        ...LocationFragment
+      }
+    }
+  }
+}
+
+mutation ChangeAway($controllerId: ID!, $active: Boolean!) {
+  changeAway(input: { id: $controllerId, active: $active }) {
+    __typename
+    ... on ChangeAwaySuccess {
+      controller {
+        ...ZoneFragment
+      }
+    }
+  }
+}
+
+mutation ChangeSetpoint(
+  $controllerId: ID!
+  $setpoint: Setpoint!
+  $value: Int!
+) {
+  changeSetpoint(
+    input: { id: $controllerId, setpoint: $setpoint, value: $value }
+  ) {
+    __typename
+    ... on ChangeSetpointSuccess {
+      controller {
+        ...ZoneFragment
+      }
+    }
+  }
+}
+
+mutation ChangeMode($controllerId: ID!, $mode: Mode!) {
+  changeMode(input: { id: $controllerId, mode: $mode }) {
+    __typename
+    ... on ChangeModeSuccess {
+      controller {
+        ...ZoneFragment
+      }
+    }
+  }
+}
+
+mutation ChangeFanMode($controllerId: ID!, $mode: FanMode!) {
+  changeFanMode(input: { id: $controllerId, mode: $mode }) {
+    __typename
+    ... on ChangeFanModeSuccess {
+      controller {
+        ...ZoneFragment
+      }
+    }
+  }
+}
+
+mutation ChangeFanCFM($locationId: ID!, $cfm: Float!) {
+  changeFanCfm(input: { id: $locationId, cfm: $cfm }) {
+    __typename
+    ... on ChangeFanCfmSuccess {
+      location {
+        ...LocationFragment
+      }
+    }
+  }
+}
+
+mutation CancelTemperatureHold($controllerId: ID!) {
+  cancelTemperatureHold(input: { id: $controllerId }) {
+    __typename
+    ... on CancelTemperatureHoldSuccess {
+      controller {
+        ...ZoneFragment
+      }
+    }
+  }
+}

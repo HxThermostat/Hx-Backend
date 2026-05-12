@@ -1,0 +1,469 @@
+enum Mode {
+  OFF
+  AUTO
+  HEAT
+  COOL
+  EHEAT
+  MAXHEAT
+  MAXCOOL
+}
+
+enum FanMode {
+  AUTO
+  FIFTEEN
+  THIRTY
+  FORTYFIVE
+  ALWAYS
+}
+
+type Setpoints {
+  heat: Int!
+  cool: Int!
+}
+
+type Away {
+  active: Boolean!
+  setpoints: Setpoints!
+}
+
+type Fan {
+  active: Boolean!
+  cfm: Float
+  mode: FanMode!
+  modes: [FanMode!]!
+  override: Boolean!
+}
+
+enum Day {
+  SUN
+  MON
+  TUE
+  WED
+  THU
+  FRI
+  SAT
+}
+
+enum ScheduleSlot {
+  AWAKE
+  LEAVE
+  ARRIVE
+  BED
+}
+
+type ScheduleTime {
+  day: Day!
+  hour: Int!
+  minute: Int!
+}
+
+type ScheduleEvent {
+  day: Day!
+  fanMode: FanMode!
+  setpoints: Setpoints!
+  slot: ScheduleSlot!
+  start: ScheduleTime!
+  stop: ScheduleTime!
+}
+
+type Schedule {
+  day: Day!
+  awake: ScheduleEvent!
+  leave: ScheduleEvent
+  arrive: ScheduleEvent
+  bed: ScheduleEvent!
+  events: [ScheduleEvent!]!
+}
+
+type SetpointRange {
+  min: Int!
+  max: Int!
+}
+
+enum HumidificationMode {
+  AUTO
+  MANUAL
+}
+
+type Humidification {
+  max: Float!
+  min: Float!
+  mode: HumidificationMode!
+  value: Float!
+}
+
+enum ScheduleOverride {
+  CANCELLED
+  NEXT_EVENT
+  HOURS_01
+  HOURS_02
+  HOURS_03
+  HOURS_04
+  HOURS_05
+  HOURS_06
+  HOURS_07
+  HOURS_08
+  HOURS_09
+  HOURS_10
+  HOURS_11
+  HOURS_12
+}
+
+type ZoneVersion {
+  primaryZoneControl: String
+  zoneSensor: [String!]!
+}
+
+enum Sensor {
+  MAIN_CONTROL
+  ZONE_THERMOSTAT_HX
+  ZONE_THERMOSTAT
+  ZONE_SENSOR
+  N_A
+}
+
+type ZoneSensor {
+  sensor: Sensor!
+  version: String!
+}
+
+enum Demand {
+  COOL
+  HEAT
+}
+
+type Controller {
+  id: String!
+  activeDemand: Demand
+  activeScheduleEvent: ScheduleEvent @access(requires: DIAGNOSTIC)
+  airflow: Int
+  airflowTestActive: Boolean
+  away: Away @access(requires: DIAGNOSTIC)
+  coolRange: SetpointRange!
+  deadband: Int!
+  dehumidification: Humidification @access(requires: DIAGNOSTIC)
+  disabled: Boolean!
+  fan: Fan @access(requires: DIAGNOSTIC)
+  heatRange: SetpointRange!
+  humidification: Humidification @access(requires: DIAGNOSTIC)
+  humidity: Float @access(requires: STATUS)
+  indoorTemp: Int @access(requires: STATUS)
+  location: Location!
+  mode: Mode @access(requires: DIAGNOSTIC)
+  modes: [Mode!]!
+  name: String!
+  outdoorTemp: Int @access(requires: STATUS)
+  schedule: [Schedule!] @access(requires: DIAGNOSTIC)
+  scheduleOverride: ScheduleOverride!
+  setpoints: Setpoints @access(requires: DIAGNOSTIC)
+  tempOverride: Boolean @access(requires: DIAGNOSTIC)
+  zone: String
+  zoneSensor: ZoneSensor
+  zoning: Boolean!
+}
+
+extend type Query {
+  controllers: [Controller!]!
+  controller(id: ID!): Controller
+}
+
+extend type Mutation {
+  renameController(input: RenameControllerInput!): RenameControllerResult!
+  changeSetpoint(input: ChangeSetpointInput!): ChangeSetpointResult!
+  changeMode(input: ChangeModeInput!): ChangeModeResult!
+  changeAway(input: ChangeAwayInput!): ChangeAwayResult!
+  changeAwaySetpoints(
+    input: ChangeAwaySetpointsInput!
+  ): ChangeAwaySetpointsResult!
+  changeFanMode(input: ChangeFanModeInput!): ChangeFanModeResult!
+  cancelTemperatureHold(
+    input: CancelTemperatureHoldInput!
+  ): CancelTemperatureHoldResult!
+  cancelFanHold(input: CancelFanHoldInput!): CancelFanHoldResult!
+  changeSchedule(input: ChangeScheduleInput!): ChangeScheduleResult!
+  copySchedule(input: CopyScheduleInput!): CopyScheduleResult!
+  addLeaveArrive(input: AddLeaveArriveInput!): AddLeaveArriveResult!
+  removeLeaveArrive(input: RemoveLeaveArriveInput!): RemoveLeaveArriveResult!
+  restoreDefaultSchedule(
+    input: RestoreDefaultScheduleInput!
+  ): RestoreDefaultScheduleResult!
+  changeDehumidificationMode(
+    input: ChangeHumidificationModeInput!
+  ): ChangeHumidificationModeResult!
+  changeHumidificationMode(
+    input: ChangeHumidificationModeInput!
+  ): ChangeHumidificationModeResult!
+  changeDehumidification(
+    input: ChangeHumidificationInput!
+  ): ChangeHumidificationResult!
+  changeHumidification(
+    input: ChangeHumidificationInput!
+  ): ChangeHumidificationResult!
+  changeScheduleOverride(
+    input: ChangeScheduleOverrideInput!
+  ): ChangeScheduleOverrideResult!
+  changeAirflow(input: ChangeAirflowInput!): ChangeAirflowResult!
+  toggleAirflowTest(input: ToggleAirflowTestInput!): ToggleAirflowTestResult!
+  setAppActive(input: SetAppActiveInput!): SetAppActiveResult!
+}
+
+input RenameControllerInput {
+  id: ID!
+  name: String!
+}
+
+type RenameControllerSuccess {
+  controller: Controller!
+}
+
+type NameInvalid implements Error {
+  message: String!
+}
+
+union RenameControllerResult = RenameControllerSuccess | NameInvalid | NotFound
+
+enum Setpoint {
+  HEAT
+  COOL
+}
+
+input ChangeSetpointInput {
+  id: ID!
+  setpoint: Setpoint!
+  value: Int!
+}
+
+type ChangeSetpointSuccess {
+  controller: Controller!
+}
+
+type AwayModeActive implements Error {
+  message: String!
+}
+
+type VacationModeActive implements Error {
+  message: String!
+}
+
+union ChangeSetpointResult =
+    ChangeSetpointSuccess
+  | AwayModeActive
+  | VacationModeActive
+  | NotFound
+
+input ChangeModeInput {
+  id: ID!
+  mode: Mode!
+}
+
+type ChangeModeSuccess {
+  controller: Controller!
+}
+
+union ChangeModeResult = ChangeModeSuccess | NotFound
+
+input ChangeAwayInput {
+  id: ID!
+  active: Boolean!
+}
+
+type ChangeAwaySuccess {
+  controller: Controller!
+}
+
+union ChangeAwayResult = ChangeAwaySuccess | NotFound
+
+input ChangeAwaySetpointsInput {
+  id: ID!
+  heat: Int!
+  cool: Int!
+}
+
+type ChangeAwaySetpointsSuccess {
+  controller: Controller!
+}
+
+union ChangeAwaySetpointsResult = ChangeAwaySetpointsSuccess | NotFound
+
+input ChangeFanModeInput {
+  id: ID!
+  mode: FanMode!
+}
+
+type ChangeFanModeSuccess {
+  controller: Controller!
+}
+
+union ChangeFanModeResult = ChangeFanModeSuccess | NotFound | NotSupported
+
+input CancelTemperatureHoldInput {
+  id: ID!
+}
+
+type CancelTemperatureHoldSuccess {
+  controller: Controller!
+}
+
+union CancelTemperatureHoldResult = CancelTemperatureHoldSuccess | NotFound
+
+input CancelFanHoldInput {
+  id: ID!
+}
+
+type CancelFanHoldSuccess {
+  controller: Controller!
+}
+
+union CancelFanHoldResult = CancelFanHoldSuccess | NotFound
+
+input ChangeScheduleInput {
+  id: ID!
+  day: Day!
+  slot: ScheduleSlot!
+  heat: Int!
+  cool: Int!
+  fanMode: FanMode!
+  hour: Int!
+  minute: Int!
+}
+
+type ChangeScheduleSuccess {
+  controller: Controller!
+}
+
+type InactiveSlot implements Error {
+  message: String!
+}
+
+union ChangeScheduleResult = ChangeScheduleSuccess | InactiveSlot | NotFound
+
+input CopyScheduleInput {
+  id: ID!
+  source: Day!
+  destination: [Day!]!
+}
+
+type CopyScheduleSuccess {
+  controller: Controller!
+}
+
+union CopyScheduleResult = CopyScheduleSuccess | NotFound
+
+input AddLeaveArriveInput {
+  id: ID!
+  day: Day!
+  leaveHeat: Int!
+  leaveCool: Int!
+  leaveFanMode: FanMode!
+  leaveHour: Int!
+  leaveMinute: Int!
+  arriveHeat: Int!
+  arriveCool: Int!
+  arriveFanMode: FanMode!
+  arriveHour: Int!
+  arriveMinute: Int!
+}
+
+type AddLeaveArriveSuccess {
+  controller: Controller!
+}
+
+union AddLeaveArriveResult = AddLeaveArriveSuccess | NotFound
+
+input RemoveLeaveArriveInput {
+  id: ID!
+  day: Day!
+}
+
+type RemoveLeaveArriveSuccess {
+  controller: Controller!
+}
+
+union RemoveLeaveArriveResult = RemoveLeaveArriveSuccess | NotFound
+
+input RestoreDefaultScheduleInput {
+  id: ID!
+  days: [Day!]!
+}
+
+type RestoreDefaultScheduleSuccess {
+  controller: Controller!
+}
+
+union RestoreDefaultScheduleResult = RestoreDefaultScheduleSuccess | NotFound
+
+input ChangeHumidificationModeInput {
+  id: ID!
+  mode: HumidificationMode!
+}
+
+type ChangeHumidificationModeSuccess {
+  controller: Controller!
+}
+
+union ChangeHumidificationModeResult =
+    ChangeHumidificationModeSuccess
+  | NotSupported
+  | NotFound
+
+input ChangeHumidificationInput {
+  id: ID!
+  value: Float!
+}
+
+type ChangeHumidificationSuccess {
+  controller: Controller!
+}
+
+union ChangeHumidificationResult =
+    ChangeHumidificationSuccess
+  | NotSupported
+  | NotFound
+
+input ChangeScheduleOverrideInput {
+  id: ID!
+  scheduleOverride: ScheduleOverride!
+}
+
+type ChangeScheduleOverrideSuccess {
+  controller: Controller!
+}
+
+union ChangeScheduleOverrideResult = ChangeScheduleOverrideSuccess | NotFound
+
+input ChangeAirflowInput {
+  id: ID!
+  value: Int!
+}
+
+type ChangeAirflowSuccess {
+  controller: Controller!
+}
+
+union ChangeAirflowResult = ChangeAirflowSuccess | NotSupported | NotFound
+
+input ToggleAirflowTestInput {
+  id: ID!
+  running: Boolean!
+}
+
+type ToggleAirflowTestSuccess {
+  controller: Controller!
+}
+
+union ToggleAirflowTestResult =
+    ToggleAirflowTestSuccess
+  | NotFound
+  | NotSupported
+  | Offline
+
+input SetAppActiveInput {
+  id: ID!
+  active: Boolean!
+}
+
+type SetAppActiveSuccess {
+  controller: Controller!
+}
+
+union SetAppActiveResult = SetAppActiveSuccess | NotFound

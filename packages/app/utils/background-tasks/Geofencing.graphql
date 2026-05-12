@@ -1,0 +1,11 @@
+fragment Background_OverrideStatus_Location on Location {
+  __typename
+  id
+  override
+}
+
+query BackgroundOverrideStatus($locationId: ID!) {
+  location(id: $locationId) {
+    ...Background_OverrideStatus_Location
+  }
+}

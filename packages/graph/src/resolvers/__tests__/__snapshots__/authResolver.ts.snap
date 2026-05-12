@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checkEmail it marks available emails as available 1`] = `
+Object {
+  "data": Object {
+    "checkEmail": Object {
+      "available": true,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`refreshToken it allows an access token to be refreshed 1`] = `
+Object {
+  "data": Object {
+    "refreshToken": Object {
+      "__typename": "RefreshTokenSuccess",
+      "accessToken": "{\\"userId\\":\\"284d0022-bd73-11ea-bb45-0a580ae995c9\\",\\"email\\":\\"nicky+signupmutation2@kraftful.com\\",\\"accessToken\\":\\"af105afff58f40c0ab78755fd5819a6b\\"}",
+      "refreshToken": "{\\"userId\\":\\"284d0022-bd73-11ea-bb45-0a580ae995c9\\",\\"refreshToken\\":\\"8a8972a3a322481784638d089e8ac4bf\\",\\"email\\":\\"nicky+signupmutation2@kraftful.com\\",\\"ksid\\":\\"ksid1\\"}",
+      "ttl": 86398,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`refreshToken it will fallback to login when the refresh token is invalid 1`] = `
+Object {
+  "data": Object {
+    "refreshToken": Object {
+      "__typename": "RefreshTokenSuccess",
+      "accessToken": "{\\"userId\\":\\"55e79d80-eb4f-11ea-a7bc-0a580ae98b08\\",\\"email\\":\\"nicky+signupmutation4@kraftful.com\\",\\"accessToken\\":\\"8bf52a2804df43d7aec304dcbd3deac1\\"}",
+      "refreshToken": "{\\"userId\\":\\"55e79d80-eb4f-11ea-a7bc-0a580ae98b08\\",\\"refreshToken\\":\\"fc254d2d8b734738b50644fdf34e57a4\\",\\"email\\":\\"nicky+signupmutation4@kraftful.com\\",\\"ksid\\":\\"ksid1\\"}",
+      "ttl": 86400,
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`sendToken it sends a confirmation email for unconfirmed accounts 1`] = `
+Object {
+  "data": Object {
+    "sendToken": Object {
+      "__typename": "SendTokenSuccess",
+      "accountStatus": "UNCONFIRMED",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`sendToken it sends a password reset email for confirmed accounts 1`] = `
+Object {
+  "data": Object {
+    "sendToken": Object {
+      "__typename": "SendTokenSuccess",
+      "accountStatus": "CONFIRMED",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`signIn it allows a user to sign in with a confirmation token 1`] = `
+Object {
+  "data": Object {
+    "signIn": Object {
+      "__typename": "SignInSuccess",
+      "accessToken": "{\\"userId\\":\\"55e79d80-eb4f-11ea-a7bc-0a580ae98b08\\",\\"email\\":\\"nicky+signupmutation4@kraftful.com\\",\\"accessToken\\":\\"c9eb9857a986414c84cd235d92b17ecf\\"}",
+      "refreshToken": "{\\"userId\\":\\"55e79d80-eb4f-11ea-a7bc-0a580ae98b08\\",\\"refreshToken\\":\\"5a52ee8bf1eb45e5b824f871ed855a35\\",\\"email\\":\\"nicky+signupmutation4@kraftful.com\\",\\"ksid\\":\\"ksid1\\"}",
+      "user": Object {
+        "email": "nicky+signupmutation4@kraftful.com",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`signIn it allows a user to sign in with a forgot password token 1`] = `
+Object {
+  "data": Object {
+    "signIn": Object {
+      "__typename": "SignInSuccess",
+      "accessToken": "{\\"userId\\":\\"55e79d80-eb4f-11ea-a7bc-0a580ae98b08\\",\\"email\\":\\"nicky+signupmutation4@kraftful.com\\",\\"accessToken\\":\\"3cc68ee9feb1494390811e20fe15cd00\\"}",
+      "refreshToken": "{\\"userId\\":\\"55e79d80-eb4f-11ea-a7bc-0a580ae98b08\\",\\"refreshToken\\":\\"c191e705541149ed8f189a78ae564ae4\\",\\"email\\":\\"nicky+signupmutation4@kraftful.com\\",\\"ksid\\":\\"ksid1\\"}",
+      "user": Object {
+        "email": "nicky+signupmutation4@kraftful.com",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`signUp it allows a user to sign up 1`] = `
+Object {
+  "data": Object {
+    "signUp": Object {
+      "__typename": "SignUpSuccess",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`signUp it returns an appropriate error when the email address has been taken 1`] = `
+Object {
+  "data": Object {
+    "signUp": Object {
+      "__typename": "EmailTaken",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

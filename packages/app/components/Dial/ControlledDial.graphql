@@ -1,0 +1,87 @@
+query ControlledDial($controllerId: ID!) {
+  controller(id: $controllerId) {
+    ...Component_ControlledDial_Controller
+  }
+}
+
+fragment Component_ControlledDial_Controller on Controller {
+  __typename
+  id
+  accessLevel
+  activeDemand
+  activeScheduleEvent {
+    setpoints {
+      heat
+      cool
+    }
+  }
+  away {
+    __typename
+    active
+  }
+  coolRange {
+    min
+    max
+  }
+  deadband
+  disabled
+  heatRange {
+    min
+    max
+  }
+  indoorTemp
+  location {
+    ...Component_ControlledDial_Location
+  }
+  mode
+  setpoints {
+    heat
+    cool
+  }
+  tempOverride
+}
+
+fragment Component_ControlledDial_Location on Location {
+  __typename
+  id
+  override
+}
+
+mutation ChangeDialSetpoints(
+  $controllerId: ID!
+  $heatValue: Int!
+  $coolValue: Int!
+) {
+  changeHeat: changeSetpoint(
+    input: { id: $controllerId, setpoint: HEAT, value: $heatValue }
+  ) {
+    __typename
+    ... on ChangeSetpointSuccess {
+      controller {
+        __typename
+        id
+        setpoints {
+          __typename
+          heat
+        }
+        tempOverride
+      }
+    }
+  }
+  changeCool: changeSetpoint(
+    input: { id: $controllerId, setpoint: COOL, value: $coolValue }
+  ) {
+    __typename
+    ... on ChangeSetpointSuccess {
+      controller {
+        __typename
+        id
+        setpoints {
+          __typename
+          cool
+        }
+        tempOverride
+      }
+    }
+  }
+}

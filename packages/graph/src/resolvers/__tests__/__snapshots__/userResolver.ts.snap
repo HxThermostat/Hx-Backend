@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changeTemperatureUnit it changes the unit 1`] = `
+Object {
+  "data": Object {
+    "changeTemperatureUnit": Object {
+      "user": Object {
+        "temperatureUnit": "F",
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`me it returns null when unauthenticated 1`] = `
+Object {
+  "data": Object {
+    "me": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`me it returns the correct fields when authenticated 1`] = `
+Object {
+  "data": Object {
+    "me": Object {
+      "accountType": "HOMEOWNER",
+      "email": "kraftfulho@gmail.com",
+      "id": "4c1b068c-84cc-11ea-b979-0a580ae994a6",
+      "temperatureUnit": "F",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

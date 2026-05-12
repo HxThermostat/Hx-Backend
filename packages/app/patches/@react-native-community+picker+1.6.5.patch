@@ -1,0 +1,21 @@
+diff --git a/node_modules/@react-native-community/picker/android/build.gradle b/node_modules/@react-native-community/picker/android/build.gradle
+index 02c1551..0003a20 100644
+--- a/node_modules/@react-native-community/picker/android/build.gradle
++++ b/node_modules/@react-native-community/picker/android/build.gradle
+@@ -2,7 +2,7 @@
+ buildscript {
+     repositories {
+         google()
+-        jcenter()
++        mavenCentral()
+     }
+ 
+     dependencies {
+@@ -32,7 +32,6 @@ android {
+ 
+ repositories {
+   google()
+-  jcenter()
+   mavenCentral()
+ }
+ 

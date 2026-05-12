@@ -1,0 +1,18 @@
+extends ../layout.pug
+
+block content
+    include ../static/email.svg
+
+    form(method="POST")
+      fieldset
+        legend What's your email address?
+        input(autocomplete="email", name="email", placeholder="Email", type="email")
+        p.error
+          if error == "email"
+            | Can't find a matching email address
+          else
+            | &nbsp;
+        
+        .button
+          button(class="button", type="submit") Continue
+          p.caption Let's check if you already have an Hx account.

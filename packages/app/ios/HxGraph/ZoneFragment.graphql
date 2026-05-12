@@ -1,0 +1,34 @@
+fragment ZoneFragment on Controller {
+  __typename
+  id
+  away {
+    active
+  }
+  disabled
+  fan {
+    cfm
+    override
+    mode
+    modes
+  }
+  humidity
+  indoorTemp
+  mode
+  modes
+  name
+  deadband
+  outdoorTemp
+  setpoints {
+    heat
+    cool
+  }
+  coolRange {
+    min
+    max
+  }
+  heatRange {
+    min
+    max
+  }
+  tempOverride
+}

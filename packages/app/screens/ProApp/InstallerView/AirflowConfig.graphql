@@ -1,0 +1,29 @@
+fragment Screen_AirflowConfig_Controller on Controller {
+  __typename
+  id
+  airflow
+  name
+  zone
+}
+
+fragment Screen_AirflowConfig_Location on Location {
+  __typename
+  id
+  accessLevel
+  airflow {
+    __typename
+    active
+    max
+    min
+  }
+  name
+}
+
+query AirflowConfig($locationId: ID!) {
+  location(id: $locationId) {
+    ...Screen_AirflowConfig_Location
+    controllers {
+      ...Screen_AirflowConfig_Controller
+    }
+  }
+}

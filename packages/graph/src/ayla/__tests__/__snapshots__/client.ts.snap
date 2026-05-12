@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`device service datapoints batchDatapoints it returns the correct fields 1`] = `undefined`;
+
+exports[`device service datapoints batchDatapoints it skips when no datapoints have been provided 1`] = `undefined`;
+
+exports[`device service device it formats fields for a NonZoningDevice 1`] = `
+Object {
+  "activeSystemAirflow": undefined,
+  "awayZn": Array [
+    "HOME;62,76",
+  ],
+  "clStptMax": 90,
+  "clStptMin": 52,
+  "clStpts": Array [
+    70,
+  ],
+  "connectionStatus": "Online",
+  "deadband": 2,
+  "dhStg": Array [
+    255,
+  ],
+  "dlrEmail": "hvacpro.com",
+  "dlrName": "Tom Harris",
+  "dlrPhone": "432-321-3214",
+  "dlrWeb": "tom@hvacpro.com",
+  "dsn": "AC000W000426300",
+  "equipOut": 2070,
+  "fanOvrSt": 0,
+  "fanStg": Array [
+    1,
+  ],
+  "forcedAirflowTest": undefined,
+  "htStptMax": 88,
+  "htStptMin": 50,
+  "htStpts": Array [
+    68,
+  ],
+  "hum": Array [
+    50,
+  ],
+  "humStg": Array [
+    255,
+  ],
+  "idTmps": Array [
+    81,
+  ],
+  "key": 301114,
+  "lat": 37.8075,
+  "lng": -122.2644,
+  "maxAirflow": undefined,
+  "minAirflow": undefined,
+  "name": "Oakland",
+  "odTmp": -128,
+  "odTmpServer": 73.4,
+  "overrideStg": Array [
+    "Cancelled",
+  ],
+  "programmable": true,
+  "sch": Array [
+    Array [
+      Object {
+        "cl": 1498175833,
+        "ht": 1111638594,
+        "tm1": 153949726,
+        "tm2": 372053760,
+      },
+      Object {
+        "cl": 1498305870,
+        "ht": 1111899718,
+        "tm1": 134220288,
+        "tm2": 301995264,
+      },
+      Object {
+        "cl": 1498305870,
+        "ht": 1111899718,
+        "tm1": 134220288,
+        "tm2": 301995264,
+      },
+      Object {
+        "cl": 1380865358,
+        "ht": 1044790854,
+        "tm1": 100665344,
+        "tm2": 301995520,
+      },
+      Object {
+        "cl": 1380865358,
+        "ht": 1044659782,
+        "tm1": 15,
+        "tm2": 1971712,
+      },
+      Object {
+        "cl": 1498305870,
+        "ht": 1111899718,
+        "tm1": 134220288,
+        "tm2": 301995264,
+      },
+      Object {
+        "cl": 1380865358,
+        "ht": 1044790854,
+        "tm1": 100668416,
+        "tm2": 336532992,
+      },
+    ],
+  ],
+  "schDayParts": Array [
+    "2,4,4,4,2,4,4",
+  ],
+  "schFan": Array [
+    "{SUN=15,45,00,45},{MON=00,00,00,60},{TUE=00,00,00,60},{WED=00,00,00,00},{THU=00,00,00,00},{FRI=00,00,00,60},{SAT=00,00,00,00}",
+  ],
+  "schStpts": Array [
+    81493,
+  ],
+  "sysStg": 535070,
+  "tmpOvr": Array [
+    17478,
+  ],
+  "tmpOvrSt": 1,
+  "userUuid": "4c1b068c-84cc-11ea-b979-0a580ae994a6",
+  "usrMd": Array [
+    2,
+  ],
+  "usrMdPrev": Array [
+    0,
+  ],
+  "vacation": undefined,
+  "version": "JCI-APPF-LO-02.21nz",
+  "versionBt": "JCI-BOOT-XX-01.01bt",
+  "versionOd": "",
+  "versionZc": undefined,
+  "versionZn": undefined,
+  "znAirflow": undefined,
+  "znSensor": undefined,
+  "znStat": Array [
+    38,
+  ],
+  "zoneName": undefined,
+  "zones": undefined,
+  "zoning": false,
+}
+`;
+
+exports[`device service device it formats fields for a ZoningDevice 1`] = `
+Object {
+  "activeSystemAirflow": 0,
+  "awayZn": Array [
+    "HOME;62,85",
+    "HOME;62,85",
+    "HOME;62,85",
+  ],
+  "clStptMax": 90,
+  "clStptMin": 52,
+  "clStpts": Array [
+    85,
+    85,
+    85,
+  ],
+  "connectionStatus": "Offline",
+  "deadband": 2,
+  "dhStg": Array [
+    321,
+    321,
+    321,
+  ],
+  "dlrEmail": "",
+  "dlrName": "",
+  "dlrPhone": "",
+  "dlrWeb": "",
+  "dsn": "AC000W001132899",
+  "equipOut": 0,
+  "fanOvrSt": 1,
+  "fanStg": Array [
+    17937,
+    17,
+    17,
+  ],
+  "forcedAirflowTest": 0,
+  "htStptMax": 88,
+  "htStptMin": 50,
+  "htStpts": Array [
+    62,
+    62,
+    62,
+  ],
+  "hum": Array [
+    67,
+    0,
+    0,
+  ],
+  "humStg": Array [
+    271,
+    271,
+    271,
+  ],
+  "idTmps": Array [
+    70,
+    128,
+    128,
+  ],
+  "key": 25702624,
+  "lat": 37.6624,
+  "lng": -97.3156,
+  "maxAirflow": 1370,
+  "minAirflow": 320,
+  "name": "Kraftful HQ",
+  "odTmp": 61,
+  "odTmpServer": 91.4,
+  "overrideStg": Array [
+    "Cancelled",
+    "Cancelled",
+    "Cancelled",
+  ],
+  "programmable": true,
+  "sch": Array [
+    Object {
+      "p1": "Sun:0600,50,78,1015,65,75,1800,70,78,2200,62,82;Mon:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Tue:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Wed:0600,70,78,0800,62,85,1800,70,78,2200,62,82;",
+      "p2": "Thu:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Fri:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Sat:0600,70,78,0800,62,85,1800,70,78,2200,62,82;",
+    },
+    Object {
+      "p1": "Sun:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Mon:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Tue:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Wed:0600,70,78,0800,62,85,1800,70,78,2200,62,82;",
+      "p2": "Thu:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Fri:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Sat:0600,70,78,0800,62,85,1800,70,78,2200,62,82;",
+    },
+    Object {
+      "p1": "Sun:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Mon:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Tue:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Wed:0600,70,78,0800,62,85,1800,70,78,2200,62,82;",
+      "p2": "Thu:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Fri:0600,70,78,0800,62,85,1800,70,78,2200,62,82;Sat:0600,70,78,0800,62,85,1800,70,78,2200,62,82;",
+    },
+  ],
+  "schDayParts": Array [
+    "4,2,4,4,4,4,4",
+    "4,4,4,4,4,4,4",
+    "4,4,4,4,4,4,4",
+  ],
+  "schFan": Array [
+    "{Sun=00,00,00,00},{Mon=00,00,00,00},{Tue=00,00,00,00},{Wed=00,00,00,45},{Thu=00,00,00,00},{Fri=15,00,00,00},{Sat=00,00,00,00}",
+    "{Sun=00,00,00,00},{Mon=00,00,00,00},{Tue=00,00,00,00},{Wed=00,00,00,00},{Thu=00,00,00,00},{Fri=00,00,00,00},{Sat=00,00,00,00}",
+    "{Sun=00,00,00,00},{Mon=00,00,00,00},{Tue=00,00,00,00},{Wed=00,00,00,00},{Thu=00,00,00,00},{Fri=00,00,00,00},{Sat=00,00,00,00}",
+  ],
+  "schStpts": Array [
+    1130069,
+    1130069,
+    1130069,
+  ],
+  "sysStg": 3690127,
+  "tmpOvr": Array [
+    14157,
+    17493,
+    0,
+  ],
+  "tmpOvrSt": 1,
+  "userUuid": "4c1b068c-84cc-11ea-b979-0a580ae994a6",
+  "usrMd": Array [
+    3,
+    2,
+    0,
+  ],
+  "usrMdPrev": Array [
+    2,
+    3,
+    0,
+  ],
+  "vacation": "HOME;69,81",
+  "version": "JCI-APPF-LO-91.23zn",
+  "versionBt": "JCI-BOOT-XX-01.01bt",
+  "versionOd": "  1.10",
+  "versionZc": Array [
+    "01.02",
+    "255.0",
+  ],
+  "versionZn": Array [
+    "",
+    "91.23",
+    "91.23",
+  ],
+  "znAirflow": Array [
+    400,
+    400,
+    400,
+  ],
+  "znSensor": Array [
+    0,
+    1,
+    1,
+  ],
+  "znStat": Array [
+    65,
+    0,
+    0,
+  ],
+  "zoneName": Array [
+    "Lobby",
+    "Conference Room",
+    "Office",
+  ],
+  "zones": 3,
+  "zoning": true,
+}
+`;
+
+exports[`device service devices it returns the correct fields 1`] = `
+Array [
+  "AC000W000426300",
+  "AC000W001132899",
+  "AC000W001137442",
+]
+`;
+
+exports[`device service metadata metadata it returns the correct fields 1`] = `
+Array [
+  Object {
+    "name": "RoomName",
+    "value": "Bedroom",
+  },
+]
+`;
+
+exports[`device service metadata setMetadata it returns  the correct fields 1`] = `undefined`;
+
+exports[`user service login a successful login returns the correct fields 1`] = `
+Object {
+  "accessToken": "fa80768ee6254c339d2a66fddaa8ecf6",
+  "expiresIn": 86400,
+  "refreshToken": "b2270b0d1535437c8e5ea896d08025e1",
+}
+`;
+
+exports[`user service profile it returns the correct fields 1`] = `
+Object {
+  "company": Object {},
+  "email": "kraftfulho@gmail.com",
+  "id": "4c1b068c-84cc-11ea-b979-0a580ae994a6",
+}
+`;
+
+exports[`user service refreshToken it returns the correct fields 1`] = `
+Object {
+  "accessToken": "b9c55647622f4386907ec83a40b2ddb0",
+  "expiresIn": 86399,
+  "refreshToken": "5160e6a2769b4154b01ea845b41bc059",
+}
+`;

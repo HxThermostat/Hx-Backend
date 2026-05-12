@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`revokeShare it revokes a share 1`] = `
+Object {
+  "data": Object {
+    "revokeShare": Object {
+      "__typename": "RevokeShareSuccess",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`shareLocation it fails with an invalid email 1`] = `
+Object {
+  "data": Object {
+    "shareLocation": Object {
+      "__typename": "InvalidEmail",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`shareLocation it fails with an invalid expiresAt 1`] = `
+Object {
+  "data": Object {
+    "shareLocation": Object {
+      "__typename": "InvalidDate",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`shareLocation it overwrites an existing share 1`] = `
+Object {
+  "data": Object {
+    "shareLocation": Object {
+      "__typename": "ShareLocationSuccess",
+      "location": Object {
+        "shares": Array [
+          Object {
+            "accessLevel": "STATUS",
+            "expiresAt": null,
+            "id": "217359",
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`shareLocation it shares a location 1`] = `
+Object {
+  "data": Object {
+    "shareLocation": Object {
+      "__typename": "ShareLocationSuccess",
+      "location": Object {
+        "shares": Array [
+          Object {
+            "accessLevel": "INSTALLER",
+            "expiresAt": null,
+            "id": "217360",
+          },
+        ],
+      },
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`shares it returns the correct fields 1`] = `
+Object {
+  "data": Object {
+    "locations": Array [
+      Object {
+        "id": "AC000W000426300",
+        "name": "Oakland",
+        "shares": Array [],
+      },
+      Object {
+        "id": "AC000W001132899",
+        "name": "Kraftful HQ",
+        "shares": Array [],
+      },
+      Object {
+        "id": "AC000W005851005",
+        "name": "Essex",
+        "shares": Array [
+          Object {
+            "accessLevel": "DIAGNOSTIC",
+            "expiresAt": "2020-08-15T03:56:43.000Z",
+            "id": "212691",
+          },
+        ],
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
