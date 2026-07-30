@@ -245,7 +245,7 @@ export default function render({
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
               <tr>
                 <td style="padding: 30px 0 0; text-align: center">
-                  <img src="https://hx.kraftful.app/app-icon-256.png" width="60" height="60" alt="Hx" border="0"
+                  <img src="https://hx.yoursysteminfo.com/app-icon-256.png" width="60" height="60" alt="Hx" border="0"
                     style="height: auto; background: #2D2D2D; font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif; font-size: 24px !important; line-height: 60px; text-align: center; color: #FFFFFF;">
                 </td>
               </tr>
@@ -360,7 +360,7 @@ export function button(label: string, path: string): string {
                     <tr>
                       <td class="button-td button-td-primary" style="border-radius: 24px; background: #1B1B1B;">
                         <a class="button-a button-a-primary"
-                          href="https://hx.kraftful.app${path}"
+                          href="https://hx.yoursysteminfo.com${path}"
                           style="background: #1B1B1B; border: 1px solid #FFFFFF; font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif; font-size: 15px !important; font-weight: 600; line-height: 15px; text-decoration: none; padding: 14px 24px; color: #ffffff; display: block; border-radius: 24px;">${label}</a>
                       </td>
                     </tr>

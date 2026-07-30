@@ -27,5 +27,5 @@ export const AYLA_RULES_SERVICE_URL = env
 
 export const AYLA_RULES_SERVICE_WEBHOOK_URL = env
   .get("AYLA_RULES_WEBHOOK_URL")
-  .default("https://hx.kraftful.cloud/ars_webhook")
+  .default("https://hx.yoursysteminfo.com/ars_webhook")
   .asUrlString();

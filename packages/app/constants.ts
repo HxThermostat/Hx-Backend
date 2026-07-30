@@ -4,7 +4,7 @@ export const ACCESS_TOKEN_KEY = "accessToken";
 export const REFRESH_TOKEN_KEY = "refreshToken";
 export const EXPIRES_AT_KEY = "accessTokenExpiresAt";
 
-export const GRAPH_URL = "https://hx.kraftful.cloud/";
+export const GRAPH_URL = "https://hx.yoursysteminfo.com/";
 
 export const RATE_OPTIONS = {
   AppleAppID: "1105092523",

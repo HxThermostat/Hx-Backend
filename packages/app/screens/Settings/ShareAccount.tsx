@@ -84,7 +84,7 @@ export default function ShareAccount(): JSX.Element {
 
     if (data?.generateShareToken.token) {
       const code = data.generateShareToken.token;
-      const url = `https://hx.kraftful.app/signIn/${email}/${code}`;
+      const url = `https://hx.yoursysteminfo.com/signIn/${email}/${code}`;
       const message = i18n.t("share.message", { scope, url, email, code });
 
       trackSegmentEvent("Share Account Share Sheet Displayed");

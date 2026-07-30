@@ -10,7 +10,7 @@ import Apollo
 import Foundation
 import HxGraph
 
-let hxCloudUrl = URL(string: "https://hx.kraftful.cloud/graphql")!
+let hxCloudUrl = URL(string: "https://hx.yoursysteminfo.com/graphql")!
 
 class ApolloAPIClient: APIClient {
     static var shared = ApolloAPIClient()

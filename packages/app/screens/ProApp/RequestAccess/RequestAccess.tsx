@@ -125,7 +125,7 @@ export default function RequestAccess({
   }, []);
 
   const onShareRequestPress = useCallback(() => {
-    const url = `https://hx.kraftful.app/grantAccess/${installerEmail}/${accessLevel}/${
+    const url = `https://hx.yoursysteminfo.com/grantAccess/${installerEmail}/${accessLevel}/${
       limitAccess ? "1" : ""
     }`;
 

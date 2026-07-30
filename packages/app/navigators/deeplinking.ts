@@ -73,7 +73,7 @@ const config: {
 };
 
 const deepLinkingConfig: LinkingOptions = {
-  prefixes: ["hx://", "https://hx.kraftful.app/"],
+  prefixes: ["hx://", "https://hx.yoursysteminfo.com/"],
   config,
   subscribe(listener) {
     const onReceiveURL = ({ url }: { url: string }): void => listener(url);
