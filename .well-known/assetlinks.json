@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.jci.RIPL",
+      "sha256_cert_fingerprints": [
+        "AD:21:A7:00:87:DC:8A:BB:7C:86:3B:2C:60:94:EB:49:17:93:CA:0D:5D:1D:7C:F5:EA:52:B8:42:0D:54:0E:A0",
+        "B8:C6:36:81:CB:1E:1E:B2:FB:D3:EA:D1:A1:69:9F:98:0A:1F:D4:CE:25:34:70:45:DA:AE:80:5D:EA:B3:31:53",
+        "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
+      ]
+    }
+  }
+]

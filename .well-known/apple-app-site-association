@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "C9JBF8A6KB.com.jci.thermostat280",
+        "paths": [
+          "/signIn/*",
+          "/grantAccess/*"
+        ]
+      }
+    ]
+  }
+}

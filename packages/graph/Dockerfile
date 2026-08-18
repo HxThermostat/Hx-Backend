@@ -66,6 +66,7 @@ RUN SKIP_POSTINSTALL=1 yarn install --frozen-lockfile
 
 COPY ./packages/graph/schema ./packages/graph/schema
 COPY ./packages/graph/static ./packages/graph/static
+COPY ./.well-known ./packages/graph/static/.well-known
 COPY ./packages/graph/views ./packages/graph/views
 COPY --from=build /usr/src/hx/packages/graph/dist /usr/src/hx/packages/graph/dist
 
