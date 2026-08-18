@@ -3,6 +3,7 @@ import express from "express";
 import { redirectToHTTPS } from "express-http-to-https";
 import compression from "compression";
 import cookieParser from "cookie-parser";
+import path from "path";
 
 import { IS_PRODUCTION, PORT } from "./config";
 
@@ -29,6 +30,10 @@ const start = async (): Promise<void> => {
   if (IS_PRODUCTION) {
     app.use(redirectToHTTPS([], [], 301));
   }
+
+  app.get("/.well-known/assetlinks.json", (_, res) => {
+    res.sendFile(path.resolve(process.cwd(), "static/.well-known/assetlinks.json"));
+  });
 
   app.use(express.static("public"));
   app.use(express.static("views"));
