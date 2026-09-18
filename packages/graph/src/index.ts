@@ -33,7 +33,7 @@ const start = async (): Promise<void> => {
     app.use(redirectToHTTPS([], [], 301));
   }
 
-  app.use(express.static("public"));
+  app.use(express.static("public")); 
   app.use(express.static("views"));
 
   // Custom landing page for production in Apollo Server 2.x
