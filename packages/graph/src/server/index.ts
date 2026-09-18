@@ -8,6 +8,7 @@ import { metrics } from "./plugins";
 
 import { isAxiosError } from "../ayla";
 import { AppContext } from "../schema/context";
+import { IS_PRODUCTION } from "../config";
 
 export { buildSchema, context, loaders };
 
@@ -36,7 +37,7 @@ export default function buildServer(
       return err;
     },
     plugins: [metrics],
-    playground: true,
+    playground: !IS_PRODUCTION,
     introspection: true,
   });
 }
