@@ -30,7 +30,7 @@ const start = async (): Promise<void> => {
 
   const FORCE_HTTPS = process.env.FORCE_HTTPS !== 'false';
   if (IS_PRODUCTION && FORCE_HTTPS) {
-    app.use(redirectToHTTPS([/localhost/, /127\.0\.0\.1/], [], 301));
+    app.use(redirectToHTTPS([], [], 301));
   }
 
   app.use(express.static("public"));
